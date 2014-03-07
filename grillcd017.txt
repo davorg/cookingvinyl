@@ -1,127 +1,19 @@
-<html>
-  <head>
-    <title>GRILL CD 017 - Delicatessen 2</title>
-    <link rel="stylesheet" href="style.css" type="text/css" />
-  <head>
-  <body>
-    <h1>Delicatessen 2</h1>
-
-    <p><a href="index.html">Return to list</p>
-
-    <table>
-      <tr>
-        <th>Code</th>
-        <td>GRILL CD 017</td>
-      </tr>
-      <tr>
-        <th>Released</th>
-        <td>2000</td>
-      </tr>
-    </table>
-    <table class="tracks">
-      <tr>
-        <td>01</td>
-        <td>XTC</td>
-        <td>Playground</td>
-      </tr>
-      <tr>
-        <td>02</td>
-        <td>Chuck Prophet</td>
-        <td>Rise</td>
-      </tr>
-      <tr>
-        <td>03</td>
-        <td>King Cobb Steelie</td>
-        <td>Mayday (Demo)</td>
-      </tr>
-      <tr>
-        <td>04</td>
-        <td>Luke Vibert</td>
-        <td>BJ Cole / Party Animal</td>
-      </tr>
-      <tr>
-        <td>05</td>
-        <td>Michael Nesmith</td>
-        <td>Rio</td>
-      </tr>
-      <tr>
-        <td>06</td>
-        <td>The Lilac Time</td>
-        <td>A Dream That We All Share</td>
-      </tr>
-      <tr>
-        <td>07</td>
-        <td>Home</td>
-        <td>So Much Love</td>
-      </tr>
-      <tr>
-        <td>08</td>
-        <td>The Church</td>
-        <td>All The Young Dudes</td>
-      </tr>
-      <tr>
-        <td>09</td>
-        <td>Saint Low</td>
-        <td>Spanish Moss (Demo)</td>
-      </tr>
-      <tr>
-        <td>10</td>
-        <td>The Wedding Present</td>
-        <td>Sports Car (Acoustic)</td>
-      </tr>
-      <tr>
-        <td>11</td>
-        <td>Pere Ubu</td>
-        <td>West Side Story</td>
-      </tr>
-      <tr>
-        <td>12</td>
-        <td>Billy Bragg</td>
-        <td>Shirley</td>
-      </tr>
-      <tr>
-        <td>13</td>
-        <td>Cathal Coughlan</td>
-        <td>Black River Falls</td>
-      </tr>
-      <tr>
-        <td>14</td>
-        <td>Jackie Leven</td>
-        <td>Single Father</td>
-      </tr>
-      <tr>
-        <td>15</td>
-        <td>Savourna Stevenson</td>
-        <td>Eddie Reader / Touch Me Like The Sun</td>
-      </tr>
-      <tr>
-        <td>16</td>
-        <td>oysterband</td>
-        <td>When I'm Up I Can't Get Down</td>
-      </tr>
-      <tr>
-        <td>17</td>
-        <td>Madder Rose</td>
-        <td>Hotel</td>
-      </tr>
-      <tr>
-        <td>18</td>
-        <td>Cinerama</td>
-        <td>Kerry Kerry</td>
-      </tr>
-      <tr>
-        <td>19</td>
-        <td>Violent Femmes</td>
-        <td>Sleepwalkin'</td>
-      </tr>
-    </table>
-    <script src="http://www.google-analytics.com/urchin.js" type="text/javascript">
-    </script>
-
-    <script type="text/javascript">
-_uacct = "UA-56332-2";
-urchinTracker();
-    </script>
-  </body>
-</html>
-    
+01	Playground	XTC
+02	Rise	Chuck Prophet
+03	Mayday (Demo)	King Cobb Steelie
+04	BJ Cole / Party Animal	Luke Vibert
+05	Rio	Michael Nesmith
+06	A Dream That We All Share	The Lilac Time
+07	So Much Love	Home
+08	All The Young Dudes	The Church
+09	Spanish Moss (Demo)	Saint Low
+10	Sports Car (Acoustic)	The Wedding Present
+11	West Side Story	Pere Ubu
+12	Shirley	Billy Bragg
+13	Black River Falls	Cathal Coughlan
+14	Single Father	Jackie Leven
+15	Eddie Reader / Touch Me Like The Sun	Savourna Stevenson
+16	When I'm Up I Can't Get Down	oysterband
+17	Hotel	Madder Rose
+18	Kerry Kerry	Cinerama
+19	Sleepwalkin'	Violent Femmes

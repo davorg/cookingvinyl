@@ -1,117 +1,17 @@
-<html>
-  <head>
-    <title>GRILL CD 018 - Delicatessen 3</title>
-    <link rel="stylesheet" href="style.css" type="text/css" />
-  <head>
-  <body>
-    <h1>Delicatessen 3</h1>
-
-    <p><a href="index.html">Return to list</p>
-
-    <table>
-      <tr>
-        <th>Code</th>
-        <td>GRILL CD 018</td>
-      </tr>
-      <tr>
-        <th>Released</th>
-        <td>2001</td>
-      </tr>
-    </table>
-    <table class="tracks">
-      <tr>
-        <td>01</td>
-        <td>Tonight</td>
-        <td>Violent Femmes</td>
-      </tr>
-      <tr>
-        <td>02</td>
-        <td>I Love The Unknown</td>
-        <td>Clem Snide</td>
-      </tr>
-      <tr>
-        <td>03</td>
-        <td>Come Pick Me Up</td>
-        <td>Ryan Adams</td>
-      </tr>
-      <tr>
-        <td>04</td>
-        <td>Robert Onion</td>
-        <td>Frank Black and the Catholics</td>
-      </tr>
-      <tr>
-        <td>05</td>
-        <td>A Best Man (Put My Girlfriend On Fire)</td>
-        <td>AM/FM</td>
-      </tr>
-      <tr>
-        <td>06</td>
-        <td>Make Me Shine (Monitor Mix)</td>
-        <td>Echo and the Bunneymen</td>
-      </tr>
-      <tr>
-        <td>07</td>
-        <td>See It Coming (Monitor Mix)</td>
-        <td>The Church</td>
-      </tr>
-      <tr>
-        <td>08</td>
-        <td>Gotta Quit That Crack</td>
-        <td>The Church</td>
-      </tr>
-      <tr>
-        <td>09</td>
-        <td>Swing Lite Alight</td>
-        <td>Luke Vibert and BJ Cole</td>
-      </tr>
-      <tr>
-        <td>10</td>
-        <td>Mayday (Radio Edit)</td>
-        <td>King Cobb Steelie</td>
-      </tr>
-      <tr>
-        <td>11</td>
-        <td>Luke One</td>
-        <td>AC Acoustics</td>
-      </tr>
-      <tr>
-        <td>12</td>
-        <td>Johnson City</td>
-        <td>Saint Low</td>
-      </tr>
-      <tr>
-        <td>13</td>
-        <td>The Ghost Of Limehouse Cut</td>
-        <td>Cathal Coughlan</td>
-      </tr>
-      <tr>
-        <td>14</td>
-        <td>Single Father</td>
-        <td>Jackie Leven</td>
-      </tr>
-      <tr>
-        <td>15</td>
-        <td>Sulk</td>
-        <td>Billy Bragg</td>
-      </tr>
-      <tr>
-        <td>16</td>
-        <td>Rising In Love</td>
-        <td>Michael Nesmith</td>
-      </tr>
-      <tr>
-        <td>17</td>
-        <td>Drugs Are Wasted On The Young</td>
-        <td>Dave Graney Show</td>
-      </tr>
-    </table>
-    <script src="http://www.google-analytics.com/urchin.js" type="text/javascript">
-    </script>
-
-    <script type="text/javascript">
-_uacct = "UA-56332-2";
-urchinTracker();
-    </script>
-  </body>
-</html>
-    
+01	Violent Femmes	Tonight
+02	Clem Snide	I Love The Unknown
+03	Ryan Adams	Come Pick Me Up
+04	Frank Black and the Catholics	Robert Onion
+05	AM/FM	A Best Man (Put My Girlfriend On Fire)
+06	Echo and the Bunneymen	Make Me Shine (Monitor Mix)
+07	The Church	See It Coming (Monitor Mix)
+08	The Church	Gotta Quit That Crack
+09	Luke Vibert and BJ Cole	Swing Lite Alight
+10	King Cobb Steelie	Mayday (Radio Edit)
+11	AC Acoustics	Luke One
+12	Saint Low	Johnson City
+13	Cathal Coughlan	The Ghost Of Limehouse Cut
+14	Jackie Leven	Single Father
+15	Billy Bragg	Sulk
+16	Michael Nesmith	Rising In Love
+17	Dave Graney Show	Drugs Are Wasted On The Young

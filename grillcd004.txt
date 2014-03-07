@@ -1,112 +1,16 @@
-<html>
-  <head>
-    <title>GRILL CD 004 - Cooking Vinyl Sampler</title>
-    <link rel="stylesheet" href="style.css" type="text/css" />
-  <head>
-  <body>
-    <h1>Cooking Vinyl Sampler</h1>
-
-    <p><a href="index.html">Return to list</p>
-
-    <table>
-      <tr>
-        <th>Code</th>
-        <td>GRILL CD 004</td>
-      </tr>
-      <tr>
-        <th>Released</th>
-        <td>1993</td>
-      </tr>
-    </table>
-    <table class="tracks">
-      <tr>
-        <td>01</td>
-        <td>Tom Robinson</td>
-        <td>Living In A Boom Time</td>
-      </tr>
-      <tr>
-        <td>02</td>
-        <td>The Ukranians</td>
-        <td>What Difference Does It Make?</td>
-      </tr>
-      <tr>
-        <td>03</td>
-        <td>Oysterband</td>
-        <td>Granite Years</td>
-      </tr>
-      <tr>
-        <td>04</td>
-        <td>TV Smith</td>
-        <td>Lion And The Lamb</td>
-      </tr>
-      <tr>
-        <td>05</td>
-        <td>The Barely Works</td>
-        <td>Big River</td>
-      </tr>
-      <tr>
-        <td>06</td>
-        <td>Rory McLeod</td>
-        <td>Spring Is Returning</td>
-      </tr>
-      <tr>
-        <td>07</td>
-        <td>June Tabor</td>
-        <td>Don't Think Twice</td>
-      </tr>
-      <tr>
-        <td>08</td>
-        <td>Rev Hammer</td>
-        <td>Down By The River 'O'</td>
-      </tr>
-      <tr>
-        <td>09</td>
-        <td>Bruce Cockburn</td>
-        <td>Rumours Of Glory</td>
-      </tr>
-      <tr>
-        <td>10</td>
-        <td>The Horseflies</td>
-        <td>Hush Little Baby</td>
-      </tr>
-      <tr>
-        <td>11</td>
-        <td>Bhundu Boys</td>
-        <td>Radio Africa</td>
-      </tr>
-      <tr>
-        <td>12</td>
-        <td>Michelle Shocked</td>
-        <td>The Secret Of A Long Life</td>
-      </tr>
-      <tr>
-        <td>13</td>
-        <td>Sweet Honey In The Rock</td>
-        <td>On Children</td>
-      </tr>
-      <tr>
-        <td>14</td>
-        <td>Screamin' Jay Hawkins</td>
-        <td>Constipation Blues</td>
-      </tr>
-      <tr>
-        <td>15</td>
-        <td>Cheb Mami</td>
-        <td>Let Me Cry</td>
-      </tr>
-      <tr>
-        <td>16</td>
-        <td>Ewan MacColl</td>
-        <td>The Joy Of Living</td>
-      </tr>
-    </table>
-    <script src="http://www.google-analytics.com/urchin.js" type="text/javascript">
-    </script>
-
-    <script type="text/javascript">
-_uacct = "UA-56332-2";
-urchinTracker();
-    </script>
-  </body>
-</html>
-    
+01	Living In A Boom Time	Tom Robinson
+02	What Difference Does It Make?	The Ukranians
+03	Granite Years	Oysterband
+04	Lion And The Lamb	TV Smith
+05	Big River	The Barely Works
+06	Spring Is Returning	Rory McLeod
+07	Don't Think Twice	June Tabor
+08	Down By The River 'O'	Rev Hammer
+09	Rumours Of Glory	Bruce Cockburn
+10	Hush Little Baby	The Horseflies
+11	Radio Africa	Bhundu Boys
+12	The Secret Of A Long Life	Michelle Shocked
+13	On Children	Sweet Honey In The Rock
+14	Constipation Blues	Screamin' Jay Hawkins
+15	Let Me Cry	Cheb Mami
+16	The Joy Of Living	Ewan MacColl

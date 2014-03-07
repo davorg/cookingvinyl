@@ -1,117 +1,18 @@
-<html>
-  <head>
-    <title>GRILL CD 005 - Cooking Vinyl Sampler Volume 2</title>
-    <link rel="stylesheet" href="style.css" type="text/css" />
-  <head>
-  <body>
-    <h1>Cooking Vinyl Sampler Volume 2</h1>
-
-    <p><a href="index.html">Return to list</p>
-
-    <table>
-      <tr>
-        <th>Code</th>
-        <td>GRILL CD 005</td>
-      </tr>
-      <tr>
-        <th>Released</th>
-        <td>1993</td>
-      </tr>
-    </table>
-    <table class="tracks">
-      <tr>
-        <td>02</td>
-        <td>The Ukranians</td>
-        <td>Venus in Furs</td>
-      </tr>
-      <tr>
-        <td>03</td>
-        <td>Jackie Leven</td>
-        <td>Call Mother a Lonely Field (Malt Mix)</td>
-      </tr>
-      <tr>
-        <td>04</td>
-        <td>Honky Tonk Cowboys &amp; Rebecca Price</td>
-        <td>Love Wore a Halo</td>
-      </tr>
-      <tr>
-        <td>05</td>
-        <td>Bhundu Boys</td>
-        <td>Pombi</td>
-      </tr>
-      <tr>
-        <td>06</td>
-        <td>Alex Chilton &amp; Medium Cool</td>
-        <td>That Old Feeling</td>
-      </tr>
-      <tr>
-        <td>07</td>
-        <td>June Tabor</td>
-        <td>Illusions</td>
-      </tr>
-      <tr>
-        <td>08</td>
-        <td>Weddings Parties Anything</td>
-        <td>Old Ronny</td>
-      </tr>
-      <tr>
-        <td>09</td>
-        <td>TV Smith</td>
-        <td>Gather Your Things And Go</td>
-      </tr>
-      <tr>
-        <td>10</td>
-        <td>Tom Robinson</td>
-        <td>Portobello Terrace</td>
-      </tr>
-      <tr>
-        <td>11</td>
-        <td>Rev Hammer</td>
-        <td>Caledonia Rain (piano version)</td>
-      </tr>
-      <tr>
-        <td>12</td>
-        <td>June Tabor &amp; Oysterband</td>
-        <td>All Tomorrows Parties</td>
-      </tr>
-      <tr>
-        <td>13</td>
-        <td>Ewan MacColl</td>
-        <td>Ballad of Accounting</td>
-      </tr>
-      <tr>
-        <td>14</td>
-        <td>Michelle Shocked</td>
-        <td>Fogtown</td>
-      </tr>
-      <tr>
-        <td>15</td>
-        <td>Bruce Cockburn</td>
-        <td>Silver Wheels</td>
-      </tr>
-      <tr>
-        <td>16</td>
-        <td>Barely Works</td>
-        <td>Run Out Of Loving</td>
-      </tr>
-      <tr>
-        <td>17</td>
-        <td>Rory McLeod</td>
-        <td>Back To Donegal</td>
-      </tr>
-      <tr>
-        <td>18</td>
-        <td>Awatinas</td>
-        <td>Kullakita</td>
-      </tr>
-    </table>
-    <script src="http://www.google-analytics.com/urchin.js" type="text/javascript">
-    </script>
-
-    <script type="text/javascript">
-_uacct = "UA-56332-2";
-urchinTracker();
-    </script>
-  </body>
-</html>
-    
+01	The Road to Santiago	Oysterband
+02	Venus in Furs	The Ukranians
+03	Call Mother a Lonely Field (Malt Mix)	Jackie Leven
+04	Love Wore a Halo	Honky Tonk Cowboys & Rebecca Price
+05	Pombi	Bhundu Boys
+06	That Old Feeling	Alex Chilton & Medium Cool
+07	Illusions	June Tabor
+08	Old Ronny	Weddings Parties Anything
+09	Gather Your Things And Go	TV Smith
+10	Portobello Terrace	Tom Robinson
+11	Caledonia Rain (piano version)	Rev Hammer
+12	All Tomorrows Parties	June Tabor & Oysterband
+13	Ballad of Accounting	Ewan MacColl
+14	Fogtown	Michelle Shocked
+15	Silver Wheels	Bruce Cockburn
+16	Run Out Of Loving	Barely Works
+17	Back To Donegal	Rory McLeod
+18	Kullakita	Awatinas

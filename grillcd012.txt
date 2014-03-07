@@ -1,117 +1,17 @@
-<html>
-  <head>
-    <title>GRILL CD 012 - This is Folk</title>
-    <link rel="stylesheet" href="style.css" type="text/css" />
-  <head>
-  <body>
-    <h1>This is Folk</h1>
-
-    <p><a href="index.html">Return to list</p>
-
-    <table>
-      <tr>
-        <th>Code</th>
-        <td>GRILL CD 012</td>
-      </tr>
-      <tr>
-        <th>Released</th>
-        <td>1998</td>
-      </tr>
-    </table>
-    <table class="tracks">
-      <tr>
-        <td>01</td>
-        <td>Bert Jansch</td>
-        <td>Step Back</td>
-      </tr>
-      <tr>
-        <td>02</td>
-        <td>Rory McLeod</td>
-        <td>Spring Is Returning/Dosvedanya</td>
-      </tr>
-      <tr>
-        <td>03</td>
-        <td>The Happy End</td>
-        <td>Turn Things Upside Down</td>
-      </tr>
-      <tr>
-        <td>04</td>
-        <td>Savourna Stevenson</td>
-        <td>Maybe Then I´ll Be A Rose</td>
-      </tr>
-      <tr>
-        <td>05</td>
-        <td>June Tabor</td>
-        <td>Doctor Calls</td>
-      </tr>
-      <tr>
-        <td>06</td>
-        <td>Barely Works</td>
-        <td>Byker Hill</td>
-      </tr>
-      <tr>
-        <td>07</td>
-        <td>Ancient Beatbox</td>
-        <td>Raining</td>
-      </tr>
-      <tr>
-        <td>08</td>
-        <td>Maddy Prior</td>
-        <td>Seventeen Years Of Sorrow</td>
-      </tr>
-      <tr>
-        <td>09</td>
-        <td>WAZ</td>
-        <td>Rhythm Of Time</td>
-      </tr>
-      <tr>
-        <td>10</td>
-        <td>Gods Little Monkeys</td>
-        <td>Whistle Daugther Whistle</td>
-      </tr>
-      <tr>
-        <td>11</td>
-        <td>Boiled In Lead</td>
-        <td>Madman Mora Blues</td>
-      </tr>
-      <tr>
-        <td>12</td>
-        <td>Horseflies</td>
-        <td>Hush Little Baby</td>
-      </tr>
-      <tr>
-        <td>13</td>
-        <td>Utah Phillips &amp; Ani DiFranco</td>
-        <td>Bridges</td>
-      </tr>
-      <tr>
-        <td>14</td>
-        <td>Wired To The Moon</td>
-        <td>Promises</td>
-      </tr>
-      <tr>
-        <td>15</td>
-        <td>June Tabor &amp; the Oysterband</td>
-        <td>All Tomorrow´s Parties</td>
-      </tr>
-      <tr>
-        <td>16</td>
-        <td>Ewan MacColl &amp; Peggy Seeger</td>
-        <td>Manchester Rambler</td>
-      </tr>
-      <tr>
-        <td>17</td>
-        <td>Colorblind James Experience</td>
-        <td>Why Should I Stand Up</td>
-      </tr>
-    </table>
-    <script src="http://www.google-analytics.com/urchin.js" type="text/javascript">
-    </script>
-
-    <script type="text/javascript">
-_uacct = "UA-56332-2";
-urchinTracker();
-    </script>
-  </body>
-</html>
-    
+01	Step Back	Bert Jansch
+02	Spring Is Returning/Dosvedanya	Rory McLeod
+03	Turn Things Upside Down	The Happy End
+04	Maybe Then I´ll Be A Rose	Savourna Stevenson
+05	Doctor Calls	June Tabor
+06	Byker Hill	Barely Works
+07	Raining	Ancient Beatbox
+08	Seventeen Years Of Sorrow	Maddy Prior
+09	Rhythm Of Time	WAZ
+10	Whistle Daugther Whistle	Gods Little Monkeys
+11	Madman Mora Blues	Boiled In Lead
+12	Hush Little Baby	Horseflies
+13	Bridges	Utah Phillips & Ani DiFranco
+14	Promises	Wired To The Moon
+15	All Tomorrow´s Parties	June Tabor & the Oysterband
+16	Manchester Rambler	Ewan MacColl & Peggy Seeger
+17	Why Should I Stand Up	Colorblind James Experience

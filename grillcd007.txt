@@ -1,102 +1,14 @@
-<html>
-  <head>
-    <title>GRILL CD 007 - Cooking Vinyl Sampler Volume 3</title>
-    <link rel="stylesheet" href="style.css" type="text/css" />
-  <head>
-  <body>
-    <h1>Cooking Vinyl Sampler Volume 3</h1>
-
-    <p><a href="index.html">Return to list</p>
-
-    <table>
-      <tr>
-        <th>Code</th>
-        <td>GRILL CD 007</td>
-      </tr>
-      <tr>
-        <th>Released</th>
-        <td>1994</td>
-      </tr>
-    </table>
-    <table class="tracks">
-      <tr>
-        <td>01</td>
-        <td>Billy Bragg</td>
-        <td>Sexuality</td>
-      </tr>
-      <tr>
-        <td>02</td>
-        <td>Tom Robinson</td>
-        <td>DDR</td>
-      </tr>
-      <tr>
-        <td>03</td>
-        <td>Jackie Leven</td>
-        <td>Shadow in My Eye</td>
-      </tr>
-      <tr>
-        <td>04</td>
-        <td>Oysterband</td>
-        <td>Blood Wedding</td>
-      </tr>
-      <tr>
-        <td>05</td>
-        <td>Goats Don't Shave</td>
-        <td>The Evictions</td>
-      </tr>
-      <tr>
-        <td>06</td>
-        <td>Weddings, Parties, Anything</td>
-        <td>Fathers Day</td>
-      </tr>
-      <tr>
-        <td>07</td>
-        <td>June Tabor</td>
-        <td>False, False</td>
-      </tr>
-      <tr>
-        <td>08</td>
-        <td>Michelle Shocked</td>
-        <td>The L&amp;N Don't Stop Here Anymore</td>
-      </tr>
-      <tr>
-        <td>09</td>
-        <td>Incantation</td>
-        <td>Theme from the Mission</td>
-      </tr>
-      <tr>
-        <td>10</td>
-        <td>Rev Hammer</td>
-        <td>Spanish Lullaby</td>
-      </tr>
-      <tr>
-        <td>11</td>
-        <td>Andy White</td>
-        <td>Street Scenes from My Heart</td>
-      </tr>
-      <tr>
-        <td>12</td>
-        <td>Ukranians</td>
-        <td>Kievskiy Express</td>
-      </tr>
-      <tr>
-        <td>13</td>
-        <td>Rory McLeod</td>
-        <td>Huge Sky</td>
-      </tr>
-      <tr>
-        <td>14</td>
-        <td>Bhundu Boys</td>
-        <td>Lizzie</td>
-      </tr>
-    </table>
-    <script src="http://www.google-analytics.com/urchin.js" type="text/javascript">
-    </script>
-
-    <script type="text/javascript">
-_uacct = "UA-56332-2";
-urchinTracker();
-    </script>
-  </body>
-</html>
-    
+01	Sexuality	Billy Bragg
+02	DDR	Tom Robinson
+03	Shadow in My Eye	Jackie Leven
+04	Blood Wedding	Oysterband
+05	The Evictions	Goats Don't Shave
+06	Fathers Day	Weddings, Parties, Anything
+07	False, False	June Tabor
+08	The L&N Don't Stop Here Anymore	Michelle Shocked
+09	Theme from the Mission	Incantation
+10	Spanish Lullaby	Rev Hammer
+11	Street Scenes from My Heart	Andy White
+12	Kievskiy Express	Ukranians
+13	Huge Sky	Rory McLeod
+14	Lizzie	Bhundu Boys

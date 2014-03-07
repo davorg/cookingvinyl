@@ -1,112 +1,16 @@
-<html>
-  <head>
-    <title>GRILL CD 008 - Cooking Vinyl Sampler Volume 4</title>
-    <link rel="stylesheet" href="style.css" type="text/css" />
-  <head>
-  <body>
-    <h1>Cooking Vinyl Sampler Volume 4</h1>
-
-    <p><a href="index.html">Return to list</p>
-
-    <table>
-      <tr>
-        <th>Code</th>
-        <td>GRILL CD 008</td>
-      </tr>
-      <tr>
-        <th>Released</th>
-        <td>1995</td>
-      </tr>
-    </table>
-    <table class="tracks">
-      <tr>
-        <td>01</td>
-        <td>Billy Bragg</td>
-        <td>Ontario Quebec and Me</td>
-      </tr>
-      <tr>
-        <td>02</td>
-        <td>Jackie Leven</td>
-        <td>Leven's Lament</td>
-      </tr>
-      <tr>
-        <td>03</td>
-        <td>Oysterband</td>
-        <td>Jam Tomorrow</td>
-      </tr>
-      <tr>
-        <td>04</td>
-        <td>Pere Ubu</td>
-        <td>Memphis</td>
-      </tr>
-      <tr>
-        <td>05</td>
-        <td>Bert Jansch</td>
-        <td>Summer Heat</td>
-      </tr>
-      <tr>
-        <td>06</td>
-        <td>Incantation</td>
-        <td>Cacharpaya Shuffle</td>
-      </tr>
-      <tr>
-        <td>07</td>
-        <td>June Tabor</td>
-        <td>All Our Trades</td>
-      </tr>
-      <tr>
-        <td>08</td>
-        <td>Rory McLeod</td>
-        <td>How Can You Keep On Moving</td>
-      </tr>
-      <tr>
-        <td>09</td>
-        <td>Rockingbirds</td>
-        <td>Roll On Forever</td>
-      </tr>
-      <tr>
-        <td>10</td>
-        <td>Goats Don't Shave</td>
-        <td>Let It Go</td>
-      </tr>
-      <tr>
-        <td>11</td>
-        <td>Immaculate Fools</td>
-        <td>No Dancing</td>
-      </tr>
-      <tr>
-        <td>12</td>
-        <td>Tom Robinson Band</td>
-        <td>You Gotta Survive</td>
-      </tr>
-      <tr>
-        <td>13</td>
-        <td>Poisongirls</td>
-        <td>Persons Unknown</td>
-      </tr>
-      <tr>
-        <td>14</td>
-        <td>The Barely Works</td>
-        <td>Liberty Blackberry Blossom The Cookoo's Nest</td>
-      </tr>
-      <tr>
-        <td>15</td>
-        <td>Ukrainians</td>
-        <td>Polityka</td>
-      </tr>
-      <tr>
-        <td>16</td>
-        <td>Four Brothers</td>
-        <td>Rumbidzai</td>
-      </tr>
-    </table>
-    <script src="http://www.google-analytics.com/urchin.js" type="text/javascript">
-    </script>
-
-    <script type="text/javascript">
-_uacct = "UA-56332-2";
-urchinTracker();
-    </script>
-  </body>
-</html>
-    
+01	Ontario Quebec and Me	Billy Bragg
+02	Leven's Lament	Jackie Leven
+03	Jam Tomorrow	Oysterband
+04	Memphis	Pere Ubu
+05	Summer Heat	Bert Jansch
+06	Cacharpaya Shuffle	Incantation
+07	All Our Trades	June Tabor
+08	How Can You Keep On Moving	Rory McLeod
+09	Roll On Forever	Rockingbirds
+10	Let It Go	Goats Don't Shave
+11	No Dancing	Immaculate Fools
+12	You Gotta Survive	Tom Robinson Band
+13	Persons Unknown	Poisongirls
+14	Liberty Blackberry Blossom The Cookoo's Nest	The Barely Works
+15	Polityka	Ukrainians
+16	Rumbidzai	Four Brothers

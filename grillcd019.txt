@@ -1,127 +1,19 @@
-<html>
-  <head>
-    <title>GRILL CD 019 - Delicatessen 4</title>
-    <link rel="stylesheet" href="style.css" type="text/css" />
-  <head>
-  <body>
-    <h1>Delicatessen 4</h1>
-
-    <p><a href="index.html">Return to list</p>
-
-    <table>
-      <tr>
-        <th>Code</th>
-        <td>GRILL CD 019</td>
-      </tr>
-      <tr>
-        <th>Released</th>
-        <td>2002</td>
-      </tr>
-    </table>
-    <table class="tracks">
-      <tr>
-        <td>01</td>
-        <td>Grant-Lee Phillips</td>
-        <td>We All Get a Taste</td>
-      </tr>
-      <tr>
-        <td>02</td>
-        <td>Shelley Devoto</td>
-        <td>Can You See Me Shining?</td>
-      </tr>
-      <tr>
-        <td>03</td>
-        <td>Billy Bragg &amp; The Blokes</td>
-        <td>St. Monday</td>
-      </tr>
-      <tr>
-        <td>04</td>
-        <td>Cracker</td>
-        <td>Forever</td>
-      </tr>
-      <tr>
-        <td>05</td>
-        <td>Mary Lorson + Saint Low</td>
-        <td>Oh Regret</td>
-      </tr>
-      <tr>
-        <td>06</td>
-        <td>The Church</td>
-        <td>Numbers</td>
-      </tr>
-      <tr>
-        <td>07</td>
-        <td>AC Acoustics</td>
-        <td>16 4 2010</td>
-      </tr>
-      <tr>
-        <td>08</td>
-        <td>Echo and the Bunnymen</td>
-        <td>The Cutter (live)</td>
-      </tr>
-      <tr>
-        <td>09</td>
-        <td>The Apples in Stereo</td>
-        <td>If You Don't Want to Wear a Hat</td>
-      </tr>
-      <tr>
-        <td>10</td>
-        <td>Obi</td>
-        <td>Ever After</td>
-      </tr>
-      <tr>
-        <td>11</td>
-        <td>Ron Sexsmith</td>
-        <td>Before We Ever Met</td>
-      </tr>
-      <tr>
-        <td>12</td>
-        <td>Clem Snide</td>
-        <td>Moment in the Sun</td>
-      </tr>
-      <tr>
-        <td>13</td>
-        <td>Cowboy Junkies</td>
-        <td>I'm So Open</td>
-      </tr>
-      <tr>
-        <td>14</td>
-        <td>Frank Black</td>
-        <td>End of Miles</td>
-      </tr>
-      <tr>
-        <td>15</td>
-        <td>Paul Kelly</td>
-        <td>Somewhere in the City</td>
-      </tr>
-      <tr>
-        <td>16</td>
-        <td>Ryan Adams</td>
-        <td>Shakedown on 9th Street</td>
-      </tr>
-      <tr>
-        <td>17</td>
-        <td>The Lilac Time</td>
-        <td>Jeans &amp; Summer</td>
-      </tr>
-      <tr>
-        <td>18</td>
-        <td>Jackie Leven</td>
-        <td>My Spanish Dad</td>
-      </tr>
-      <tr>
-        <td>19</td>
-        <td>Bruce Cockburn</td>
-        <td>My Beat</td>
-      </tr>
-    </table>
-    <script src="http://www.google-analytics.com/urchin.js" type="text/javascript">
-    </script>
-
-    <script type="text/javascript">
-_uacct = "UA-56332-2";
-urchinTracker();
-    </script>
-  </body>
-</html>
-    
+01	We All Get a Taste	Grant-Lee Phillips
+02	Can You See Me Shining?	Shelley Devoto
+03	St. Monday	Billy Bragg & The Blokes
+04	Forever	Cracker
+05	Oh Regret	Mary Lorson + Saint Low
+06	Numbers	The Church
+07	16 4 2010	AC Acoustics
+08	The Cutter (live)	Echo and the Bunnymen
+09	If You Don't Want to Wear a Hat	The Apples in Stereo
+10	Ever After	Obi
+11	Before We Ever Met	Ron Sexsmith
+12	Moment in the Sun	Clem Snide
+13	I'm So Open	Cowboy Junkies
+14	End of Miles	Frank Black
+15	Somewhere in the City	Paul Kelly
+16	Shakedown on 9th Street	Ryan Adams
+17	Jeans & Summer	The Lilac Time
+18	My Spanish Dad	Jackie Leven
+19	My Beat	Bruce Cockburn

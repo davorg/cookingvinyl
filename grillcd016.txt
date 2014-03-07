@@ -1,122 +1,18 @@
-<html>
-  <head>
-    <title>GRILL CD 016 - Delicatessen 1</title>
-    <link rel="stylesheet" href="style.css" type="text/css" />
-  <head>
-  <body>
-    <h1>Delicatessen 1</h1>
-
-    <p><a href="index.html">Return to list</p>
-
-    <table>
-      <tr>
-        <th>Code</th>
-        <td>GRILL CD 016</td>
-      </tr>
-      <tr>
-        <th>Released</th>
-        <td>1999</td>
-      </tr>
-    </table>
-    <table class="tracks">
-      <tr>
-        <td>01</td>
-        <td>XTC</td>
-        <td>Harvest Festival</td>
-      </tr>
-      <tr>
-        <td>02</td>
-        <td>The Lilac Time</td>
-        <td>Family Coach</td>
-      </tr>
-      <tr>
-        <td>03</td>
-        <td>Ani Difranco</td>
-        <td>Angry Anymore</td>
-      </tr>
-      <tr>
-        <td>04</td>
-        <td>Madder Rose</td>
-        <td>Goodbye June Fool</td>
-      </tr>
-      <tr>
-        <td>05</td>
-        <td>Prolapse</td>
-        <td>Adiabatic</td>
-      </tr>
-      <tr>
-        <td>06</td>
-        <td>Number One Cup</td>
-        <td>What Does It Mean?</td>
-      </tr>
-      <tr>
-        <td>07</td>
-        <td>They Might Be Giants</td>
-        <td>Doctor Worm</td>
-      </tr>
-      <tr>
-        <td>08</td>
-        <td>The Pale Orchestra</td>
-        <td>Morbid Sky</td>
-      </tr>
-      <tr>
-        <td>09</td>
-        <td>Utah Phillips &amp; Ani Difranco</td>
-        <td>The Most Dangerous Woman</td>
-      </tr>
-      <tr>
-        <td>10</td>
-        <td>Chuck Prophet</td>
-        <td>Scarecrow</td>
-      </tr>
-      <tr>
-        <td>11</td>
-        <td>The Church</td>
-        <td>Comedown</td>
-      </tr>
-      <tr>
-        <td>12</td>
-        <td>The Velvet Crush</td>
-        <td>Think It Over</td>
-      </tr>
-      <tr>
-        <td>13</td>
-        <td>Cinerama</td>
-        <td>Dance Girl Dance</td>
-      </tr>
-      <tr>
-        <td>14</td>
-        <td>Andy White</td>
-        <td>Vision Of You</td>
-      </tr>
-      <tr>
-        <td>15</td>
-        <td>Jackie Leven</td>
-        <td>Live Or Die</td>
-      </tr>
-      <tr>
-        <td>16</td>
-        <td>Pere Ubu</td>
-        <td>Caligari's Mirror</td>
-      </tr>
-      <tr>
-        <td>17</td>
-        <td>Carter The Unstoppable Sex Machine</td>
-        <td>Let's Get Tatoos</td>
-      </tr>
-      <tr>
-        <td>18</td>
-        <td>Billy Bragg</td>
-        <td>Upfield</td>
-      </tr>
-    </table>
-    <script src="http://www.google-analytics.com/urchin.js" type="text/javascript">
-    </script>
-
-    <script type="text/javascript">
-_uacct = "UA-56332-2";
-urchinTracker();
-    </script>
-  </body>
-</html>
-    
+01	Harvest Festival	XTC
+02	Family Coach	The Lilac Time
+03	Angry Anymore	Ani Difranco
+04	Goodbye June Fool	Madder Rose
+05	Adiabatic	Prolapse
+06	What Does It Mean?	Number One Cup
+07	Doctor Worm	They Might Be Giants
+08	Morbid Sky	The Pale Orchestra
+09	The Most Dangerous Woman	Utah Phillips & Ani Difranco
+10	Scarecrow	Chuck Prophet
+11	Comedown	The Church
+12	Think It Over	The Velvet Crush
+13	Dance Girl Dance	Cinerama
+14	Vision Of You	Andy White
+15	Live Or Die	Jackie Leven
+16	Caligari's Mirror	Pere Ubu
+17	Let's Get Tatoos	Carter The Unstoppable Sex Machine
+18	Upfield	Billy Bragg
