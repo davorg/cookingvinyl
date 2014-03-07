@@ -18,7 +18,7 @@
         <td>2004</td>
       </tr>
     </table>
-    <table>
+    <table class="tracks">
       <tr>
         <td>01</td>
         <td>Seefood</td>

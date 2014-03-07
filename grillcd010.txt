@@ -18,7 +18,7 @@
         <td>1997</td>
       </tr>
     </table>
-    <table>
+    <table class="tracks">
       <tr>
         <td>01</td>
         <td>Oysterband</td>
