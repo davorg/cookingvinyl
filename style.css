@@ -7,18 +7,9 @@ body {
   margin: 20px 80px;
   border: solid 5px #66f;
   background-color: #ccf;
-  -border-radius-topleft: 30px;
-  -border-radius-topright: 30px;
-  -border-radius-bottomleft: 30px;
-  -border-radius-bottomright: 30px;
-  -moz-border-radius-topleft: 30px;
-  -moz-border-radius-topright: 30px;
-  -moz-border-radius-bottomleft: 30px;
-  -moz-border-radius-bottomright: 30px;
-  -webkit-border-radius-topleft: 30px;
-  -webkit-border-radius-topright: 30px;
-  -webkit-border-radius-bottomleft: 30px;
-  -webkit-border-radius-bottomright: 30px;
+  -border-radius: 30px;
+  -moz-border-radius: 30px;
+  -webkit-border-radius: 30px;
 }
 
 h1 {
