@@ -4,7 +4,7 @@
     <link rel="stylesheet" href="style.css" type="text/css" />
   <head>
   <body>
-    <h1>[% cd.title %]</h1>
+    <h1>[% cd.title | html %]</h1>
 
     <p><a href="index.html">Return to list</p>
 
@@ -15,15 +15,15 @@
       </tr>
       <tr>
         <th>Released</th>
-        <td>[% cd.release %]</td>
+        <td>[% cd.year %]</td>
       </tr>
     </table>
     <table>
 [% FOR track IN cd.tracks -%]
       <tr>
-        <td>[% loop.count %]</td>
-        <td>[% track.artist %]</td>
-        <td>[% track.title %]</td>
+        <td>[% track.num %]</td>
+        <td>[% track.artist | html %]</td>
+        <td>[% track.title | html %]</td>
       </tr>
 [% END -%]
     </table>

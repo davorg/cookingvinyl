@@ -10,9 +10,8 @@
     <table>
 [% FOREACH cd IN cds -%]
       <tr>
-[% IF cd.title;
-   code = cd.code.split(' ') -%]
-        <td><a href="grillcd[% code.2 %].html">[% cd.code IF cd.code %]</a></td>
+[% IF cd.title -%]
+        <td><a href="grillcd[% cd.num %].html">[% cd.code IF cd.code %]</a></td>
 [% ELSE -%]
         <td>[% cd.code IF cd.code -%]</td>
 [% END -%]
