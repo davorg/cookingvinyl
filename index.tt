@@ -1,0 +1,35 @@
+<html>
+  <head>
+    <title>Cooking Vinyl Compilation CDs</title>
+    <link rel="stylesheet" href="style.css" type="text/css" />
+  </head>
+  <body>
+    <h1>Cooking Vinyl Compilation CDs</h1>
+    <p>A list of compilations released by
+      <a href="http://www.cookingvinyl.com/">Cooking Vinyl</a> records.</p>
+    <table>
+[% FOREACH cd IN cds -%]
+      <tr>
+[% IF cd.title;
+   code = cd.code.split(' ') -%]
+        <td><a href="grillcd[% code.2 %].html">[% cd.code IF cd.code %]</a></td>
+[% ELSE -%]
+        <td>[% cd.code IF cd.code -%]</td>
+[% END -%]
+        <td>[% cd.year IF cd.year %]</td>
+        <td>[% cd.title IF cd.title %]</td>
+      </tr>
+[% END -%]
+    </table>
+    <address>
+      Site created by <a href="mailto:dave@dave.org.uk">Dave Cross</a>
+    </address>
+    <script src="http://www.google-analytics.com/urchin.js" type="text/javascript">
+    </script>
+
+    <script type="text/javascript">
+_uacct = "UA-56332-2";
+urchinTracker();
+    </script>
+  </body>
+</html>

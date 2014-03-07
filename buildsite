@@ -1,0 +1,22 @@
+#!/usr/bin/perl
+
+use strict;
+use warnings;
+use 5.010;
+
+use Template;
+
+open my $cd_fh, '<', 'cds.txt' or die $!;
+my $cds;
+
+my @cols = qw[code year title];
+while (<$cd_fh>) {
+  chomp;
+  my %cd;
+  @cd{@cols} = split /\t/;
+  push @$cds, \%cd;
+}
+
+my $tt = Template->new;
+$tt->process('index.tt', { cds => $cds }, 'index.html')
+  or die $tt->error;
