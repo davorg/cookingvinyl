@@ -1,0 +1,20 @@
+<html>
+  <head>
+    <title>[% title %]</title>
+    <link rel="stylesheet" href="style.css" type="text/css" />
+  <head>
+  <body>
+[% content %]
+    <address>
+      Site created by <a href="mailto:dave@dave.org.uk">Dave Cross</a>
+    </address>
+    <script src="http://www.google-analytics.com/urchin.js" type="text/javascript">
+    </script>
+
+    <script type="text/javascript">
+_uacct = "UA-56332-2";
+urchinTracker();
+    </script>
+  </body>
+</html>
+    
