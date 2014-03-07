@@ -1,0 +1,117 @@
+<html>
+  <head>
+    <title>GRILL CD 005 - Cooking Vinyl Sampler Volume 2</title>
+    <link rel="stylesheet" href="style.css" type="text/css" />
+  <head>
+  <body>
+    <h1>Cooking Vinyl Sampler Volume 2</h1>
+
+    <p><a href="index.html">Return to list</p>
+
+    <table>
+      <tr>
+        <th>Code</th>
+        <td>GRILL CD 005</td>
+      </tr>
+      <tr>
+        <th>Released</th>
+        <td>1993</td>
+      </tr>
+    </table>
+    <table>
+      <tr>
+        <td>02</td>
+        <td>The Ukranians</td>
+        <td>Venus in Furs</td>
+      </tr>
+      <tr>
+        <td>03</td>
+        <td>Jackie Leven</td>
+        <td>Call Mother a Lonely Field (Malt Mix)</td>
+      </tr>
+      <tr>
+        <td>04</td>
+        <td>Honky Tonk Cowboys &amp; Rebecca Price</td>
+        <td>Love Wore a Halo</td>
+      </tr>
+      <tr>
+        <td>05</td>
+        <td>Bhundu Boys</td>
+        <td>Pombi</td>
+      </tr>
+      <tr>
+        <td>06</td>
+        <td>Alex Chilton &amp; Medium Cool</td>
+        <td>That Old Feeling</td>
+      </tr>
+      <tr>
+        <td>07</td>
+        <td>June Tabor</td>
+        <td>Illusions</td>
+      </tr>
+      <tr>
+        <td>08</td>
+        <td>Weddings Parties Anything</td>
+        <td>Old Ronny</td>
+      </tr>
+      <tr>
+        <td>09</td>
+        <td>TV Smith</td>
+        <td>Gather Your Things And Go</td>
+      </tr>
+      <tr>
+        <td>10</td>
+        <td>Tom Robinson</td>
+        <td>Portobello Terrace</td>
+      </tr>
+      <tr>
+        <td>11</td>
+        <td>Rev Hammer</td>
+        <td>Caledonia Rain (piano version)</td>
+      </tr>
+      <tr>
+        <td>12</td>
+        <td>June Tabor &amp; Oysterband</td>
+        <td>All Tomorrows Parties</td>
+      </tr>
+      <tr>
+        <td>13</td>
+        <td>Ewan MacColl</td>
+        <td>Ballad of Accounting</td>
+      </tr>
+      <tr>
+        <td>14</td>
+        <td>Michelle Shocked</td>
+        <td>Fogtown</td>
+      </tr>
+      <tr>
+        <td>15</td>
+        <td>Bruce Cockburn</td>
+        <td>Silver Wheels</td>
+      </tr>
+      <tr>
+        <td>16</td>
+        <td>Barely Works</td>
+        <td>Run Out Of Loving</td>
+      </tr>
+      <tr>
+        <td>17</td>
+        <td>Rory McLeod</td>
+        <td>Back To Donegal</td>
+      </tr>
+      <tr>
+        <td>18</td>
+        <td>Awatinas</td>
+        <td>Kullakita</td>
+      </tr>
+    </table>
+    <script src="http://www.google-analytics.com/urchin.js" type="text/javascript">
+    </script>
+
+    <script type="text/javascript">
+_uacct = "UA-56332-2";
+urchinTracker();
+    </script>
+  </body>
+</html>
+    

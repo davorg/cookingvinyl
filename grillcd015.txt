@@ -1,0 +1,122 @@
+<html>
+  <head>
+    <title>GRILL CD 015 - Cooking Vinyl Sampler Volume 8</title>
+    <link rel="stylesheet" href="style.css" type="text/css" />
+  <head>
+  <body>
+    <h1>Cooking Vinyl Sampler Volume 8</h1>
+
+    <p><a href="index.html">Return to list</p>
+
+    <table>
+      <tr>
+        <th>Code</th>
+        <td>GRILL CD 015</td>
+      </tr>
+      <tr>
+        <th>Released</th>
+        <td>1999</td>
+      </tr>
+    </table>
+    <table>
+      <tr>
+        <td>01</td>
+        <td>XTC</td>
+        <td>Harvest Festival</td>
+      </tr>
+      <tr>
+        <td>02</td>
+        <td>The Lilac Time</td>
+        <td>Family Coach</td>
+      </tr>
+      <tr>
+        <td>03</td>
+        <td>Ani DiFranco</td>
+        <td>Angry Anymore</td>
+      </tr>
+      <tr>
+        <td>04</td>
+        <td>Madder Rose</td>
+        <td>Narco</td>
+      </tr>
+      <tr>
+        <td>05</td>
+        <td>They Might Be Giants</td>
+        <td>Doctor Worm</td>
+      </tr>
+      <tr>
+        <td>06</td>
+        <td>Cinerama</td>
+        <td>Dance Girl Dance</td>
+      </tr>
+      <tr>
+        <td>07</td>
+        <td>Carter the Unstoppable Sex Machine</td>
+        <td>Johnny Cash</td>
+      </tr>
+      <tr>
+        <td>08</td>
+        <td>Chuck Prophet</td>
+        <td>Scarecow</td>
+      </tr>
+      <tr>
+        <td>09</td>
+        <td>The Velvet Crush</td>
+        <td>Think It Over</td>
+      </tr>
+      <tr>
+        <td>10</td>
+        <td>Andy White</td>
+        <td>Vision Of You</td>
+      </tr>
+      <tr>
+        <td>11</td>
+        <td>Andy White</td>
+        <td>Come Down To The Sea</td>
+      </tr>
+      <tr>
+        <td>12</td>
+        <td>The Church</td>
+        <td>Comedown</td>
+      </tr>
+      <tr>
+        <td>13</td>
+        <td>Pere Ubu</td>
+        <td>Caligari's Mirror</td>
+      </tr>
+      <tr>
+        <td>14</td>
+        <td>Pere Ubu</td>
+        <td>All The Dogs Are Barking</td>
+      </tr>
+      <tr>
+        <td>15</td>
+        <td>The Pale Orchestra</td>
+        <td>Morbid Sky</td>
+      </tr>
+      <tr>
+        <td>16</td>
+        <td>Jackie Leven</td>
+        <td>Live Or Die</td>
+      </tr>
+      <tr>
+        <td>17</td>
+        <td>Billy Bragg</td>
+        <td>Upfield</td>
+      </tr>
+      <tr>
+        <td>18</td>
+        <td>XTC</td>
+        <td>Life Begins At The Hop</td>
+      </tr>
+    </table>
+    <script src="http://www.google-analytics.com/urchin.js" type="text/javascript">
+    </script>
+
+    <script type="text/javascript">
+_uacct = "UA-56332-2";
+urchinTracker();
+    </script>
+  </body>
+</html>
+    

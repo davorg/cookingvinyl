@@ -1,0 +1,128 @@
+<html>
+  <head>
+    <title>GRILL CD 023 - Delicatessen 6</title>
+    <link rel="stylesheet" href="style.css" type="text/css" />
+  <head>
+  <body>
+    <h1>Best of Cooking Vinyl 2008</h1>
+
+    <p><a href="index.html">Return to list</p>
+
+    <table>
+      <tr>
+        <th>Code</th>
+        <td>GRILL CD 026</td>
+      </tr>
+      <tr>
+        <th>Released</th>
+        <td>2004-11-24</td>
+      </tr>
+    </table>
+    <table>
+      <tr>
+        <td>01</td>
+        <td>Nitin Sawhiney</td>
+        <td>Days of Fire</td>
+      </tr>
+      <tr>
+        <td>02</td>
+        <td>The Charlatans</td>
+        <td>Oh Vanity!</td>
+      </tr>
+      <tr>
+        <td>03</td>
+        <td>The Vines</td>
+        <td>He's A Rocker</td>
+      </tr>
+      <tr>
+        <td>04</td>
+        <td>The Datsuns</td>
+        <td>Human Error</td>
+      </tr>
+      <tr>
+        <td>05</td>
+        <td>Less Than Jake</td>
+        <td>Abandon Ship</td>
+      </tr>
+      <tr>
+        <td>06</td>
+        <td>Forward Russia</td>
+        <td>Breaking Standing</td>
+      </tr>
+      <tr>
+        <td>07</td>
+        <td>Black Francis</td>
+        <td>The Seus</td>
+      </tr>
+      <tr>
+        <td>08</td>
+        <td>Centro-matic</td>
+        <td>A Critical Display Of Snakes</td>
+      </tr>
+      <tr>
+        <td>09</td>
+        <td>Kaki King</td>
+        <td>Bone Chaos In The Castle</td>
+      </tr>
+      <tr>
+        <td>10</td>
+        <td>Mexican Institute Of Sound</td>
+        <td>OK!</td>
+      </tr>
+      <tr>
+        <td>11</td>
+        <td>Camper Van Beethoven</td>
+        <td>Take The Skinheads Bowling</td>
+      </tr>
+      <tr>
+        <td>12</td>
+        <td>The Presidents Of The United States Of America</td>
+        <td>Mixed Up S.O.B</td>
+      </tr>
+      <tr>
+        <td>13</td>
+        <td>Hayseed Dixie</td>
+        <td>Bouncing Betty Boogie</td>
+      </tr>
+      <tr>
+        <td>14</td>
+        <td>Billy Bragg</td>
+        <td>I Keep Faith</td>
+      </tr>
+      <tr>
+        <td>15</td>
+        <td>Dr John</td>
+        <td>Time For A Change</td>
+      </tr>
+      <tr>
+        <td>16</td>
+        <td>Bauhaus</td>
+        <td>Too Much 21st Century</td>
+      </tr>
+      <tr>
+        <td>17</td>
+        <td>American Music Club</td>
+        <td>The Decibels And Little Pills</td>
+      </tr>
+      <tr>
+        <td>18</td>
+        <td>Todd Rundgren</td>
+        <td>Strike</td>
+      </tr>
+      <tr>
+        <td>19</td>
+        <td>Jackie Leven</td>
+        <td>Fareham Confidential</td>
+      </tr>
+    </table>
+    <script src="http://www.google-analytics.com/urchin.js" type="text/javascript">
+    </script>
+
+    <script type="text/javascript">
+_uacct = "UA-56332-2";
+urchinTracker();
+    </script>
+  </body>
+</html>
+    
+

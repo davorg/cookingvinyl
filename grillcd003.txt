@@ -1,0 +1,137 @@
+<html>
+  <head>
+    <title>GRILL CD 003 - Hootenanny</title>
+    <link rel="stylesheet" href="style.css" type="text/css" />
+  <head>
+  <body>
+    <h1>Hootenanny</h1>
+
+    <p><a href="index.html">Return to list</p>
+
+    <table>
+      <tr>
+        <th>Code</th>
+        <td>GRILL CD 003</td>
+      </tr>
+      <tr>
+        <th>Released</th>
+        <td>1990</td>
+      </tr>
+    </table>
+    <table>
+      <tr>
+        <td>01</td>
+        <td>Ancient Beatbox</td>
+        <td>Raining</td>
+      </tr>
+      <tr>
+        <td>02</td>
+        <td>Colorblind James Experience</td>
+        <td>Polka girl</td>
+      </tr>
+      <tr>
+        <td>03</td>
+        <td>Edward II And The Red Hot Polkas</td>
+        <td>Just as the tide was a'flowing</td>
+      </tr>
+      <tr>
+        <td>04</td>
+        <td>Gods Little Monkeys</td>
+        <td>Gastown</td>
+      </tr>
+      <tr>
+        <td>05</td>
+        <td>Boiled In Lead</td>
+        <td>Tape decks all over hell</td>
+      </tr>
+      <tr>
+        <td>06</td>
+        <td>June Tabor &amp; The Oyster Band</td>
+        <td>Valentines day is over</td>
+      </tr>
+      <tr>
+        <td>07</td>
+        <td>Andy White</td>
+        <td>Travelling circus</td>
+      </tr>
+      <tr>
+        <td>08</td>
+        <td>Weddings Parties Anything</td>
+        <td>The wind and the rain</td>
+      </tr>
+      <tr>
+        <td>09</td>
+        <td>Davy Spillane</td>
+        <td>Pigeon on the gate</td>
+      </tr>
+      <tr>
+        <td>10</td>
+        <td>Machanic Manyeruke</td>
+        <td>kana vatsvene vopinda</td>
+      </tr>
+      <tr>
+        <td>11</td>
+        <td>Sweet Honey In The Rock</td>
+        <td>Ode to the international debt</td>
+      </tr>
+      <tr>
+        <td>12</td>
+        <td>The Four Brothers</td>
+        <td>Viimbay</td>
+      </tr>
+      <tr>
+        <td>13</td>
+        <td>Rey De Copas</td>
+        <td>Frontera del ensueno</td>
+      </tr>
+      <tr>
+        <td>14</td>
+        <td>The Happy End</td>
+        <td>Rhumba por Nicaragua</td>
+      </tr>
+      <tr>
+        <td>15</td>
+        <td>Bruce Cockburn</td>
+        <td>See how I miss you</td>
+      </tr>
+      <tr>
+        <td>16</td>
+        <td>Rory McLeod</td>
+        <td>Collectorman</td>
+      </tr>
+      <tr>
+        <td>17</td>
+        <td>Roy Carriere</td>
+        <td>I'm coming home to stay</td>
+      </tr>
+      <tr>
+        <td>18</td>
+        <td>Charles Mann</td>
+        <td>She's about a mover</td>
+      </tr>
+      <tr>
+        <td>19</td>
+        <td>The Barely Works</td>
+        <td>Liberty/blackberry blossom/The cuckoo's nest</td>
+      </tr>
+      <tr>
+        <td>20</td>
+        <td>Ewan MacColl &amp; Peggy Seeger</td>
+        <td>Rogues Gallery</td>
+      </tr>
+      <tr>
+        <td>21</td>
+        <td>The Jolly Boys</td>
+        <td>Back to back (belly to belly)</td>
+      </tr>
+    </table>
+    <script src="http://www.google-analytics.com/urchin.js" type="text/javascript">
+    </script>
+
+    <script type="text/javascript">
+_uacct = "UA-56332-2";
+urchinTracker();
+    </script>
+  </body>
+</html>
+    

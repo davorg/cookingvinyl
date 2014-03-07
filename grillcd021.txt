@@ -1,0 +1,127 @@
+<html>
+  <head>
+    <title>GRILL CD 021 - Delicatessen 5</title>
+    <link rel="stylesheet" href="style.css" type="text/css" />
+  <head>
+  <body>
+    <h1>Delicatessen 5</h1>
+
+    <p><a href="index.html">Return to list</p>
+
+    <table>
+      <tr>
+        <th>Code</th>
+        <td>GRILL CD 021</td>
+      </tr>
+      <tr>
+        <th>Released</th>
+        <td>2003</td>
+      </tr>
+    </table>
+    <table>
+      <tr>
+        <td>01</td>
+        <td>Ian McCulloch</td>
+        <td>Love In Veins</td>
+      </tr>
+      <tr>
+        <td>02</td>
+        <td>Eyes Adrift</td>
+        <td>Alaska (Radio Edit)</td>
+      </tr>
+      <tr>
+        <td>03</td>
+        <td>Gordon Gano</td>
+        <td>Hitting The Ground</td>
+      </tr>
+      <tr>
+        <td>04</td>
+        <td>Ryan Adams</td>
+        <td>To Be Young (Acoustic Version)</td>
+      </tr>
+      <tr>
+        <td>05</td>
+        <td>Church</td>
+        <td>Seen It @ The Feelmore</td>
+      </tr>
+      <tr>
+        <td>06</td>
+        <td>Obi</td>
+        <td>Somewhere Nicer</td>
+      </tr>
+      <tr>
+        <td>07</td>
+        <td>Frank Balck &amp; The Catholics</td>
+        <td>Velvety</td>
+      </tr>
+      <tr>
+        <td>08</td>
+        <td>Mary Lorson &amp; Billy Cote</td>
+        <td>See The Stars (Radio Edit)</td>
+      </tr>
+      <tr>
+        <td>09</td>
+        <td>Soft Cell</td>
+        <td>The Night</td>
+      </tr>
+      <tr>
+        <td>10</td>
+        <td>Mendoza Line</td>
+        <td>A Damn Good Disguise</td>
+      </tr>
+      <tr>
+        <td>11</td>
+        <td>Camper Van Beethoven</td>
+        <td>Take The Skinheads Bowling</td>
+      </tr>
+      <tr>
+        <td>12</td>
+        <td>Apples In Stereo</td>
+        <td>Please</td>
+      </tr>
+      <tr>
+        <td>13</td>
+        <td>Dan Bern</td>
+        <td>Talkin' At Kida Blues</td>
+      </tr>
+      <tr>
+        <td>14</td>
+        <td>Richard Thompson</td>
+        <td>One Door Opens</td>
+      </tr>
+      <tr>
+        <td>15</td>
+        <td>Jackie Leven</td>
+        <td>Irresistible Romance (Radio Edit)</td>
+      </tr>
+      <tr>
+        <td>16</td>
+        <td>French Kicks</td>
+        <td>Crying Just For Show</td>
+      </tr>
+      <tr>
+        <td>17</td>
+        <td>Billy Bragg &amp; The Blokes</td>
+        <td>Distant Shore</td>
+      </tr>
+      <tr>
+        <td>18</td>
+        <td>Ryan Adams</td>
+        <td>Goodbye Honey</td>
+      </tr>
+      <tr>
+        <td>19</td>
+        <td>Minus 5</td>
+        <td>Retrieval Of You</td>
+      </tr>
+    </table>
+    <script src="http://www.google-analytics.com/urchin.js" type="text/javascript">
+    </script>
+
+    <script type="text/javascript">
+_uacct = "UA-56332-2";
+urchinTracker();
+    </script>
+  </body>
+</html>
+    
