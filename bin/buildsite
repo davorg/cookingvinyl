@@ -6,10 +6,13 @@ use 5.010;
 
 use Template;
 
-open my $cds_fh, '<', 'cds.txt' or die $!;
+open my $cds_fh, '<', 'data/cds.txt' or die $!;
 my $cds;
 
-my $tt = Template->new;
+my $tt = Template->new({
+  INCLUDE_PATH => 'templates',
+  OUTPUT_PATH  => 'site',
+});
 
 my @cd_cols = qw[code year title];
 my @track_cols = qw[num title artist];
@@ -20,9 +23,10 @@ while (<$cds_fh>) {
   $cd{num} = (split ' ', $cd{code})[-1];
   push @$cds, \%cd;
 
-  next unless -f "grillcd$cd{num}.txt";
+  next unless -f "data/grillcd$cd{num}.txt";
 
-  open my $track_fh, '<', "grillcd$cd{num}.txt" or die "$!: grillcd$cd{num}.txt";
+  open my $track_fh, '<', "data/grillcd$cd{num}.txt"
+    or die "$!: grillcd$cd{num}.txt";
   while (my $track = <$track_fh>) {
     chomp $track;
     my %track;
