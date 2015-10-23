@@ -22,5 +22,5 @@ GRILL CD 021	2003	Delicatessen 5
 GRILL CD 022
 GRILL CD 023	2004	Delicatessen 6
 GRILL CD 024	2006	Delicatessen 7
-GRILL CD 025
+GRILL CD 025	2007	Delicatessen 8
 GRILL CD 026	2008	Best Of Cooking Vinyl 2008
