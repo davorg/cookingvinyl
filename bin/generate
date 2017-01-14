@@ -2,7 +2,7 @@
 
 use strict;
 use warnings;
-use 5.024;
+use 5.022;
 
 use lib 'lib';
 use Cooking::Schema;
