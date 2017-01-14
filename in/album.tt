@@ -1,0 +1,28 @@
+[% WRAPPER page.tt %]
+    <h1>[% album.title %]</h1>
+
+    <p><a href="index.html">Return to list</a></p>
+
+    <table class="table table-striped table-condensed table-hover table-bordered">
+      <tr>
+        <th>Code</th>
+        <td>[% album.cat %]</td>
+      </tr>
+      <tr>
+        <th>Released</th>
+        <td>[% album.year %]</td>
+      </tr>
+    </table>
+    <table class="table table-striped table-condensed table-hover table-bordered">
+      <tr>
+        <th>&nbsp;</th><th>Title</th><th>Artist</th>
+      </tr>
+[% FOREACH track IN album.tracks -%]
+      <tr>
+        <td>[% track.number %]</td>
+        <td><a href="/[% track.song.filename %]">[% track.song.title %]</a></td>
+        <td><a href="/[% track.artist.filename %]">[% track.artist.name %]</a></td>
+      </tr>
+[% END -%]
+    </table>
+[% END %]

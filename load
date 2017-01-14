@@ -1,0 +1,53 @@
+#!/usr/bin/perl
+
+use strict;
+use warnings;
+use 5.024;
+
+use lib 'lib';
+use Cooking::Schema;
+
+my $file = shift || 'albums.dat';
+
+open my $dat_fh, '<', $file or die "Can't open $file: $!\n";
+
+my $sch = Cooking::Schema->get_schema;
+
+foreach (qw[Track Album Artist Song]) {
+  $sch->resultset($_)->delete;
+}
+
+my $album;
+while (<$dat_fh>) {
+  chomp;
+  if (/^\d/) {
+    load_track($_, $album);
+  } else {
+    $album = load_album($_);
+  }
+}
+
+sub load_album {
+  my $album_rs = $sch->resultset('Album');
+  my @cols = qw[cat year title];
+  my %album;
+  @album{@cols} = split /\t/, $_[0];
+  say "Loading album: ", ($album{title} // $album{cat});
+  return $album_rs->create(\%album);
+}
+
+sub load_track {
+  my $artist_rs = $sch->resultset('Artist');
+  my $song_rs   = $sch->resultset('Song');
+  my @cols = qw[number artist title];
+  my %track;
+  @track{@cols} = split /\t/, $_[0];
+
+  my $artist = $artist_rs->find_or_create({ name => $track{artist}});
+  $track{artist} = $artist->id;
+  my $song   = $song_rs->find_or_create({ title => $track{title}});
+  $track{song}   = $song->id;
+  say "Adding track: ", $track{title};
+  delete $track{title};
+  $_[1]->add_to_tracks(\%track);
+}

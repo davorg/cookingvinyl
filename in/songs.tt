@@ -1,0 +1,15 @@
+[% WRAPPER page.tt %]
+    <h1>Songs</h1>
+    <p>A list of songs on compilations released by
+      <a href="http://www.cookingvinyl.com/">Cooking Vinyl</a> records.</p>
+    <table class="table table-striped table-condensed table-hover table-bordered">
+      <tr>
+        <th>Song</th>
+      </tr>
+[% FOREACH track IN tracks.sort('title') -%]
+      <tr>
+        <td><a href="[% track.filename %]">[% track.title %]</a></td>
+      </tr>
+[% END %]
+    </table>
+[% END %]
