@@ -10,8 +10,8 @@
       </tr>
 [% FOREACH track IN tracks -%]
       <tr>
-        <td><a href="[% track.artist.filename %]">[% track.artist.name %]</a></td>
-        <td><a href="[% track.album.filename %]">[% track.album.title %]</a></td>
+        <td><a href="/[% track.artist.filename %]">[% track.artist.name %]</a></td>
+        <td><a href="/[% track.album.filename %]">[% track.album.title %]</a></td>
         <td>[% track.album.cat %]</td>
       </tr>
 [% END -%]
