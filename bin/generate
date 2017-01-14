@@ -22,6 +22,9 @@ my @songs   = $sch->resultset('Song')->search(undef, {
 		order_by => 'title',
               })->all;
 
+$tt->process('index.tt', undef, 'index.html')
+  or die $tt->error;
+
 $tt->process('albums.tt', {
 	       albums => \@albums,
 	       title  => 'Cooking Vinyl Compilations',
