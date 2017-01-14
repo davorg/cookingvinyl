@@ -4,10 +4,11 @@ use strict;
 use warnings;
 use 5.024;
 
-use lib 'lib';
+use FindBin '$Bin';
+use lib "$Bin/../lib";
 use Cooking::Schema;
 
-my $file = shift || 'albums.dat';
+my $file = shift || "$Bin/../dat/albums.dat";
 
 open my $dat_fh, '<', $file or die "Can't open $file: $!\n";
 
