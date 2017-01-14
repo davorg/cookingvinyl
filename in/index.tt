@@ -1,3 +1,4 @@
+[% WRAPPER page.tt -%]
 <p>View the contents of the Cooking Vinyl compilation albums in various ways:</p>
 
 <ul>
@@ -5,3 +6,4 @@
 <li><a href="artists/">List of artists</a></li>
 <li><a href="songs/">List of songs</a></li>
 </ul>
+[% END -%]
