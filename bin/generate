@@ -48,7 +48,7 @@ $tt->process('songs.tt', {
 foreach (@albums) {
   $tt->process('album.tt', {
     album => $_,
-    tracks => [ $_->tracks ],
+    tracks => [ $_->tracks->by_title ],
     title => $_->page_title,
   }, $_->filename)
     or die $tt->error;
@@ -57,7 +57,7 @@ foreach (@albums) {
 foreach (@artists) {
   $tt->process('artist.tt', {
     artist => $_,
-    tracks => [ $_->tracks ],
+    tracks => [ $_->tracks->by_title ],
     title  => $_->page_title,
   }, $_->filename)
     or die $tt->error;
@@ -66,7 +66,7 @@ foreach (@artists) {
 foreach (@songs) {
   $tt->process('song.tt', {
     song => $_,
-    tracks => [ $_->tracks ],
+    tracks => [ $_->tracks->by_title ],
     title  => $_->page_title,
   }, $_->filename)
     or die $tt->error;
