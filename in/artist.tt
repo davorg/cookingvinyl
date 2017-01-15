@@ -8,7 +8,7 @@
       <tr>
         <th>Song</th><th>Album</th><th>Cat</th>
       </tr>
-[% FOREACH track IN tracks.sort('title') -%]
+[% FOREACH track IN tracks -%]
       <tr>
         <td><a href="/[% track.song.filename %]">[% track.song.title %]</a></td>
         <td><a href="/[% track.album.filename %]">[% track.album.title %]</a></td>
