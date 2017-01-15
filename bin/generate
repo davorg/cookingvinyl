@@ -40,8 +40,8 @@ $tt->process('artists.tt', {
   or die $tt->error;
 
 $tt->process('songs.tt', {
-  tracks => \@songs,
-  title  => 'Songs',
+  songs => \@songs,
+  title => 'Songs',
 }, 'songs/index.html')
   or die $tt->error;
 
