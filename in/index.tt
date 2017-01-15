@@ -1,4 +1,5 @@
 [% WRAPPER page.tt -%]
+<h1>Cooking Vinyl Compilations</h1>
 <p>View the contents of the Cooking Vinyl compilation albums in various ways:</p>
 
 <ul>
