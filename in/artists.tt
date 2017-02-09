@@ -2,7 +2,7 @@
     <h1>Artists</h1>
     <p>A list of artists on compilations released by
       <a href="http://www.cookingvinyl.com/">Cooking Vinyl</a> records.</p>
-    <table class="table table-striped table-condensed table-hover table-bordered">
+    <table id="datatable" class="tablesorter table table-striped table-condensed table-hover table-bordered">
       <thead>
         <tr>
           <th>Artist</th>

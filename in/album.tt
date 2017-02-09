@@ -13,7 +13,7 @@
         <td>[% album.year %]</td>
       </tr>
     </table>
-    <table class="table table-striped table-condensed table-hover table-bordered">
+    <table id="datatable" class="tablesorter table table-striped table-condensed table-hover table-bordered">
       <thead>
         <tr>
           <th>&nbsp;</th><th>Title</th><th>Artist</th>
