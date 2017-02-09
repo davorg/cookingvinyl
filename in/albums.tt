@@ -3,15 +3,19 @@
     <p>A list of compilations released by
       <a href="http://www.cookingvinyl.com/">Cooking Vinyl</a> records.</p>
     <table class="table table-striped table-condensed table-hover table-bordered">
-      <tr>
-        <th>Catalogue</th><th>Year</th><th>Title</th>
-      </tr>
+      <thead>
+        <tr>
+          <th>Catalogue</th><th>Year</th><th>Title</th>
+        </tr>
+      </thead>
+      <tbody>
 [% FOREACH album IN albums -%]
-      <tr>
-	      <td>[% IF album.title %]<a href="/[% album.filename %]">[% END %][% album.cat %][% IF album.title %]</a>[% END %]</td>
-        <td>[% album.year %]</td>
-        <td>[% album.title %]</td>
-      </tr>
+        <tr>
+          <td>[% IF album.title %]<a href="/[% album.filename %]">[% END %][% album.cat %][% IF album.title %]</a>[% END %]</td>
+          <td>[% album.year %]</td>
+          <td>[% album.title %]</td>
+        </tr>
 [% END %]
+      </tbody>
     </table>
 [% END %]

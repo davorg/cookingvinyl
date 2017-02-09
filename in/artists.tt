@@ -3,13 +3,17 @@
     <p>A list of artists on compilations released by
       <a href="http://www.cookingvinyl.com/">Cooking Vinyl</a> records.</p>
     <table class="table table-striped table-condensed table-hover table-bordered">
-      <tr>
-        <th>Artist</th>
-      </tr>
+      <thead>
+        <tr>
+          <th>Artist</th>
+        </tr>
+      </thead>
+      <tbody>
 [% FOREACH artist IN artists -%]
-      <tr>
-        <td><a href="/[% artist.filename %]">[% artist.name %]</a></td>
-      </tr>
+        <tr>
+          <td><a href="/[% artist.filename %]">[% artist.name %]</a></td>
+        </tr>
 [% END %]
+      </tbody>
     </table>
 [% END %]

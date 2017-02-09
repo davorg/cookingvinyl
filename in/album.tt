@@ -14,15 +14,19 @@
       </tr>
     </table>
     <table class="table table-striped table-condensed table-hover table-bordered">
-      <tr>
-        <th>&nbsp;</th><th>Title</th><th>Artist</th>
-      </tr>
+      <thead>
+        <tr>
+          <th>&nbsp;</th><th>Title</th><th>Artist</th>
+        </tr>
+      </thead>
+      <tbody>
 [% FOREACH track IN album.tracks -%]
-      <tr>
-        <td>[% track.number %]</td>
-        <td><a href="/[% track.song.filename %]">[% track.song.title %]</a></td>
-        <td><a href="/[% track.artist.filename %]">[% track.artist.name %]</a></td>
-      </tr>
+        <tr>
+          <td>[% track.number %]</td>
+          <td><a href="/[% track.song.filename %]">[% track.song.title %]</a></td>
+          <td><a href="/[% track.artist.filename %]">[% track.artist.name %]</a></td>
+        </tr>
 [% END -%]
+      </tbody>
     </table>
 [% END %]
