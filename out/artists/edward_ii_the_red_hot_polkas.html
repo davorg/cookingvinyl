@@ -7,6 +7,11 @@
     <link href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet">
     <title>Edward II & the Red Hot Polkas</title>
     <!-- link rel="stylesheet" href="style.css" type="text/css" / -->
+    <script type="text/javascript"
+      src="https://code.jquery.com/jquery-3.1.1.slim.min.js"
+      integrity="sha256-/SIrNqv8h6QGKDuNoLGA4iret+kyesCkHGzVUUV0shc="
+      crossorigin="anonymous"></script>
+    <script type="text/javascript" src="/js/jquery.tablesorter.min.js"></script>
   </head>
   <body>
     <div class="container">
@@ -45,31 +50,34 @@
 
     <p><a href="index.html">Return to list</a></p>
 
-    <table class="table table-striped table-condensed table-hover table-bordered">
-    <table class="table table-striped table-condensed table-hover table-bordered">
-      <tr>
-        <th>Song</th><th>Album</th><th>Cat</th>
-      </tr>
-      <tr>
-        <td><a href="/songs/bjorn_again_polka.html">Bjorn Again Polka</a></td>
-        <td><a href="/albums/grillcd010.html">Cooking Vinyl Sampler Volume 6</a></td>
-        <td>GRILL CD 010</td>
-      </tr>
-      <tr>
-        <td><a href="/songs/bjorn_again_polka.html">Bjorn Again Polka</a></td>
-        <td><a href="/albums/grillcd011.html">This is Modern Folk</a></td>
-        <td>GRILL CD 011</td>
-      </tr>
-      <tr>
-        <td><a href="/songs/just_as_the_tide_was_a_flowing.html">Just As the Tide Was A'Flowing</a></td>
-        <td><a href="/albums/grillcd003.html">Hootenanny</a></td>
-        <td>GRILL CD 003</td>
-      </tr>
-      <tr>
-        <td><a href="/songs/swedish_polka.html">Swedish Polka</a></td>
-        <td><a href="/albums/grillcd009.html">Cooking Vinyl Sampler Volume 5</a></td>
-        <td>GRILL CD 009</td>
-      </tr>
+    <table id="datatable" class="tablesorter table table-striped table-condensed table-hover table-bordered">
+      <thead>
+        <tr>
+          <th>Song</th><th>Album</th><th>Cat</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><a href="/songs/bjorn_again_polka.html">Bjorn Again Polka</a></td>
+          <td><a href="/albums/grillcd010.html">Cooking Vinyl Sampler Volume 6</a></td>
+          <td>GRILL CD 010</td>
+        </tr>
+        <tr>
+          <td><a href="/songs/bjorn_again_polka.html">Bjorn Again Polka</a></td>
+          <td><a href="/albums/grillcd011.html">This is Modern Folk</a></td>
+          <td>GRILL CD 011</td>
+        </tr>
+        <tr>
+          <td><a href="/songs/just_as_the_tide_was_a_flowing.html">Just As the Tide Was A'Flowing</a></td>
+          <td><a href="/albums/grillcd003.html">Hootenanny</a></td>
+          <td>GRILL CD 003</td>
+        </tr>
+        <tr>
+          <td><a href="/songs/swedish_polka.html">Swedish Polka</a></td>
+          <td><a href="/albums/grillcd009.html">Cooking Vinyl Sampler Volume 5</a></td>
+          <td>GRILL CD 009</td>
+        </tr>
+      </tbody>
     </table>
 
       </div>

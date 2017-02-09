@@ -7,6 +7,11 @@
     <link href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet">
     <title>Pere Ubu</title>
     <!-- link rel="stylesheet" href="style.css" type="text/css" / -->
+    <script type="text/javascript"
+      src="https://code.jquery.com/jquery-3.1.1.slim.min.js"
+      integrity="sha256-/SIrNqv8h6QGKDuNoLGA4iret+kyesCkHGzVUUV0shc="
+      crossorigin="anonymous"></script>
+    <script type="text/javascript" src="/js/jquery.tablesorter.min.js"></script>
   </head>
   <body>
     <div class="container">
@@ -45,56 +50,59 @@
 
     <p><a href="index.html">Return to list</a></p>
 
-    <table class="table table-striped table-condensed table-hover table-bordered">
-    <table class="table table-striped table-condensed table-hover table-bordered">
-      <tr>
-        <th>Song</th><th>Album</th><th>Cat</th>
-      </tr>
-      <tr>
-        <td><a href="/songs/all_the_dogs_are_barking.html">All the Dogs Are Barking</a></td>
-        <td><a href="/albums/grillcd015.html">Cooking Vinyl Sampler Volume 8</a></td>
-        <td>GRILL CD 015</td>
-      </tr>
-      <tr>
-        <td><a href="/songs/caligari_s_mirror.html">Caligari's Mirror</a></td>
-        <td><a href="/albums/grillcd009.html">Cooking Vinyl Sampler Volume 5</a></td>
-        <td>GRILL CD 009</td>
-      </tr>
-      <tr>
-        <td><a href="/songs/caligari_s_mirror.html">Caligari's Mirror</a></td>
-        <td><a href="/albums/grillcd015.html">Cooking Vinyl Sampler Volume 8</a></td>
-        <td>GRILL CD 015</td>
-      </tr>
-      <tr>
-        <td><a href="/songs/caligari_s_mirror.html">Caligari's Mirror</a></td>
-        <td><a href="/albums/grillcd016.html">Delicatessen 1</a></td>
-        <td>GRILL CD 016</td>
-      </tr>
-      <tr>
-        <td><a href="/songs/codex.html">Codex</a></td>
-        <td><a href="/albums/grillcd010.html">Cooking Vinyl Sampler Volume 6</a></td>
-        <td>GRILL CD 010</td>
-      </tr>
-      <tr>
-        <td><a href="/songs/highwaterville.html">Highwaterville</a></td>
-        <td><a href="/albums/grillcd014.html">Cooking Vinyl Sampler Volume 7</a></td>
-        <td>GRILL CD 014</td>
-      </tr>
-      <tr>
-        <td><a href="/songs/memphis.html">Memphis</a></td>
-        <td><a href="/albums/grillcd008.html">Cooking Vinyl Sampler Volume 4</a></td>
-        <td>GRILL CD 008</td>
-      </tr>
-      <tr>
-        <td><a href="/songs/my_friend_is_a_stooge_for_the_media_priests.html">My Friend is a Stooge For The Media Priests</a></td>
-        <td><a href="/albums/grillcd009.html">Cooking Vinyl Sampler Volume 5</a></td>
-        <td>GRILL CD 009</td>
-      </tr>
-      <tr>
-        <td><a href="/songs/west_side_story.html">West Side Story</a></td>
-        <td><a href="/albums/grillcd017.html">Delicatessen 2</a></td>
-        <td>GRILL CD 017</td>
-      </tr>
+    <table id="datatable" class="tablesorter table table-striped table-condensed table-hover table-bordered">
+      <thead>
+        <tr>
+          <th>Song</th><th>Album</th><th>Cat</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><a href="/songs/all_the_dogs_are_barking.html">All the Dogs Are Barking</a></td>
+          <td><a href="/albums/grillcd015.html">Cooking Vinyl Sampler Volume 8</a></td>
+          <td>GRILL CD 015</td>
+        </tr>
+        <tr>
+          <td><a href="/songs/caligari_s_mirror.html">Caligari's Mirror</a></td>
+          <td><a href="/albums/grillcd009.html">Cooking Vinyl Sampler Volume 5</a></td>
+          <td>GRILL CD 009</td>
+        </tr>
+        <tr>
+          <td><a href="/songs/caligari_s_mirror.html">Caligari's Mirror</a></td>
+          <td><a href="/albums/grillcd015.html">Cooking Vinyl Sampler Volume 8</a></td>
+          <td>GRILL CD 015</td>
+        </tr>
+        <tr>
+          <td><a href="/songs/caligari_s_mirror.html">Caligari's Mirror</a></td>
+          <td><a href="/albums/grillcd016.html">Delicatessen 1</a></td>
+          <td>GRILL CD 016</td>
+        </tr>
+        <tr>
+          <td><a href="/songs/codex.html">Codex</a></td>
+          <td><a href="/albums/grillcd010.html">Cooking Vinyl Sampler Volume 6</a></td>
+          <td>GRILL CD 010</td>
+        </tr>
+        <tr>
+          <td><a href="/songs/highwaterville.html">Highwaterville</a></td>
+          <td><a href="/albums/grillcd014.html">Cooking Vinyl Sampler Volume 7</a></td>
+          <td>GRILL CD 014</td>
+        </tr>
+        <tr>
+          <td><a href="/songs/memphis.html">Memphis</a></td>
+          <td><a href="/albums/grillcd008.html">Cooking Vinyl Sampler Volume 4</a></td>
+          <td>GRILL CD 008</td>
+        </tr>
+        <tr>
+          <td><a href="/songs/my_friend_is_a_stooge_for_the_media_priests.html">My Friend is a Stooge For The Media Priests</a></td>
+          <td><a href="/albums/grillcd009.html">Cooking Vinyl Sampler Volume 5</a></td>
+          <td>GRILL CD 009</td>
+        </tr>
+        <tr>
+          <td><a href="/songs/west_side_story.html">West Side Story</a></td>
+          <td><a href="/albums/grillcd017.html">Delicatessen 2</a></td>
+          <td>GRILL CD 017</td>
+        </tr>
+      </tbody>
     </table>
 
       </div>

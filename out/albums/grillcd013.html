@@ -7,6 +7,11 @@
     <link href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet">
     <title>GRILL CD 013: World in Motion</title>
     <!-- link rel="stylesheet" href="style.css" type="text/css" / -->
+    <script type="text/javascript"
+      src="https://code.jquery.com/jquery-3.1.1.slim.min.js"
+      integrity="sha256-/SIrNqv8h6QGKDuNoLGA4iret+kyesCkHGzVUUV0shc="
+      crossorigin="anonymous"></script>
+    <script type="text/javascript" src="/js/jquery.tablesorter.min.js"></script>
   </head>
   <body>
     <div class="container">
@@ -55,95 +60,99 @@
         <td>1998</td>
       </tr>
     </table>
-    <table class="table table-striped table-condensed table-hover table-bordered">
-      <tr>
-        <th>&nbsp;</th><th>Title</th><th>Artist</th>
-      </tr>
-      <tr>
-        <td>1</td>
-        <td><a href="/songs/radio_africa.html">Radio Africa</a></td>
-        <td><a href="/artists/bhundu_boys.html">Bhundu Boys</a></td>
-      </tr>
-      <tr>
-        <td>2</td>
-        <td><a href="/songs/kachembere.html">Kachembere</a></td>
-        <td><a href="/artists/bhundu_boys.html">Bhundu Boys</a></td>
-      </tr>
-      <tr>
-        <td>3</td>
-        <td><a href="/songs/real_sounds.html">Real Sounds</a></td>
-        <td><a href="/artists/wende_zako.html">Wende Zako</a></td>
-      </tr>
-      <tr>
-        <td>4</td>
-        <td><a href="/songs/rudo_chete.html">Rudo Chete</a></td>
-        <td><a href="/artists/four_brothers.html">Four Brothers</a></td>
-      </tr>
-      <tr>
-        <td>5</td>
-        <td><a href="/songs/kana_vatsvene_vopinda.html">Kana Vatsvene Vopinda</a></td>
-        <td><a href="/artists/mechanic_manureke.html">Mechanic Manureke</a></td>
-      </tr>
-      <tr>
-        <td>6</td>
-        <td><a href="/songs/cain_na_abel.html">Cain Na Abel</a></td>
-        <td><a href="/artists/mechanic_manureke.html">Mechanic Manureke</a></td>
-      </tr>
-      <tr>
-        <td>7</td>
-        <td><a href="/songs/out_of_africa.html">Out of Africa</a></td>
-        <td><a href="/artists/biggie_tembo.html">Biggie Tembo</a></td>
-      </tr>
-      <tr>
-        <td>8</td>
-        <td><a href="/songs/banana.html">Banana</a></td>
-        <td><a href="/artists/jolly_boys.html">Jolly Boys</a></td>
-      </tr>
-      <tr>
-        <td>9</td>
-        <td><a href="/songs/mother_and_wife.html">Mother and Wife</a></td>
-        <td><a href="/artists/jolly_boys.html">Jolly Boys</a></td>
-      </tr>
-      <tr>
-        <td>10</td>
-        <td><a href="/songs/my_lovely_elizabeth.html">My Lovely Elizabeth</a></td>
-        <td><a href="/artists/s_e_rogie.html">S.E Rogie</a></td>
-      </tr>
-      <tr>
-        <td>11</td>
-        <td><a href="/songs/i_wish_i_was_a_cowboy.html">I Wish I Was a Cowboy</a></td>
-        <td><a href="/artists/s_e_rogie.html">S.E Rogie</a></td>
-      </tr>
-      <tr>
-        <td>12</td>
-        <td><a href="/songs/ganado_feroz.html">Ganado Feroz</a></td>
-        <td><a href="/artists/incantation.html">Incantation</a></td>
-      </tr>
-      <tr>
-        <td>13</td>
-        <td><a href="/songs/ojos_azules.html">Ojos Azules</a></td>
-        <td><a href="/artists/incantation.html">Incantation</a></td>
-      </tr>
-      <tr>
-        <td>14</td>
-        <td><a href="/songs/breaths.html">Breaths</a></td>
-        <td><a href="/artists/sweet_honey_in_the_rock.html">Sweet Honey in the Rock</a></td>
-      </tr>
-      <tr>
-        <td>15</td>
-        <td><a href="/songs/waters_of_babylon.html">Waters of Babylon</a></td>
-        <td><a href="/artists/sweet_honey_in_the_rock.html">Sweet Honey in the Rock</a></td>
-      </tr>
-      <tr>
-        <td>16</td>
-        <td><a href="/songs/polityka.html">Polityka</a></td>
-        <td><a href="/artists/the_ukrainians.html">The Ukrainians</a></td>
-      </tr>
-      <tr>
-        <td>17</td>
-        <td><a href="/songs/koroleva_ne_polerma.html">Koroleva Ne Polerma</a></td>
-        <td><a href="/artists/the_ukrainians.html">The Ukrainians</a></td>
-      </tr>
+    <table id="datatable" class="tablesorter table table-striped table-condensed table-hover table-bordered">
+      <thead>
+        <tr>
+          <th>&nbsp;</th><th>Title</th><th>Artist</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1</td>
+          <td><a href="/songs/radio_africa.html">Radio Africa</a></td>
+          <td><a href="/artists/bhundu_boys.html">Bhundu Boys</a></td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td><a href="/songs/kachembere.html">Kachembere</a></td>
+          <td><a href="/artists/bhundu_boys.html">Bhundu Boys</a></td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td><a href="/songs/real_sounds.html">Real Sounds</a></td>
+          <td><a href="/artists/wende_zako.html">Wende Zako</a></td>
+        </tr>
+        <tr>
+          <td>4</td>
+          <td><a href="/songs/rudo_chete.html">Rudo Chete</a></td>
+          <td><a href="/artists/four_brothers.html">Four Brothers</a></td>
+        </tr>
+        <tr>
+          <td>5</td>
+          <td><a href="/songs/kana_vatsvene_vopinda.html">Kana Vatsvene Vopinda</a></td>
+          <td><a href="/artists/mechanic_manureke.html">Mechanic Manureke</a></td>
+        </tr>
+        <tr>
+          <td>6</td>
+          <td><a href="/songs/cain_na_abel.html">Cain Na Abel</a></td>
+          <td><a href="/artists/mechanic_manureke.html">Mechanic Manureke</a></td>
+        </tr>
+        <tr>
+          <td>7</td>
+          <td><a href="/songs/out_of_africa.html">Out of Africa</a></td>
+          <td><a href="/artists/biggie_tembo.html">Biggie Tembo</a></td>
+        </tr>
+        <tr>
+          <td>8</td>
+          <td><a href="/songs/banana.html">Banana</a></td>
+          <td><a href="/artists/jolly_boys.html">Jolly Boys</a></td>
+        </tr>
+        <tr>
+          <td>9</td>
+          <td><a href="/songs/mother_and_wife.html">Mother and Wife</a></td>
+          <td><a href="/artists/jolly_boys.html">Jolly Boys</a></td>
+        </tr>
+        <tr>
+          <td>10</td>
+          <td><a href="/songs/my_lovely_elizabeth.html">My Lovely Elizabeth</a></td>
+          <td><a href="/artists/s_e_rogie.html">S.E Rogie</a></td>
+        </tr>
+        <tr>
+          <td>11</td>
+          <td><a href="/songs/i_wish_i_was_a_cowboy.html">I Wish I Was a Cowboy</a></td>
+          <td><a href="/artists/s_e_rogie.html">S.E Rogie</a></td>
+        </tr>
+        <tr>
+          <td>12</td>
+          <td><a href="/songs/ganado_feroz.html">Ganado Feroz</a></td>
+          <td><a href="/artists/incantation.html">Incantation</a></td>
+        </tr>
+        <tr>
+          <td>13</td>
+          <td><a href="/songs/ojos_azules.html">Ojos Azules</a></td>
+          <td><a href="/artists/incantation.html">Incantation</a></td>
+        </tr>
+        <tr>
+          <td>14</td>
+          <td><a href="/songs/breaths.html">Breaths</a></td>
+          <td><a href="/artists/sweet_honey_in_the_rock.html">Sweet Honey in the Rock</a></td>
+        </tr>
+        <tr>
+          <td>15</td>
+          <td><a href="/songs/waters_of_babylon.html">Waters of Babylon</a></td>
+          <td><a href="/artists/sweet_honey_in_the_rock.html">Sweet Honey in the Rock</a></td>
+        </tr>
+        <tr>
+          <td>16</td>
+          <td><a href="/songs/polityka.html">Polityka</a></td>
+          <td><a href="/artists/the_ukrainians.html">The Ukrainians</a></td>
+        </tr>
+        <tr>
+          <td>17</td>
+          <td><a href="/songs/koroleva_ne_polerma.html">Koroleva Ne Polerma</a></td>
+          <td><a href="/artists/the_ukrainians.html">The Ukrainians</a></td>
+        </tr>
+      </tbody>
     </table>
 
       </div>

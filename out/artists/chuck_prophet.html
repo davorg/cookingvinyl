@@ -7,6 +7,11 @@
     <link href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet">
     <title>Chuck Prophet</title>
     <!-- link rel="stylesheet" href="style.css" type="text/css" / -->
+    <script type="text/javascript"
+      src="https://code.jquery.com/jquery-3.1.1.slim.min.js"
+      integrity="sha256-/SIrNqv8h6QGKDuNoLGA4iret+kyesCkHGzVUUV0shc="
+      crossorigin="anonymous"></script>
+    <script type="text/javascript" src="/js/jquery.tablesorter.min.js"></script>
   </head>
   <body>
     <div class="container">
@@ -45,41 +50,44 @@
 
     <p><a href="index.html">Return to list</a></p>
 
-    <table class="table table-striped table-condensed table-hover table-bordered">
-    <table class="table table-striped table-condensed table-hover table-bordered">
-      <tr>
-        <th>Song</th><th>Album</th><th>Cat</th>
-      </tr>
-      <tr>
-        <td><a href="/songs/apology.html">Apology</a></td>
-        <td><a href="/albums/grillcd020.html">Songs in the Key of Cooking Vinyl</a></td>
-        <td>GRILL CD 020</td>
-      </tr>
-      <tr>
-        <td><a href="/songs/homemade_blood.html">Homemade Blood</a></td>
-        <td><a href="/albums/grillcd010.html">Cooking Vinyl Sampler Volume 6</a></td>
-        <td>GRILL CD 010</td>
-      </tr>
-      <tr>
-        <td><a href="/songs/new_year_s_day.html">New Year's Day</a></td>
-        <td><a href="/albums/grillcd011.html">This is Modern Folk</a></td>
-        <td>GRILL CD 011</td>
-      </tr>
-      <tr>
-        <td><a href="/songs/rise.html">Rise</a></td>
-        <td><a href="/albums/grillcd017.html">Delicatessen 2</a></td>
-        <td>GRILL CD 017</td>
-      </tr>
-      <tr>
-        <td><a href="/songs/scarecrow.html">Scarecrow</a></td>
-        <td><a href="/albums/grillcd015.html">Cooking Vinyl Sampler Volume 8</a></td>
-        <td>GRILL CD 015</td>
-      </tr>
-      <tr>
-        <td><a href="/songs/scarecrow.html">Scarecrow</a></td>
-        <td><a href="/albums/grillcd016.html">Delicatessen 1</a></td>
-        <td>GRILL CD 016</td>
-      </tr>
+    <table id="datatable" class="tablesorter table table-striped table-condensed table-hover table-bordered">
+      <thead>
+        <tr>
+          <th>Song</th><th>Album</th><th>Cat</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><a href="/songs/apology.html">Apology</a></td>
+          <td><a href="/albums/grillcd020.html">Songs in the Key of Cooking Vinyl</a></td>
+          <td>GRILL CD 020</td>
+        </tr>
+        <tr>
+          <td><a href="/songs/homemade_blood.html">Homemade Blood</a></td>
+          <td><a href="/albums/grillcd010.html">Cooking Vinyl Sampler Volume 6</a></td>
+          <td>GRILL CD 010</td>
+        </tr>
+        <tr>
+          <td><a href="/songs/new_year_s_day.html">New Year's Day</a></td>
+          <td><a href="/albums/grillcd011.html">This is Modern Folk</a></td>
+          <td>GRILL CD 011</td>
+        </tr>
+        <tr>
+          <td><a href="/songs/rise.html">Rise</a></td>
+          <td><a href="/albums/grillcd017.html">Delicatessen 2</a></td>
+          <td>GRILL CD 017</td>
+        </tr>
+        <tr>
+          <td><a href="/songs/scarecrow.html">Scarecrow</a></td>
+          <td><a href="/albums/grillcd015.html">Cooking Vinyl Sampler Volume 8</a></td>
+          <td>GRILL CD 015</td>
+        </tr>
+        <tr>
+          <td><a href="/songs/scarecrow.html">Scarecrow</a></td>
+          <td><a href="/albums/grillcd016.html">Delicatessen 1</a></td>
+          <td>GRILL CD 016</td>
+        </tr>
+      </tbody>
     </table>
 
       </div>

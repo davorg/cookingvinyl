@@ -7,6 +7,11 @@
     <link href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet">
     <title>GRILL CD 018: Delicatessen 3</title>
     <!-- link rel="stylesheet" href="style.css" type="text/css" / -->
+    <script type="text/javascript"
+      src="https://code.jquery.com/jquery-3.1.1.slim.min.js"
+      integrity="sha256-/SIrNqv8h6QGKDuNoLGA4iret+kyesCkHGzVUUV0shc="
+      crossorigin="anonymous"></script>
+    <script type="text/javascript" src="/js/jquery.tablesorter.min.js"></script>
   </head>
   <body>
     <div class="container">
@@ -55,95 +60,99 @@
         <td>2001</td>
       </tr>
     </table>
-    <table class="table table-striped table-condensed table-hover table-bordered">
-      <tr>
-        <th>&nbsp;</th><th>Title</th><th>Artist</th>
-      </tr>
-      <tr>
-        <td>1</td>
-        <td><a href="/songs/tonight.html">Tonight</a></td>
-        <td><a href="/artists/violent_femmes.html">Violent Femmes</a></td>
-      </tr>
-      <tr>
-        <td>2</td>
-        <td><a href="/songs/i_love_the_unknown.html">I Love The Unknown</a></td>
-        <td><a href="/artists/clem_snide.html">Clem Snide</a></td>
-      </tr>
-      <tr>
-        <td>3</td>
-        <td><a href="/songs/come_pick_me_up.html">Come Pick Me Up</a></td>
-        <td><a href="/artists/ryan_adams.html">Ryan Adams</a></td>
-      </tr>
-      <tr>
-        <td>4</td>
-        <td><a href="/songs/robert_onion.html">Robert Onion</a></td>
-        <td><a href="/artists/frank_black_the_catholics.html">Frank Black & the Catholics</a></td>
-      </tr>
-      <tr>
-        <td>5</td>
-        <td><a href="/songs/a_best_man_put_my_girlfriend_on_fire_.html">A Best Man (Put My Girlfriend On Fire)</a></td>
-        <td><a href="/artists/am_fm.html">AM/FM</a></td>
-      </tr>
-      <tr>
-        <td>6</td>
-        <td><a href="/songs/make_me_shine_monitor_mix_.html">Make Me Shine (Monitor Mix)</a></td>
-        <td><a href="/artists/echo_and_the_bunnymen.html">Echo and the Bunnymen</a></td>
-      </tr>
-      <tr>
-        <td>7</td>
-        <td><a href="/songs/see_it_coming_monitor_mix_.html">See It Coming (Monitor Mix)</a></td>
-        <td><a href="/artists/the_church.html">The Church</a></td>
-      </tr>
-      <tr>
-        <td>8</td>
-        <td><a href="/songs/gotta_quit_that_crack.html">Gotta Quit That Crack</a></td>
-        <td><a href="/artists/the_church.html">The Church</a></td>
-      </tr>
-      <tr>
-        <td>9</td>
-        <td><a href="/songs/swing_lite_alight.html">Swing Lite Alight</a></td>
-        <td><a href="/artists/luke_vibert_bj_cole.html">Luke Vibert & BJ Cole</a></td>
-      </tr>
-      <tr>
-        <td>10</td>
-        <td><a href="/songs/mayday_radio_edit_.html">Mayday (Radio Edit)</a></td>
-        <td><a href="/artists/king_cobb_steelie.html">King Cobb Steelie</a></td>
-      </tr>
-      <tr>
-        <td>11</td>
-        <td><a href="/songs/luke_one.html">Luke One</a></td>
-        <td><a href="/artists/ac_acoustics.html">AC Acoustics</a></td>
-      </tr>
-      <tr>
-        <td>12</td>
-        <td><a href="/songs/johnson_city.html">Johnson City</a></td>
-        <td><a href="/artists/saint_low.html">Saint Low</a></td>
-      </tr>
-      <tr>
-        <td>13</td>
-        <td><a href="/songs/the_ghost_of_limehouse_cut.html">The Ghost Of Limehouse Cut</a></td>
-        <td><a href="/artists/cathal_coughlan.html">Cathal Coughlan</a></td>
-      </tr>
-      <tr>
-        <td>14</td>
-        <td><a href="/songs/single_father.html">Single Father</a></td>
-        <td><a href="/artists/jackie_leven.html">Jackie Leven</a></td>
-      </tr>
-      <tr>
-        <td>15</td>
-        <td><a href="/songs/sulk.html">Sulk</a></td>
-        <td><a href="/artists/billy_bragg.html">Billy Bragg</a></td>
-      </tr>
-      <tr>
-        <td>16</td>
-        <td><a href="/songs/rising_in_love.html">Rising in Love</a></td>
-        <td><a href="/artists/michael_nesmith.html">Michael Nesmith</a></td>
-      </tr>
-      <tr>
-        <td>17</td>
-        <td><a href="/songs/drugs_are_wasted_on_the_young.html">Drugs Are Wasted On the Young</a></td>
-        <td><a href="/artists/dave_graney_show.html">Dave Graney Show</a></td>
-      </tr>
+    <table id="datatable" class="tablesorter table table-striped table-condensed table-hover table-bordered">
+      <thead>
+        <tr>
+          <th>&nbsp;</th><th>Title</th><th>Artist</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1</td>
+          <td><a href="/songs/tonight.html">Tonight</a></td>
+          <td><a href="/artists/violent_femmes.html">Violent Femmes</a></td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td><a href="/songs/i_love_the_unknown.html">I Love The Unknown</a></td>
+          <td><a href="/artists/clem_snide.html">Clem Snide</a></td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td><a href="/songs/come_pick_me_up.html">Come Pick Me Up</a></td>
+          <td><a href="/artists/ryan_adams.html">Ryan Adams</a></td>
+        </tr>
+        <tr>
+          <td>4</td>
+          <td><a href="/songs/robert_onion.html">Robert Onion</a></td>
+          <td><a href="/artists/frank_black_the_catholics.html">Frank Black & the Catholics</a></td>
+        </tr>
+        <tr>
+          <td>5</td>
+          <td><a href="/songs/a_best_man_put_my_girlfriend_on_fire_.html">A Best Man (Put My Girlfriend On Fire)</a></td>
+          <td><a href="/artists/am_fm.html">AM/FM</a></td>
+        </tr>
+        <tr>
+          <td>6</td>
+          <td><a href="/songs/make_me_shine_monitor_mix_.html">Make Me Shine (Monitor Mix)</a></td>
+          <td><a href="/artists/echo_and_the_bunnymen.html">Echo and the Bunnymen</a></td>
+        </tr>
+        <tr>
+          <td>7</td>
+          <td><a href="/songs/see_it_coming_monitor_mix_.html">See It Coming (Monitor Mix)</a></td>
+          <td><a href="/artists/the_church.html">The Church</a></td>
+        </tr>
+        <tr>
+          <td>8</td>
+          <td><a href="/songs/gotta_quit_that_crack.html">Gotta Quit That Crack</a></td>
+          <td><a href="/artists/the_church.html">The Church</a></td>
+        </tr>
+        <tr>
+          <td>9</td>
+          <td><a href="/songs/swing_lite_alight.html">Swing Lite Alight</a></td>
+          <td><a href="/artists/luke_vibert_bj_cole.html">Luke Vibert & BJ Cole</a></td>
+        </tr>
+        <tr>
+          <td>10</td>
+          <td><a href="/songs/mayday_radio_edit_.html">Mayday (Radio Edit)</a></td>
+          <td><a href="/artists/king_cobb_steelie.html">King Cobb Steelie</a></td>
+        </tr>
+        <tr>
+          <td>11</td>
+          <td><a href="/songs/luke_one.html">Luke One</a></td>
+          <td><a href="/artists/ac_acoustics.html">AC Acoustics</a></td>
+        </tr>
+        <tr>
+          <td>12</td>
+          <td><a href="/songs/johnson_city.html">Johnson City</a></td>
+          <td><a href="/artists/saint_low.html">Saint Low</a></td>
+        </tr>
+        <tr>
+          <td>13</td>
+          <td><a href="/songs/the_ghost_of_limehouse_cut.html">The Ghost Of Limehouse Cut</a></td>
+          <td><a href="/artists/cathal_coughlan.html">Cathal Coughlan</a></td>
+        </tr>
+        <tr>
+          <td>14</td>
+          <td><a href="/songs/single_father.html">Single Father</a></td>
+          <td><a href="/artists/jackie_leven.html">Jackie Leven</a></td>
+        </tr>
+        <tr>
+          <td>15</td>
+          <td><a href="/songs/sulk.html">Sulk</a></td>
+          <td><a href="/artists/billy_bragg.html">Billy Bragg</a></td>
+        </tr>
+        <tr>
+          <td>16</td>
+          <td><a href="/songs/rising_in_love.html">Rising in Love</a></td>
+          <td><a href="/artists/michael_nesmith.html">Michael Nesmith</a></td>
+        </tr>
+        <tr>
+          <td>17</td>
+          <td><a href="/songs/drugs_are_wasted_on_the_young.html">Drugs Are Wasted On the Young</a></td>
+          <td><a href="/artists/dave_graney_show.html">Dave Graney Show</a></td>
+        </tr>
+      </tbody>
     </table>
 
       </div>

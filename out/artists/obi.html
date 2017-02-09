@@ -7,6 +7,11 @@
     <link href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet">
     <title>Obi</title>
     <!-- link rel="stylesheet" href="style.css" type="text/css" / -->
+    <script type="text/javascript"
+      src="https://code.jquery.com/jquery-3.1.1.slim.min.js"
+      integrity="sha256-/SIrNqv8h6QGKDuNoLGA4iret+kyesCkHGzVUUV0shc="
+      crossorigin="anonymous"></script>
+    <script type="text/javascript" src="/js/jquery.tablesorter.min.js"></script>
   </head>
   <body>
     <div class="container">
@@ -45,26 +50,29 @@
 
     <p><a href="index.html">Return to list</a></p>
 
-    <table class="table table-striped table-condensed table-hover table-bordered">
-    <table class="table table-striped table-condensed table-hover table-bordered">
-      <tr>
-        <th>Song</th><th>Album</th><th>Cat</th>
-      </tr>
-      <tr>
-        <td><a href="/songs/ever_after.html">Ever After</a></td>
-        <td><a href="/albums/grillcd019.html">Delicatessen 4</a></td>
-        <td>GRILL CD 019</td>
-      </tr>
-      <tr>
-        <td><a href="/songs/old_rodriguez_single_edit_.html">Old Rodriguez (Single Edit)</a></td>
-        <td><a href="/albums/grillcd023.html">Delicatessen 6</a></td>
-        <td>GRILL CD 023</td>
-      </tr>
-      <tr>
-        <td><a href="/songs/somewhere_nicer.html">Somewhere Nicer</a></td>
-        <td><a href="/albums/grillcd021.html">Delicatessen 5</a></td>
-        <td>GRILL CD 021</td>
-      </tr>
+    <table id="datatable" class="tablesorter table table-striped table-condensed table-hover table-bordered">
+      <thead>
+        <tr>
+          <th>Song</th><th>Album</th><th>Cat</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><a href="/songs/ever_after.html">Ever After</a></td>
+          <td><a href="/albums/grillcd019.html">Delicatessen 4</a></td>
+          <td>GRILL CD 019</td>
+        </tr>
+        <tr>
+          <td><a href="/songs/old_rodriguez_single_edit_.html">Old Rodriguez (Single Edit)</a></td>
+          <td><a href="/albums/grillcd023.html">Delicatessen 6</a></td>
+          <td>GRILL CD 023</td>
+        </tr>
+        <tr>
+          <td><a href="/songs/somewhere_nicer.html">Somewhere Nicer</a></td>
+          <td><a href="/albums/grillcd021.html">Delicatessen 5</a></td>
+          <td>GRILL CD 021</td>
+        </tr>
+      </tbody>
     </table>
 
       </div>

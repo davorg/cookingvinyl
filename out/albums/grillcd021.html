@@ -7,6 +7,11 @@
     <link href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet">
     <title>GRILL CD 021: Delicatessen 5</title>
     <!-- link rel="stylesheet" href="style.css" type="text/css" / -->
+    <script type="text/javascript"
+      src="https://code.jquery.com/jquery-3.1.1.slim.min.js"
+      integrity="sha256-/SIrNqv8h6QGKDuNoLGA4iret+kyesCkHGzVUUV0shc="
+      crossorigin="anonymous"></script>
+    <script type="text/javascript" src="/js/jquery.tablesorter.min.js"></script>
   </head>
   <body>
     <div class="container">
@@ -55,105 +60,109 @@
         <td>2003</td>
       </tr>
     </table>
-    <table class="table table-striped table-condensed table-hover table-bordered">
-      <tr>
-        <th>&nbsp;</th><th>Title</th><th>Artist</th>
-      </tr>
-      <tr>
-        <td>1</td>
-        <td><a href="/songs/love_in_veins.html">Love In Veins</a></td>
-        <td><a href="/artists/ian_mcculloch.html">Ian McCulloch</a></td>
-      </tr>
-      <tr>
-        <td>2</td>
-        <td><a href="/songs/alaska_radio_edit_.html">Alaska (Radio Edit)</a></td>
-        <td><a href="/artists/eyes_adrift.html">Eyes Adrift</a></td>
-      </tr>
-      <tr>
-        <td>3</td>
-        <td><a href="/songs/hitting_the_ground.html">Hitting The Ground</a></td>
-        <td><a href="/artists/gordon_gano.html">Gordon Gano</a></td>
-      </tr>
-      <tr>
-        <td>4</td>
-        <td><a href="/songs/to_be_young_acoustic_version_.html">To Be Young (Acoustic Version)</a></td>
-        <td><a href="/artists/ryan_adams.html">Ryan Adams</a></td>
-      </tr>
-      <tr>
-        <td>5</td>
-        <td><a href="/songs/seen_it_the_feelmore.html">Seen It @ The Feelmore</a></td>
-        <td><a href="/artists/the_church.html">The Church</a></td>
-      </tr>
-      <tr>
-        <td>6</td>
-        <td><a href="/songs/somewhere_nicer.html">Somewhere Nicer</a></td>
-        <td><a href="/artists/obi.html">Obi</a></td>
-      </tr>
-      <tr>
-        <td>7</td>
-        <td><a href="/songs/velvety.html">Velvety</a></td>
-        <td><a href="/artists/frank_black_the_catholics.html">Frank Black & the Catholics</a></td>
-      </tr>
-      <tr>
-        <td>8</td>
-        <td><a href="/songs/see_the_stars_radio_edit_.html">See The Stars (Radio Edit)</a></td>
-        <td><a href="/artists/mary_lorson_billy_cote.html">Mary Lorson & Billy Cote</a></td>
-      </tr>
-      <tr>
-        <td>9</td>
-        <td><a href="/songs/the_night.html">The Night</a></td>
-        <td><a href="/artists/soft_cell.html">Soft Cell</a></td>
-      </tr>
-      <tr>
-        <td>10</td>
-        <td><a href="/songs/a_damn_good_disguise.html">A Damn Good Disguise</a></td>
-        <td><a href="/artists/mendoza_line.html">Mendoza Line</a></td>
-      </tr>
-      <tr>
-        <td>11</td>
-        <td><a href="/songs/take_the_skinheads_bowling.html">Take The Skinheads Bowling</a></td>
-        <td><a href="/artists/camper_van_beethoven.html">Camper Van Beethoven</a></td>
-      </tr>
-      <tr>
-        <td>12</td>
-        <td><a href="/songs/please.html">Please</a></td>
-        <td><a href="/artists/apples_in_stereo.html">Apples In Stereo</a></td>
-      </tr>
-      <tr>
-        <td>13</td>
-        <td><a href="/songs/talkin_at_kida_blues.html">Talkin' At Kida Blues</a></td>
-        <td><a href="/artists/dan_bern.html">Dan Bern</a></td>
-      </tr>
-      <tr>
-        <td>14</td>
-        <td><a href="/songs/one_door_opens.html">One Door Opens</a></td>
-        <td><a href="/artists/richard_thompson.html">Richard Thompson</a></td>
-      </tr>
-      <tr>
-        <td>15</td>
-        <td><a href="/songs/irresistible_romance_radio_edit_.html">Irresistible Romance (Radio Edit)</a></td>
-        <td><a href="/artists/jackie_leven.html">Jackie Leven</a></td>
-      </tr>
-      <tr>
-        <td>16</td>
-        <td><a href="/songs/crying_just_for_show.html">Crying Just For Show</a></td>
-        <td><a href="/artists/french_kicks.html">French Kicks</a></td>
-      </tr>
-      <tr>
-        <td>17</td>
-        <td><a href="/songs/distant_shore.html">Distant Shore</a></td>
-        <td><a href="/artists/billy_bragg_the_blokes.html">Billy Bragg & The Blokes</a></td>
-      </tr>
-      <tr>
-        <td>18</td>
-        <td><a href="/songs/goodbye_honey.html">Goodbye Honey</a></td>
-        <td><a href="/artists/ryan_adams.html">Ryan Adams</a></td>
-      </tr>
-      <tr>
-        <td>19</td>
-        <td><a href="/songs/retrieval_of_you.html">Retrieval Of You</a></td>
-        <td><a href="/artists/minus_5.html">Minus 5</a></td>
-      </tr>
+    <table id="datatable" class="tablesorter table table-striped table-condensed table-hover table-bordered">
+      <thead>
+        <tr>
+          <th>&nbsp;</th><th>Title</th><th>Artist</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1</td>
+          <td><a href="/songs/love_in_veins.html">Love In Veins</a></td>
+          <td><a href="/artists/ian_mcculloch.html">Ian McCulloch</a></td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td><a href="/songs/alaska_radio_edit_.html">Alaska (Radio Edit)</a></td>
+          <td><a href="/artists/eyes_adrift.html">Eyes Adrift</a></td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td><a href="/songs/hitting_the_ground.html">Hitting The Ground</a></td>
+          <td><a href="/artists/gordon_gano.html">Gordon Gano</a></td>
+        </tr>
+        <tr>
+          <td>4</td>
+          <td><a href="/songs/to_be_young_acoustic_version_.html">To Be Young (Acoustic Version)</a></td>
+          <td><a href="/artists/ryan_adams.html">Ryan Adams</a></td>
+        </tr>
+        <tr>
+          <td>5</td>
+          <td><a href="/songs/seen_it_the_feelmore.html">Seen It @ The Feelmore</a></td>
+          <td><a href="/artists/the_church.html">The Church</a></td>
+        </tr>
+        <tr>
+          <td>6</td>
+          <td><a href="/songs/somewhere_nicer.html">Somewhere Nicer</a></td>
+          <td><a href="/artists/obi.html">Obi</a></td>
+        </tr>
+        <tr>
+          <td>7</td>
+          <td><a href="/songs/velvety.html">Velvety</a></td>
+          <td><a href="/artists/frank_black_the_catholics.html">Frank Black & the Catholics</a></td>
+        </tr>
+        <tr>
+          <td>8</td>
+          <td><a href="/songs/see_the_stars_radio_edit_.html">See The Stars (Radio Edit)</a></td>
+          <td><a href="/artists/mary_lorson_billy_cote.html">Mary Lorson & Billy Cote</a></td>
+        </tr>
+        <tr>
+          <td>9</td>
+          <td><a href="/songs/the_night.html">The Night</a></td>
+          <td><a href="/artists/soft_cell.html">Soft Cell</a></td>
+        </tr>
+        <tr>
+          <td>10</td>
+          <td><a href="/songs/a_damn_good_disguise.html">A Damn Good Disguise</a></td>
+          <td><a href="/artists/mendoza_line.html">Mendoza Line</a></td>
+        </tr>
+        <tr>
+          <td>11</td>
+          <td><a href="/songs/take_the_skinheads_bowling.html">Take The Skinheads Bowling</a></td>
+          <td><a href="/artists/camper_van_beethoven.html">Camper Van Beethoven</a></td>
+        </tr>
+        <tr>
+          <td>12</td>
+          <td><a href="/songs/please.html">Please</a></td>
+          <td><a href="/artists/apples_in_stereo.html">Apples In Stereo</a></td>
+        </tr>
+        <tr>
+          <td>13</td>
+          <td><a href="/songs/talkin_at_kida_blues.html">Talkin' At Kida Blues</a></td>
+          <td><a href="/artists/dan_bern.html">Dan Bern</a></td>
+        </tr>
+        <tr>
+          <td>14</td>
+          <td><a href="/songs/one_door_opens.html">One Door Opens</a></td>
+          <td><a href="/artists/richard_thompson.html">Richard Thompson</a></td>
+        </tr>
+        <tr>
+          <td>15</td>
+          <td><a href="/songs/irresistible_romance_radio_edit_.html">Irresistible Romance (Radio Edit)</a></td>
+          <td><a href="/artists/jackie_leven.html">Jackie Leven</a></td>
+        </tr>
+        <tr>
+          <td>16</td>
+          <td><a href="/songs/crying_just_for_show.html">Crying Just For Show</a></td>
+          <td><a href="/artists/french_kicks.html">French Kicks</a></td>
+        </tr>
+        <tr>
+          <td>17</td>
+          <td><a href="/songs/distant_shore.html">Distant Shore</a></td>
+          <td><a href="/artists/billy_bragg_the_blokes.html">Billy Bragg & The Blokes</a></td>
+        </tr>
+        <tr>
+          <td>18</td>
+          <td><a href="/songs/goodbye_honey.html">Goodbye Honey</a></td>
+          <td><a href="/artists/ryan_adams.html">Ryan Adams</a></td>
+        </tr>
+        <tr>
+          <td>19</td>
+          <td><a href="/songs/retrieval_of_you.html">Retrieval Of You</a></td>
+          <td><a href="/artists/minus_5.html">Minus 5</a></td>
+        </tr>
+      </tbody>
     </table>
 
       </div>

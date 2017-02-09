@@ -7,6 +7,11 @@
     <link href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet">
     <title>GRILL CD 005: Cooking Vinyl Sampler Volume 2</title>
     <!-- link rel="stylesheet" href="style.css" type="text/css" / -->
+    <script type="text/javascript"
+      src="https://code.jquery.com/jquery-3.1.1.slim.min.js"
+      integrity="sha256-/SIrNqv8h6QGKDuNoLGA4iret+kyesCkHGzVUUV0shc="
+      crossorigin="anonymous"></script>
+    <script type="text/javascript" src="/js/jquery.tablesorter.min.js"></script>
   </head>
   <body>
     <div class="container">
@@ -55,100 +60,104 @@
         <td>1993</td>
       </tr>
     </table>
-    <table class="table table-striped table-condensed table-hover table-bordered">
-      <tr>
-        <th>&nbsp;</th><th>Title</th><th>Artist</th>
-      </tr>
-      <tr>
-        <td>1</td>
-        <td><a href="/songs/the_road_to_santiago.html">The Road to Santiago</a></td>
-        <td><a href="/artists/oysterband.html">Oysterband</a></td>
-      </tr>
-      <tr>
-        <td>2</td>
-        <td><a href="/songs/venus_in_furs.html">Venus in Furs</a></td>
-        <td><a href="/artists/the_ukrainians.html">The Ukrainians</a></td>
-      </tr>
-      <tr>
-        <td>3</td>
-        <td><a href="/songs/call_mother_a_lonely_field_malt_mix_.html">Call Mother a Lonely Field (Malt Mix)</a></td>
-        <td><a href="/artists/jackie_leven.html">Jackie Leven</a></td>
-      </tr>
-      <tr>
-        <td>4</td>
-        <td><a href="/songs/love_wore_a_halo.html">Love Wore a Halo</a></td>
-        <td><a href="/artists/honky_tonk_cowboys_rebecca_price.html">Honky Tonk Cowboys & Rebecca Price</a></td>
-      </tr>
-      <tr>
-        <td>5</td>
-        <td><a href="/songs/pombi.html">Pombi</a></td>
-        <td><a href="/artists/bhundu_boys.html">Bhundu Boys</a></td>
-      </tr>
-      <tr>
-        <td>6</td>
-        <td><a href="/songs/that_old_feeling.html">That Old Feeling</a></td>
-        <td><a href="/artists/alex_chilton_medium_cool.html">Alex Chilton & Medium Cool</a></td>
-      </tr>
-      <tr>
-        <td>7</td>
-        <td><a href="/songs/illusions.html">Illusions</a></td>
-        <td><a href="/artists/june_tabor.html">June Tabor</a></td>
-      </tr>
-      <tr>
-        <td>8</td>
-        <td><a href="/songs/old_ronny.html">Old Ronny</a></td>
-        <td><a href="/artists/weddings_parties_anything.html">Weddings Parties Anything</a></td>
-      </tr>
-      <tr>
-        <td>9</td>
-        <td><a href="/songs/gather_your_things_and_go.html">Gather Your Things and Go</a></td>
-        <td><a href="/artists/tv_smith.html">TV Smith</a></td>
-      </tr>
-      <tr>
-        <td>10</td>
-        <td><a href="/songs/portobello_terrace.html">Portobello Terrace</a></td>
-        <td><a href="/artists/tom_robinson.html">Tom Robinson</a></td>
-      </tr>
-      <tr>
-        <td>11</td>
-        <td><a href="/songs/caledonia_rain_piano_version_.html">Caledonia Rain (Piano Version)</a></td>
-        <td><a href="/artists/rev_hammer.html">Rev Hammer</a></td>
-      </tr>
-      <tr>
-        <td>12</td>
-        <td><a href="/songs/all_tomorrow_s_parties.html">All Tomorrow's Parties</a></td>
-        <td><a href="/artists/june_tabor_oysterband.html">June Tabor & Oysterband</a></td>
-      </tr>
-      <tr>
-        <td>13</td>
-        <td><a href="/songs/ballad_of_accounting.html">Ballad of Accounting</a></td>
-        <td><a href="/artists/ewan_maccoll.html">Ewan MacColl</a></td>
-      </tr>
-      <tr>
-        <td>14</td>
-        <td><a href="/songs/fogtown.html">Fogtown</a></td>
-        <td><a href="/artists/michelle_shocked.html">Michelle Shocked</a></td>
-      </tr>
-      <tr>
-        <td>15</td>
-        <td><a href="/songs/silver_wheels.html">Silver Wheels</a></td>
-        <td><a href="/artists/bruce_cockburn.html">Bruce Cockburn</a></td>
-      </tr>
-      <tr>
-        <td>16</td>
-        <td><a href="/songs/run_out_of_loving.html">Run Out Of Loving</a></td>
-        <td><a href="/artists/barely_works.html">Barely Works</a></td>
-      </tr>
-      <tr>
-        <td>17</td>
-        <td><a href="/songs/back_to_donegal.html">Back To Donegal</a></td>
-        <td><a href="/artists/rory_mcleod.html">Rory McLeod</a></td>
-      </tr>
-      <tr>
-        <td>18</td>
-        <td><a href="/songs/kullakita.html">Kullakita</a></td>
-        <td><a href="/artists/awatinas.html">Awatinas</a></td>
-      </tr>
+    <table id="datatable" class="tablesorter table table-striped table-condensed table-hover table-bordered">
+      <thead>
+        <tr>
+          <th>&nbsp;</th><th>Title</th><th>Artist</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1</td>
+          <td><a href="/songs/the_road_to_santiago.html">The Road to Santiago</a></td>
+          <td><a href="/artists/oysterband.html">Oysterband</a></td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td><a href="/songs/venus_in_furs.html">Venus in Furs</a></td>
+          <td><a href="/artists/the_ukrainians.html">The Ukrainians</a></td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td><a href="/songs/call_mother_a_lonely_field_malt_mix_.html">Call Mother a Lonely Field (Malt Mix)</a></td>
+          <td><a href="/artists/jackie_leven.html">Jackie Leven</a></td>
+        </tr>
+        <tr>
+          <td>4</td>
+          <td><a href="/songs/love_wore_a_halo.html">Love Wore a Halo</a></td>
+          <td><a href="/artists/honky_tonk_cowboys_rebecca_price.html">Honky Tonk Cowboys & Rebecca Price</a></td>
+        </tr>
+        <tr>
+          <td>5</td>
+          <td><a href="/songs/pombi.html">Pombi</a></td>
+          <td><a href="/artists/bhundu_boys.html">Bhundu Boys</a></td>
+        </tr>
+        <tr>
+          <td>6</td>
+          <td><a href="/songs/that_old_feeling.html">That Old Feeling</a></td>
+          <td><a href="/artists/alex_chilton_medium_cool.html">Alex Chilton & Medium Cool</a></td>
+        </tr>
+        <tr>
+          <td>7</td>
+          <td><a href="/songs/illusions.html">Illusions</a></td>
+          <td><a href="/artists/june_tabor.html">June Tabor</a></td>
+        </tr>
+        <tr>
+          <td>8</td>
+          <td><a href="/songs/old_ronny.html">Old Ronny</a></td>
+          <td><a href="/artists/weddings_parties_anything.html">Weddings Parties Anything</a></td>
+        </tr>
+        <tr>
+          <td>9</td>
+          <td><a href="/songs/gather_your_things_and_go.html">Gather Your Things and Go</a></td>
+          <td><a href="/artists/tv_smith.html">TV Smith</a></td>
+        </tr>
+        <tr>
+          <td>10</td>
+          <td><a href="/songs/portobello_terrace.html">Portobello Terrace</a></td>
+          <td><a href="/artists/tom_robinson.html">Tom Robinson</a></td>
+        </tr>
+        <tr>
+          <td>11</td>
+          <td><a href="/songs/caledonia_rain_piano_version_.html">Caledonia Rain (Piano Version)</a></td>
+          <td><a href="/artists/rev_hammer.html">Rev Hammer</a></td>
+        </tr>
+        <tr>
+          <td>12</td>
+          <td><a href="/songs/all_tomorrow_s_parties.html">All Tomorrow's Parties</a></td>
+          <td><a href="/artists/june_tabor_oysterband.html">June Tabor & Oysterband</a></td>
+        </tr>
+        <tr>
+          <td>13</td>
+          <td><a href="/songs/ballad_of_accounting.html">Ballad of Accounting</a></td>
+          <td><a href="/artists/ewan_maccoll.html">Ewan MacColl</a></td>
+        </tr>
+        <tr>
+          <td>14</td>
+          <td><a href="/songs/fogtown.html">Fogtown</a></td>
+          <td><a href="/artists/michelle_shocked.html">Michelle Shocked</a></td>
+        </tr>
+        <tr>
+          <td>15</td>
+          <td><a href="/songs/silver_wheels.html">Silver Wheels</a></td>
+          <td><a href="/artists/bruce_cockburn.html">Bruce Cockburn</a></td>
+        </tr>
+        <tr>
+          <td>16</td>
+          <td><a href="/songs/run_out_of_loving.html">Run Out Of Loving</a></td>
+          <td><a href="/artists/barely_works.html">Barely Works</a></td>
+        </tr>
+        <tr>
+          <td>17</td>
+          <td><a href="/songs/back_to_donegal.html">Back To Donegal</a></td>
+          <td><a href="/artists/rory_mcleod.html">Rory McLeod</a></td>
+        </tr>
+        <tr>
+          <td>18</td>
+          <td><a href="/songs/kullakita.html">Kullakita</a></td>
+          <td><a href="/artists/awatinas.html">Awatinas</a></td>
+        </tr>
+      </tbody>
     </table>
 
       </div>
