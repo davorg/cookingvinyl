@@ -11,7 +11,7 @@ use Template;
 my $sch = Cooking::Schema->get_schema;
 my $tt = Template->new({
   INCLUDE_PATH => [ qw(in tt_lib) ],
-  OUTPUT_PATH  => 'out',
+  OUTPUT_PATH  => 'docs',
 });
 
 my @albums  = $sch->resultset('Album')->all;
