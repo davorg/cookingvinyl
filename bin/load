@@ -21,10 +21,10 @@ foreach (qw[Track Album Artist Song]) {
 my $album;
 while (<$dat_fh>) {
   chomp;
-  if (/^\d/) {
-    load_track($_, $album);
-  } else {
+  if (/^GRILL/) {
     $album = load_album($_);
+  } else {
+    load_track($_, $album);
   }
 }
 
