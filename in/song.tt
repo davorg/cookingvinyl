@@ -3,7 +3,7 @@
 
     <p><a href="index.html">Return to list</a></p>
 
-    <table id="datatable" class="tablesorter table table-striped table-condensed table-hover table-bordered">
+    <table id="datatable" class="tablesorter table table-striped table-sm table-hover table-bordered">
       <thead>
         <tr>
           <th>Artist</th><th>Album</th><th>Cat</th>
