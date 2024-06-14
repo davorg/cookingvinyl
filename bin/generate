@@ -8,6 +8,8 @@ use lib 'lib';
 use Cooking::Schema;
 use Template;
 
+my $uri = 'https://cookingvinyl.dave.org.uk';
+
 my $sch = Cooking::Schema->get_schema;
 my $tt = Template->new({
   INCLUDE_PATH => [ qw(in tt_lib) ],
@@ -23,25 +25,30 @@ my @songs   = $sch->resultset('Song')->search(undef, {
 })->all;
 
 for (qw[index about]) {
-  $tt->process("$_.tt", undef, "$_.html")
+  my $vars = { canonical => "$uri/" };
+  $vars->{canonical} .= 'about/' if $_ eq 'about';
+  $tt->process("$_.tt", $vars, "$_.html")
   or die $tt->error;
 }
 
 $tt->process('albums.tt', {
   albums => \@albums,
   title  => 'Albums',
+  canonical => "$uri/albums/",
 }, 'albums/index.html')
   or die $tt->error;
 
 $tt->process('artists.tt', {
   artists => \@artists,
   title   => 'Artists',
+  canonical => "$uri/artists/",
 }, 'artists/index.html')
   or die $tt->error;
 
 $tt->process('songs.tt', {
   songs => \@songs,
   title => 'Songs',
+  canonical => "$uri/songs/",
 }, 'songs/index.html')
   or die $tt->error;
 
@@ -50,6 +57,7 @@ foreach (@albums) {
     album => $_,
     tracks => [ $_->tracks->by_title ],
     title => $_->page_title,
+    canonical => "$uri/" . $_->filename,
   }, $_->filename)
     or die $tt->error;
 }
@@ -59,6 +67,7 @@ foreach (@artists) {
     artist => $_,
     tracks => [ $_->tracks->by_title ],
     title  => $_->page_title,
+    canonical => "$uri/" . $_->filename,
   }, $_->filename)
     or die $tt->error;
 }
@@ -68,6 +77,7 @@ foreach (@songs) {
     song => $_,
     tracks => [ $_->tracks->by_title ],
     title  => $_->page_title,
+    canonical => "$uri/" . $_->filename,
   }, $_->filename)
     or die $tt->error;
 }
