@@ -24,10 +24,14 @@ my @songs   = $sch->resultset('Song')->search(undef, {
   order_by => 'title',
 })->all;
 
+my %file = (
+  index => 'index.html',
+  about => 'about/index.html',
+);
 for (qw[index about]) {
   my $vars = { canonical => "$uri/" };
   $vars->{canonical} .= 'about/' if $_ eq 'about';
-  $tt->process("$_.tt", $vars, "$_.html")
+  $tt->process("$_.tt", $vars, $file{$_})
   or die $tt->error;
 }
 
