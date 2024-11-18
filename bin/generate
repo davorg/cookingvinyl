@@ -37,21 +37,21 @@ for (qw[index about]) {
 
 $tt->process('albums.tt', {
   albums => \@albums,
-  title  => 'Albums',
+  title  => 'List of Albums',
   canonical => "$uri/albums/",
 }, 'albums/index.html')
   or die $tt->error;
 
 $tt->process('artists.tt', {
   artists => \@artists,
-  title   => 'Artists',
+  title   => 'List of Artists',
   canonical => "$uri/artists/",
 }, 'artists/index.html')
   or die $tt->error;
 
 $tt->process('songs.tt', {
   songs => \@songs,
-  title => 'Songs',
+  title => 'List of Songs',
   canonical => "$uri/songs/",
 }, 'songs/index.html')
   or die $tt->error;
