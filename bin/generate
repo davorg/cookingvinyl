@@ -38,6 +38,9 @@ my %file = (
     desc      => 'About the site and why I build it.'
   },
 );
+
+my @urls;
+
 for (keys %file) {
   my $file = $file{$_};
   my $vars = {
@@ -48,6 +51,8 @@ for (keys %file) {
   };
   $tt->process("$_.tt", $vars, $file->{out})
     or die $tt->error;
+
+  push @urls, $vars->{canonical};
 }
 
 $tt->process('albums.tt', {
@@ -59,6 +64,8 @@ $tt->process('albums.tt', {
 }, 'albums/index.html')
   or die $tt->error;
 
+push @urls, "$uri/albums/";
+
 $tt->process('artists.tt', {
   artists   => \@artists,
   title     => 'List of Artists',
@@ -68,6 +75,8 @@ $tt->process('artists.tt', {
 }, 'artists/index.html')
   or die $tt->error;
 
+push @urls, "$uri/artists/";
+ 
 $tt->process('songs.tt', {
   songs     => \@songs,
   title     => 'List of Songs',
@@ -76,6 +85,8 @@ $tt->process('songs.tt', {
   type      => 'website',
 }, 'songs/index.html')
   or die $tt->error;
+
+push @urls, "$uri/songs/";
 
 foreach (@albums) {
   next unless $_->title;
@@ -88,6 +99,8 @@ foreach (@albums) {
     type      => 'music.album',
   }, $_->filename)
     or die $tt->error;
+
+  push @urls, "$uri/" . $_->filename;
 }
 
 foreach (@artists) {
@@ -100,6 +113,8 @@ foreach (@artists) {
     type      => 'music.musician',
   }, $_->filename)
     or die $tt->error;
+
+  push @urls, "$uri/" . $_->filename;
 }
 
 foreach (@songs) {
@@ -112,4 +127,26 @@ foreach (@songs) {
     type      => 'music.song',
   }, $_->filename)
     or die $tt->error;
+
+  push @urls, "$uri/" . $_->filename;
 }
+
+open my $sitemap, '>', 'docs/sitemap.xml'
+  or die "Cannot open docs/sitemap.xml: $!\n";
+
+print $sitemap <<EOSITEMAP;
+<?xml version='1.0' encoding='UTF-8'?>
+<urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd"
+  xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+EOSITEMAP
+
+  for (@urls) {
+    print $sitemap <<EOSITEMAP;
+  <url>
+    <loc>$_</loc>
+  </url>
+EOSITEMAP
+  }
+
+print $sitemap "</urlset>\n";
