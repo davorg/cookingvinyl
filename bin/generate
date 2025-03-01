@@ -25,63 +25,91 @@ my @songs   = $sch->resultset('Song')->search(undef, {
 })->all;
 
 my %file = (
-  index => 'index.html',
-  about => 'about/index.html',
+  index => {
+    out       => 'index.html',
+    title     => '',
+    canonical => '',
+    desc      => 'Information about the compilation albums released by Cooking Vinyl records.',
+  },
+  about => {
+    out       => 'about/index.html',
+    title     => 'About',
+    canonical => 'about/',
+    desc      => 'About the site and why I build it.'
+  },
 );
-for (qw[index about]) {
-  my $vars = { canonical => "$uri/" };
-  $vars->{canonical} .= 'about/' if $_ eq 'about';
-  $tt->process("$_.tt", $vars, $file{$_})
-  or die $tt->error;
+for (keys %file) {
+  my $file = $file{$_};
+  my $vars = {
+    canonical => "$uri/$file->{canonical}",
+    title     => $file->{title},
+    desc      => $file->{desc},
+    type      => 'website',
+  };
+  $tt->process("$_.tt", $vars, $file->{out})
+    or die $tt->error;
 }
 
 $tt->process('albums.tt', {
-  albums => \@albums,
-  title  => 'List of Albums',
+  albums    => \@albums,
+  title     => 'List of Albums',
   canonical => "$uri/albums/",
+  desc      => 'List of compilation albums released by Cooking Vinyl records.',
+  type      => 'website',
 }, 'albums/index.html')
   or die $tt->error;
 
 $tt->process('artists.tt', {
-  artists => \@artists,
-  title   => 'List of Artists',
+  artists   => \@artists,
+  title     => 'List of Artists',
   canonical => "$uri/artists/",
+  desc      => 'List of artists appearing on compilations released by Cooking Vinyl records.',
+  type      => 'website',
 }, 'artists/index.html')
   or die $tt->error;
 
 $tt->process('songs.tt', {
-  songs => \@songs,
-  title => 'List of Songs',
+  songs     => \@songs,
+  title     => 'List of Songs',
   canonical => "$uri/songs/",
+  desc      => 'List of songs appearing on compilations released by Cooking Vinyl records.',
+  type      => 'website',
 }, 'songs/index.html')
   or die $tt->error;
 
 foreach (@albums) {
+  next unless $_->title;
   $tt->process('album.tt', {
-    album => $_,
-    tracks => [ $_->tracks->by_title ],
-    title => $_->page_title,
+    album     => $_,
+    tracks    => [ $_->tracks->by_title ],
+    title     => $_->page_title,
     canonical => "$uri/" . $_->filename,
+    desc      => 'Album: ' . $_->title,
+    type      => 'music.album',
   }, $_->filename)
     or die $tt->error;
 }
 
 foreach (@artists) {
   $tt->process('artist.tt', {
-    artist => $_,
-    tracks => [ $_->tracks->by_title ],
-    title  => $_->page_title,
+    artist    => $_,
+    tracks    => [ $_->tracks->by_title ],
+    title     => $_->page_title,
     canonical => "$uri/" . $_->filename,
+    desc      => 'Artist: ' . $_->name,
+    type      => 'music.musician',
   }, $_->filename)
     or die $tt->error;
 }
 
 foreach (@songs) {
   $tt->process('song.tt', {
-    song => $_,
-    tracks => [ $_->tracks->by_title ],
-    title  => $_->page_title,
+    song      => $_,
+    tracks    => [ $_->tracks->by_title ],
+    title     => $_->page_title,
     canonical => "$uri/" . $_->filename,
+    desc      => 'Song: ' . $_->title,
+    type      => 'music.song',
   }, $_->filename)
     or die $tt->error;
 }
