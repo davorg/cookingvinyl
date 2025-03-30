@@ -3,10 +3,10 @@
   xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd"
   xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://cookingvinyl.dave.org.uk/about/</loc>
+    <loc>https://cookingvinyl.dave.org.uk/</loc>
   </url>
   <url>
-    <loc>https://cookingvinyl.dave.org.uk/</loc>
+    <loc>https://cookingvinyl.dave.org.uk/about/</loc>
   </url>
   <url>
     <loc>https://cookingvinyl.dave.org.uk/albums/</loc>
@@ -484,9 +484,6 @@
   </url>
   <url>
     <loc>https://cookingvinyl.dave.org.uk/artists/ryan_adams.html</loc>
-  </url>
-  <url>
-    <loc>https://cookingvinyl.dave.org.uk/artists/s_e_rogie.html</loc>
   </url>
   <url>
     <loc>https://cookingvinyl.dave.org.uk/artists/s_e_rogie.html</loc>
