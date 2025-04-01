@@ -89,12 +89,24 @@ sub page_title {
   return $self->title;
 }
 
-sub filename {
+sub url_path {
   my $self = shift;
   my $fn = lc $self->title;
   $fn =~ s/\W+/_/g;
 
-  return "songs/$fn.html";
+  return "songs/$fn/";
+}
+
+sub out_file {
+  my $self = shift;
+
+  return $self->url_path . 'index.html';
+}
+
+sub redirect_file {
+  my $self = shift;
+
+  return $self->url_path =~ s[/$][.html]r;
 }
 
 __PACKAGE__->meta->make_immutable;

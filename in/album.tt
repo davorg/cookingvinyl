@@ -23,8 +23,8 @@
 [% FOREACH track IN album.tracks -%]
         <tr>
           <td>[% track.number %]</td>
-          <td><a href="/[% track.song.filename %]">[% track.song.title %]</a></td>
-          <td><a href="/[% track.artist.filename %]">[% track.artist.name %]</a></td>
+          <td><a href="/[% track.song.url_path %]">[% track.song.title %]</a></td>
+          <td><a href="/[% track.artist.url_path %]">[% track.artist.name %]</a></td>
         </tr>
 [% END -%]
       </tbody>

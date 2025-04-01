@@ -100,13 +100,15 @@ method run {
       album     => $_,
       tracks    => [ $_->tracks->by_title ],
       title     => $_->page_title,
-      canonical => "$uri/" . $_->filename,
+      canonical => "$uri/" . $_->url_path,
       desc      => 'Album: ' . $_->title,
       type      => 'music.album',
-    }, $_->filename)
+    }, $_->out_file)
       or die $tt->error;
 
-    push @urls, "$uri/" . $_->filename;
+    push @urls, "$uri/" . $_->url_path;
+
+    $tt->process('redirect.tt', { target => '/' . $_->url_path }, $_->redirect_file);
   }
 
   foreach (@artists) {
@@ -114,13 +116,15 @@ method run {
       artist    => $_,
       tracks    => [ $_->tracks->by_title ],
       title     => $_->page_title,
-      canonical => "$uri/" . $_->filename,
+      canonical => "$uri/" . $_->url_path,
       desc      => 'Artist: ' . $_->name,
       type      => 'music.musician',
-    }, $_->filename)
+    }, $_->out_file)
       or die $tt->error;
 
-    push @urls, "$uri/" . $_->filename;
+    push @urls, "$uri/" . $_->url_path;
+
+    $tt->process('redirect.tt', { target => '/' . $_->url_path }, $_->redirect_file);
   }
 
   foreach (@songs) {
@@ -128,13 +132,15 @@ method run {
       song      => $_,
       tracks    => [ $_->tracks->by_title ],
       title     => $_->page_title,
-      canonical => "$uri/" . $_->filename,
+      canonical => "$uri/" . $_->url_path,
       desc      => 'Song: ' . $_->title,
       type      => 'music.song',
-    }, $_->filename)
+    }, $_->out_file)
       or die $tt->error;
 
-    push @urls, "$uri/" . $_->filename;
+    push @urls, "$uri/" . $_->url_path;
+
+    $tt->process('redirect.tt', { target => '/' . $_->url_path }, $_->redirect_file);
   }
 
   open my $sitemap, '>', 'docs/sitemap.xml'

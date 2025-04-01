@@ -11,7 +11,7 @@
       <tbody>
 [% FOREACH artist IN artists -%]
         <tr>
-          <td><a href="/[% artist.filename %]">[% artist.name %]</a></td>
+          <td><a href="/[% artist.url_path %]">[% artist.name %]</a></td>
         </tr>
 [% END %]
       </tbody>

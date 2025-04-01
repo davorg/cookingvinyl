@@ -11,7 +11,7 @@
       <tbody>
 [% FOREACH album IN albums -%]
         <tr>
-          <td>[% IF album.title %]<a href="/[% album.filename %]">[% END %][% album.cat %][% IF album.title %]</a>[% END %]</td>
+          <td>[% IF album.title %]<a href="/[% album.url_path %]">[% END %][% album.cat %][% IF album.title %]</a>[% END %]</td>
           <td>[% album.year %]</td>
           <td>[% album.title %]</td>
         </tr>
