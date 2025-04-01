@@ -106,6 +106,15 @@ sub page_title {
   return $title;
 }
 
+sub type {
+  return 'music.album';
+}
+
+sub description {
+  my $self = shift;
+  return 'Album: ' . $self->title;
+}
+
 sub url_path {
   my $self = shift;
   my $fn = lc $self->cat;

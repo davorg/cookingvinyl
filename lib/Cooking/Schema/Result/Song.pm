@@ -89,6 +89,15 @@ sub page_title {
   return $self->title;
 }
 
+sub type {
+  return 'music.song';
+}
+
+sub description {
+  my $self = shift;
+  return 'Song: ' . $self->title;
+}
+
 sub url_path {
   my $self = shift;
   my $fn = lc $self->title;

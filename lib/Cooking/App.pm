@@ -28,45 +28,45 @@ field @songs   = $sch->resultset('Song')->search(undef, {
   order_by => 'title',
 })->all;
 
-field %file = (
+field %page = (
   index => {
-    out       => 'index.html',
-    title     => '',
-    canonical => '',
-    desc      => 'Information about the compilation albums released by Cooking Vinyl records.',
+    out         => 'index.html',
+    page_title  => '',
+    url_path    => '',
+    description => 'Information about the compilation albums released by Cooking Vinyl records.',
+    type        => 'website',
   },
   about => {
-    out       => 'about/index.html',
-    title     => 'About',
-    canonical => 'about/',
-    desc      => 'About the site and why I built it.'
+    out         => 'about/index.html',
+    page_title  => 'About',
+    url_path    => 'about/',
+    description => 'About the site and why I built it.',
+    type        => 'website',
   },
 );
 
 field @urls;
 
 method run {
-  for (keys %file) {
-    my $file = $file{$_};
-    my $vars = {
-      canonical => "$uri/$file->{canonical}",
-      title     => $file->{title},
-      desc      => $file->{desc},
-      type      => 'website',
-    };
-
-    $tt->process("$_.tt", $vars, $file->{out})
+  for (keys %page) {
+    $tt->process("$_.tt", {
+      page => $page{$_},
+      domain => $uri,
+    }, $page{$_}->{out})
       or die $tt->error;
 
-    push @urls, $vars->{canonical};
+    push @urls, "$uri/$page{$_}->{url_path}";
   }
 
   $tt->process('albums.tt', {
     albums    => \@albums,
-    title     => 'List of Albums',
-    canonical => "$uri/albums/",
-    desc      => 'List of compilation albums released by Cooking Vinyl records.',
-    type      => 'website',
+    domain    => $uri,
+    page      => {
+      page_title  => 'List of Albums',
+      url_path    => 'albums/',
+      description => 'List of compilation albums released by Cooking Vinyl records.',
+      type        => 'website',
+    },
   }, 'albums/index.html')
     or die $tt->error;
 
@@ -74,10 +74,13 @@ method run {
 
   $tt->process('artists.tt', {
     artists   => \@artists,
-    title     => 'List of Artists',
-    canonical => "$uri/artists/",
-    desc      => 'List of artists appearing on compilations released by Cooking Vinyl records.',
-    type      => 'website',
+    domain    => $uri,
+    page      => {
+      page_title  => 'List of Artists',
+      url_path    => 'artists/',
+      description => 'List of artists appearing on compilations released by Cooking Vinyl records.',
+      type      => 'website',
+    },
   }, 'artists/index.html')
     or die $tt->error;
 
@@ -85,10 +88,13 @@ method run {
  
   $tt->process('songs.tt', {
     songs     => \@songs,
-    title     => 'List of Songs',
-    canonical => "$uri/songs/",
-    desc      => 'List of songs appearing on compilations released by Cooking Vinyl records.',
-    type      => 'website',
+    domain    => $uri,
+    page      => {
+      page_title  => 'List of Songs',
+      url_path    => 'songs/',
+      description => 'List of songs appearing on compilations released by Cooking Vinyl records.',
+      type        => 'website',
+    },
   }, 'songs/index.html')
     or die $tt->error;
 
@@ -98,11 +104,8 @@ method run {
     next unless $_->title;
     $tt->process('album.tt', {
       album     => $_,
+      domain    => $uri,
       tracks    => [ $_->tracks->by_title ],
-      title     => $_->page_title,
-      canonical => "$uri/" . $_->url_path,
-      desc      => 'Album: ' . $_->title,
-      type      => 'music.album',
     }, $_->out_file)
       or die $tt->error;
 
@@ -114,11 +117,8 @@ method run {
   foreach (@artists) {
     $tt->process('artist.tt', {
       artist    => $_,
+      domain    => $uri,
       tracks    => [ $_->tracks->by_title ],
-      title     => $_->page_title,
-      canonical => "$uri/" . $_->url_path,
-      desc      => 'Artist: ' . $_->name,
-      type      => 'music.musician',
     }, $_->out_file)
       or die $tt->error;
 
@@ -130,11 +130,8 @@ method run {
   foreach (@songs) {
     $tt->process('song.tt', {
       song      => $_,
+      domain    => $uri,
       tracks    => [ $_->tracks->by_title ],
-      title     => $_->page_title,
-      canonical => "$uri/" . $_->url_path,
-      desc      => 'Song: ' . $_->title,
-      type      => 'music.song',
     }, $_->out_file)
       or die $tt->error;
 
