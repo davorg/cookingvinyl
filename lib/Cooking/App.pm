@@ -39,7 +39,7 @@ field %file = (
     out       => 'about/index.html',
     title     => 'About',
     canonical => 'about/',
-    desc      => 'About the site and why I build it.'
+    desc      => 'About the site and why I built it.'
   },
 );
 
