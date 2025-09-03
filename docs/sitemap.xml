@@ -3,10 +3,10 @@
   xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd"
   xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://cookingvinyl.dave.org.uk/about/</loc>
+    <loc>https://cookingvinyl.dave.org.uk/</loc>
   </url>
   <url>
-    <loc>https://cookingvinyl.dave.org.uk/</loc>
+    <loc>https://cookingvinyl.dave.org.uk/about/</loc>
   </url>
   <url>
     <loc>https://cookingvinyl.dave.org.uk/albums/</loc>
@@ -117,10 +117,10 @@
     <loc>https://cookingvinyl.dave.org.uk/artists/ani_difranco/</loc>
   </url>
   <url>
-    <loc>https://cookingvinyl.dave.org.uk/artists/anne_mccue/</loc>
+    <loc>https://cookingvinyl.dave.org.uk/artists/ani_difranco_utah_phillips/</loc>
   </url>
   <url>
-    <loc>https://cookingvinyl.dave.org.uk/artists/any_difranco_utah_phillips/</loc>
+    <loc>https://cookingvinyl.dave.org.uk/artists/anne_mccue/</loc>
   </url>
   <url>
     <loc>https://cookingvinyl.dave.org.uk/artists/apples_in_stereo/</loc>
@@ -636,7 +636,7 @@
     <loc>https://cookingvinyl.dave.org.uk/artists/we_free_kings/</loc>
   </url>
   <url>
-    <loc>https://cookingvinyl.dave.org.uk/artists/weddings_parties_anything/</loc>
+    <loc>https://cookingvinyl.dave.org.uk/artists/weddings_parties_anithing/</loc>
   </url>
   <url>
     <loc>https://cookingvinyl.dave.org.uk/artists/wende_zako/</loc>

@@ -1,10 +1,35 @@
 [% WRAPPER page.tt -%]
-<h1>Cooking Vinyl Compilations</h1>
-<p>View the contents of the Cooking Vinyl compilation albums in various ways:</p>
+<div class="row g-4">
+  <div class="col-md-4">
+    <div class="card feature-card h-100">
+      <div class="card-body">
+        <h3 class="card-title">Albums</h3>
+        <p class="card-text">See the compilation albums released on Cooking Vinyl, with release year and artwork where available.</p>
+        <a href="albums/" class="btn btn-dark">Browse albums</a>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-4">
+    <div class="card feature-card h-100">
+      <div class="card-body">
+        <h3 class="card-title">Artists</h3>
+        <p class="card-text">Jump straight to an artist and discover which samplers and promos they appear on.</p>
+        <a href="artists/" class="btn btn-dark">Browse artists</a>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-4">
+    <div class="card feature-card h-100">
+      <div class="card-body">
+        <h3 class="card-title">Songs</h3>
+        <p class="card-text">A track-first view. Useful when you’re hunting for that one version you heard on a label sampler.</p>
+        <a href="songs/" class="btn btn-dark">Browse songs</a>
+      </div>
+    </div>
+  </div>
+</div>
 
-<ul>
-<li><a href="albums/">List of albums</a></li>
-<li><a href="artists/">List of artists</a></li>
-<li><a href="songs/">List of songs</a></li>
-</ul>
+<div class="mt-5">
+  <p class="text-muted small mb-0">This is a very niche project documenting a label I love. If you spot mistakes or have missing details/artwork, <a href="https://github.com/davorg/cookingvinyl/issues">open an issue</a>.</p>
+</div>
 [% END -%]

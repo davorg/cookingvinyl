@@ -1,19 +1,45 @@
 [% WRAPPER page.tt %]
-    <h1>Songs</h1>
-    <p>A list of songs on compilations released by
-      <a href="http://www.cookingvinyl.com/">Cooking Vinyl</a> records.</p>
-    <table id="datatable" class="tablesorter table table-striped table-sm table-hover table-bordered">
-      <thead>
-        <tr>
-          <th>Song</th>
-        </tr>
-      </thead>
-      <tbody>
+  <h1>Songs</h1>
+  <p>A list of songs on compilations released by
+    <a href="http://www.cookingvinyl.com/">Cooking Vinyl</a> records.</p>
+
+  <div class="row g-4">
+    <div class="col-lg-9">
+      <div class="table-wrap feature-card p-0" style="--col1:100%;">
+        <div class="table-tools p-3 border-bottom">
+          <div class="d-flex flex-wrap align-items-center gap-2">
+            <label for="songFilter" class="me-2 mb-0 small text-muted">Quick filter</label>
+            <input id="songFilter" class="form-control form-control-sm w-auto" placeholder="Type to filter…">
+            <span class="ms-auto small text-muted" id="songCount"></span>
+          </div>
+          <div class="columns-bar mt-2" style="--col1:100%;"><div>Song</div></div>
+        </div>
+        <div class="table-responsive">
+          <table id="datatable" class="table table-striped table-sm table-hover mb-0">
+            <colgroup><col></colgroup>
+            <thead><tr><th>Song</th></tr></thead>
+            <tbody>
 [% FOREACH song IN songs.sort('title') -%]
-        <tr>
-          <td><a href="/[% song.url_path %]">[% song.title %]</a></td>
-        </tr>
+              <tr><td><a href="/[% song.url_path %]">[% song.title %]</a></td></tr>
 [% END %]
-      </tbody>
-    </table>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-3">
+      <div class="card feature-card">
+        <div class="card-body">
+          <h5 class="card-title">Tip</h5>
+          <p class="small text-muted mb-0">Start typing to filter; click the header to sort.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+[% page_js = BLOCK %]
+  const table = document.getElementById('datatable');
+  TableTools.makeSortable(table);
+  TableTools.attachFilter(table, document.getElementById('songFilter'), document.getElementById('songCount'));
+[% END %]
 [% END %]

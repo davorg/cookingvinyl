@@ -1,0 +1,186 @@
+:root {
+  --ink: #111;
+  --ink-muted: #6c757d;
+  --cream: #f7f5f2;
+  --accent: #e85709; /* Cooking Vinyl-ish orange */
+  --accent-2: #7c4dff;
+}
+html, body { height: 100%; }
+body {
+  font-feature-settings: "ss01","liga","kern";
+  color: var(--ink);
+  background: var(--cream);
+}
+/* Sticky footer layout */
+.site-wrapper { min-height: 100vh; display: flex; flex-direction: column; }
+main { flex: 1 0 auto; }
+footer { flex-shrink: 0; }
+
+/* Hero */
+.hero {
+  position: relative;
+  background:
+    radial-gradient(circle at 30% 30%, rgba(255,255,255,.25), transparent 35%),
+    radial-gradient(circle at 70% 60%, rgba(255,255,255,.15), transparent 35%),
+    linear-gradient(135deg, var(--accent) 0%, #ff9a3d 35%, var(--accent-2) 100%);
+  color: #fff;
+}
+.hero .inner {
+  padding: 5rem 0 3rem;
+}
+.brandmark {
+  display: inline-flex;
+  align-items: center;
+  gap: .75rem;
+  font-weight: 800;
+  letter-spacing: .5px;
+}
+.brandmark svg { width: 40px; height: 40px; }
+.hero h1 {
+  font-size: clamp(2rem, 4.5vw, 3.2rem);
+  font-weight: 800;
+  margin: .25rem 0 0;
+}
+.hero p.lead { margin-top: .75rem; max-width: 60ch; }
+
+/* Wave divider */
+.wave { display:block; height: 40px; margin-top: -10px; line-height:0; }
+.wave svg { display:block; width:100%; height:40px; }
+
+/* Nav */
+.navbar-transparent .navbar-nav .nav-link { color: rgba(255,255,255,.92); }
+.navbar-transparent .navbar-nav .nav-link:hover { color: #fff; }
+
+/* Cards */
+.feature-card {
+  border: 0;
+  border-radius: 1.25rem;
+  box-shadow: 0 10px 25px rgba(0,0,0,.08);
+  transition: transform .15s ease, box-shadow .2s ease;
+  background: #fff;
+}
+.feature-card:hover { transform: translateY(-2px); box-shadow: 0 14px 32px rgba(0,0,0,.12); }
+
+/* Footer */
+.footer {
+  background: #fff;
+  border-top: 1px solid rgba(0,0,0,.06);
+}
+.footer a { color: var(--accent); text-decoration: none; }
+.footer a:hover { text-decoration: underline; }
+
+/* space below the wave before cards start */
+main > .container {
+  margin-top: 2rem;   /* adjust to taste (2–3rem usually looks right) */
+}
+
+/* Headers & branding */
+h1, h2, h3, h4, h5, h6,
+.navbar-brand {
+  font-family: 'Oswald', sans-serif;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+/* Body copy */
+body {
+  font-family: 'Inter', system-ui, sans-serif;
+  font-weight: 400;
+}
+
+/* Make tables fill the card
+/* Make tables fill the card and look polished */
+/* Tables — clean, no sticky thead, faux header lives in tools bar */
+.table-wrap {
+  border-radius: 1.25rem;
+  box-shadow: 0 10px 25px rgba(0,0,0,.08);
+  background: #fff;
+}
+
+/* Sticky tools bar (with filter + faux header inside) */
+.table-tools {
+  position: sticky;
+  top: 0;
+  z-index: 6;
+  border-top-left-radius: 1.25rem;
+  border-top-right-radius: 1.25rem;
+  background: #fff;
+}
+
+/* Faux header inside tools bar, full width */
+.columns-bar {
+  display: flex;
+  margin-left: -1rem;  /* cancel .p-3 on tools bar */
+  margin-right: -1rem;
+  padding: .5rem 1rem;
+  font-weight: 600;
+  background: #f8f9fa;
+  border-top: 1px solid rgba(0,0,0,.08);
+  border-bottom: 1px solid rgba(0,0,0,.08);
+  border-bottom-left-radius: .5rem;
+  border-bottom-right-radius: .5rem;
+}
+/* Default to one column; templates with 3 columns set CSS vars inline */
+.columns-bar > div:nth-child(1) { flex: 0 0 var(--col1,100%); }
+.columns-bar > div:nth-child(2) { flex: 0 0 var(--col2,0%); }
+.columns-bar > div:nth-child(3) { flex: 1 1 var(--col3,0%); }
+
+/* Table respects same widths via <colgroup> */
+.table-responsive { overflow: auto; border-bottom-left-radius: 1.25rem; border-bottom-right-radius: 1.25rem; }
+.table-wrap .table { table-layout: fixed; width: 100%; margin-bottom: 0; }
+.table-wrap colgroup col:nth-child(1) { width: var(--col1, 100%); }
+.table-wrap colgroup col:nth-child(2) { width: var(--col2, 0%); }
+.table-wrap colgroup col:nth-child(3) { width: var(--col3, 0%); }
+
+/* Hide any native thead (we render a faux header) */
+.table-wrap thead { display: none !important; }
+
+/* Minor polish */
+.table tbody tr:hover td { background-color: rgba(0,0,0,.02); }
+.table thead th { font-weight: 600; }
+
+/* Prevent narrow columns from wrapping on 3-col tables */
+.table-wrap td:nth-child(1), .table-wrap td:nth-child(2) { white-space: nowrap; }
+
+/* Widen content a touch on very large screens */
+@media (min-width: 1200px) { .container { max-width: 1140px; } }
+@media (min-width: 1400px) { .container { max-width: 1280px; } }
+
+
+/* A–Z quick jump row */
+.az .btn { padding: .25rem .5rem; }
+.az { gap: .25rem; }
+
+/* Sidebar cards */
+.feature-card .card-title { margin-bottom: .5rem; }
+
+
+
+/* ===== Detail pages polish ===== */
+.mini-tools {
+  position: sticky;
+  top: 0;
+  z-index: 7;
+  background: #fff;
+  border-radius: .5rem;
+  padding: .5rem .75rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,.05);
+  display: flex;
+  gap: .5rem;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+.mini-tools .btn-sm { padding: .25rem .5rem; }
+
+.meta-card .list-group-item { padding: .5rem .75rem; }
+.meta-card .badge { font-weight: 500; }
+
+.table.tracks td:nth-child(1),
+.table.tracks th:nth-child(1) { width: 56px; white-space: nowrap; }
+.table.tracks td:nth-child(2),
+.table.tracks th:nth-child(2) { width: 44%; }
+.table.tracks td:nth-child(3),
+.table.tracks th:nth-child(3) { width: 56%; }
+
+.table.detail-table td:nth-child(3),
+.table.detail-table th:nth-child(3) { width: 140px; white-space: nowrap; }

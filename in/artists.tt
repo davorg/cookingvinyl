@@ -1,19 +1,75 @@
 [% WRAPPER page.tt %]
-    <h1>Artists</h1>
-    <p>A list of artists on compilations released by
-      <a href="http://www.cookingvinyl.com/">Cooking Vinyl</a> records.</p>
-    <table id="datatable" class="tablesorter table table-striped table-sm table-hover table-bordered">
-      <thead>
-        <tr>
-          <th>Artist</th>
-        </tr>
-      </thead>
-      <tbody>
+  <h1>Artists</h1>
+  <p>A list of artists on compilations released by
+    <a href="http://www.cookingvinyl.com/">Cooking Vinyl</a> records.</p>
+
+  <div class="row g-4">
+    <div class="col-lg-9">
+      <div class="table-wrap feature-card p-0" style="--col1:100%;">
+        <div class="table-tools p-3 border-bottom">
+          <div class="d-flex flex-wrap align-items-center gap-2">
+            <label for="artistFilter" class="me-2 mb-0 small text-muted">Quick filter</label>
+            <input id="artistFilter" class="form-control form-control-sm w-auto" placeholder="Type to filter…">
+            <span class="ms-auto small text-muted" id="artistCount"></span>
+          </div>
+          <div class="mt-2 small">
+            <nav class="az d-flex flex-wrap">
+              [% FOREACH l IN [ 'All','A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z' ] -%]
+              <a href="#" class="btn btn-light btn-sm js-az" data-letter="[% l == 'All' ? '' : l %]">[% l %]</a>
+              [% END -%]
+            </nav>
+          </div>
+          <div class="columns-bar mt-2" style="--col1:100%;"><div>Artist</div></div>
+        </div>
+        <div class="table-responsive">
+          <table id="datatable" class="table table-striped table-sm table-hover mb-0">
+            <colgroup><col></colgroup>
+            <thead><tr><th>Artist</th></tr></thead>
+            <tbody>
 [% FOREACH artist IN artists -%]
-        <tr>
-          <td><a href="/[% artist.url_path %]">[% artist.name %]</a></td>
-        </tr>
+              <tr><td><a href="/[% artist.url_path %]">[% artist.name %]</a></td></tr>
 [% END %]
-      </tbody>
-    </table>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-3">
+      <div class="card feature-card">
+        <div class="card-body">
+          <h5 class="card-title">Tips</h5>
+          <p class="small text-muted mb-2">Use A–Z to jump or start typing to filter.</p>
+          <p class="small text-muted mb-0">Click an artist to see which compilation(s) they appear on.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+[% page_js = BLOCK %]
+  const table = document.getElementById('datatable');
+  TableTools.makeSortable(table);
+  TableTools.attachFilter(table, document.getElementById('artistFilter'), document.getElementById('artistCount'));
+  document.querySelectorAll('.js-az').forEach(a=>a.addEventListener('click', e=>{
+    e.preventDefault();
+    const letter = e.currentTarget.dataset.letter || '';
+    const input = document.getElementById('artistFilter');
+    if(letter) {
+      // starts-with filter
+      const rows = table.tBodies[0].rows;
+      let shown = 0;
+      for(const row of rows){
+        const txt = row.textContent.trim().toLowerCase();
+        const vis = txt.startsWith(letter.toLowerCase());
+        row.style.display = vis ? '' : 'none';
+        if(vis) shown++;
+      }
+      const total = table.tBodies[0].rows.length;
+      const counter = document.getElementById('artistCount');
+      if(counter) counter.textContent = (shown===total) ? total + ' artists' : shown + ' of ' + total + ' shown';
+    } else {
+      input.value = '';
+      input.dispatchEvent(new Event('input', {bubbles:true}));
+    }
+  }));
+[% END %]
 [% END %]

@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XGZYTJZW70"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-XGZYTJZW70');
+    </script>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Ani DiFranco & Utah Phillips</title>
+
+    <meta property="og:title" content="Ani DiFranco & Utah Phillips" />
+    <meta property="og:description" content="Exploring the compilation albums released by Cooking Vinyl — browse by albums, artists, and songs." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://cookingvinyl.dave.org.uk/music.musician/" />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+
+    <!-- Tiny bit of custom flair -->
+    <link rel="stylesheet" href="/css/style.css">
+  </head>
+  <body>
+    <div class="site-wrapper">
+      <header class="hero">
+        <nav class="navbar navbar-expand-md navbar-transparent">
+          <div class="container">
+            <a class="navbar-brand text-white brandmark" href="/">
+              <!-- simple record icon -->
+              <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <circle cx="12" cy="12" r="10" stroke="white" stroke-width="1.5"/>
+                <circle cx="12" cy="12" r="3" fill="white"/>
+              </svg>
+              <span>Cooking Vinyl Compilations</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#siteNav" aria-controls="siteNav" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="siteNav">
+              <ul class="navbar-nav ms-auto mb-2 mb-md-0">
+                <li class="nav-item"><a class="nav-link" href="/albums/">Albums</a></li>
+                <li class="nav-item"><a class="nav-link" href="/artists/">Artists</a></li>
+                <li class="nav-item"><a class="nav-link" href="/songs/">Songs</a></li>
+                <li class="nav-item"><a class="nav-link" href="/about/">About</a></li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+        <div class="container inner">
+          <div class="row align-items-end">
+            <div class="col-lg-10">
+              <h1>Cooking Vinyl Compilations</h1>
+              <p class="lead opacity-85">Browse every <strong>Cooking Vinyl</strong> compilation by album, artist, or track. A tiny slice of British indie history, neatly indexed.</p>
+            </div>
+          </div>
+        </div>
+        <div class="wave">
+          <svg preserveAspectRatio="none" viewBox="0 0 1200 40"><path d="M0,12 C150,40 350,0 600,20 C850,40 1050,10 1200,22 L1200,40 L0,40 Z" fill="#fff"/></svg>
+        </div>
+      </header>
+
+      <main class="pb-5">
+        <div class="container">
+
+    <h1>Ani DiFranco & Utah Phillips</h1>
+
+    <p><a href="/artists/">Return to list</a></p>
+
+    <table id="datatable" class="tablesorter table table-striped table-sm table-hover table-bordered">
+      <thead>
+        <tr>
+          <th>Song</th><th>Album</th><th>Cat</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><a href="/songs/holding_on/">Holding On</a></td>
+          <td><a href="/albums/grillcd010/">Cooking Vinyl Sampler Volume 6</a></td>
+          <td>GRILL CD 010</td>
+        </tr>
+      </tbody>
+    </table>
+
+        </div>
+      </main>
+
+      <footer class="footer mt-auto py-4">
+        <div class="container small text-center text-muted">
+          <div class="addthis_native_toolbox mb-2"></div>
+          Site created by <a href="https://links.davecross.co.uk/">Dave Cross</a> • Code on <a href="https://github.com/davorg/cookingvinyl/">GitHub</a>
+        </div>
+      </footer>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+    <!-- Minimal, dependency-free table utilities (sort + filter) -->
+    <script>
+    (()=>{
+      function getCellText(cell){ return (cell?.textContent || '').trim(); }
+      function detectType(val){ return /^-?\d+(?:[\.,]\d+)?$/.test(val.replace(/[,\s]/g,'')) ? 'number' : 'text'; }
+
+      function sortTable(table, colIndex, dir='asc'){
+        const tbody = table.tBodies[0];
+        const rows = Array.from(tbody.rows);
+        const sample = getCellText(rows[0]?.cells[colIndex] || {});
+        const type = table.querySelectorAll('th')[colIndex]?.dataset.sortType || detectType(sample);
+        rows.sort((a,b)=>{
+          let A = getCellText(a.cells[colIndex]);
+          let B = getCellText(b.cells[colIndex]);
+          if(type==='number'){ A=parseFloat(A.replace(/[,\s]/g,''))||0; B=parseFloat(B.replace(/[,\s]/g,''))||0; }
+          else { A=A.toLowerCase(); B=B.toLowerCase(); }
+          return (A<B ? -1 : A>B ? 1 : 0) * (dir==='asc'?1:-1);
+        });
+        rows.forEach(r=>tbody.appendChild(r));
+        // aria state
+        table.querySelectorAll('th').forEach(th=>th.removeAttribute('aria-sort'));
+        table.querySelectorAll('th')[colIndex].setAttribute('aria-sort', dir==='asc'?'ascending':'descending');
+      }
+
+      function makeSortable(table){
+        const headers = table.tHead?.rows[0]?.cells || [];
+        Array.from(headers).forEach((th, i)=>{
+          th.tabIndex = 0;
+          th.classList.add('sortable');
+          th.addEventListener('click', ()=>{
+            const dir = th.dataset.dir = (th.dataset.dir === 'asc' ? 'desc' : 'asc');
+            sortTable(table, i, dir);
+          });
+          th.addEventListener('keydown', (e)=>{
+            if(e.key==='Enter' || e.key===' ') { e.preventDefault(); th.click(); }
+          });
+        });
+      }
+
+      function attachFilter(table, input, counter){
+        if(!input) return;
+        const rows = table.tBodies[0].rows;
+        const update = ()=>{
+          const q = input.value.trim().toLowerCase();
+          let shown = 0;
+          for(const row of rows){
+            const txt = row.textContent.toLowerCase();
+            const vis = !q || txt.includes(q);
+            row.style.display = vis ? '' : 'none';
+            if(vis) shown++;
+          }
+          if(counter){
+            const total = rows.length;
+            counter.textContent = (shown===total) ? total + ' items' : shown + ' of ' + total + ' shown';
+          }
+        };
+        input.addEventListener('input', update);
+        update();
+      }
+
+      // expose helpers globally for page sections that need them
+      window.TableTools = { makeSortable, attachFilter, sortTable };
+    })();
+    </script>
+
+    <!-- Page-specific vanilla JS, if supplied -->
+    
+  </body>
+</html>
+

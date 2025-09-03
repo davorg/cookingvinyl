@@ -7,649 +7,454 @@
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
-
       gtag('config', 'G-XGZYTJZW70');
     </script>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Cooking Vinyl Compilations - List of Artists</title>
-    <meta name="description" content="List of artists appearing on compilations released by Cooking Vinyl records.">
-    <meta property="og:title" content="Cooking Vinyl Compilations - List of Artists" />
+    <title>Cooking Vinyl Compilations</title>
+
+    <meta property="og:title" content="Cooking Vinyl Compilations" />
+    <meta property="og:description" content="Exploring the compilation albums released by Cooking Vinyl — browse by albums, artists, and songs." />
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://cookingvinyl.dave.org.uk/artists/" />
-    <meta property="og:description" content="List of artists appearing on compilations released by Cooking Vinyl records." />
-    <link rel="stylesheet"
-          href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
-          integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr"
-          crossorigin="anonymous">
-    <link rel="canonical" href="https://cookingvinyl.dave.org.uk/artists/">
-    <!-- link rel="stylesheet" href="style.css" type="text/css" / -->
+    <meta property="og:url" content="https://cookingvinyl.dave.org.uk/website/" />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+
+    <!-- Tiny bit of custom flair -->
+    <link rel="stylesheet" href="/css/style.css">
   </head>
   <body>
-    <div class="container">
-      <div class="header">
-        <nav class="navbar navbar-light bg-light navbar-expand-sm">
+    <div class="site-wrapper">
+      <header class="hero">
+        <nav class="navbar navbar-expand-md navbar-transparent">
           <div class="container">
-            <!-- Brand and toggle get grouped for better mobile display -->
-            <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+            <a class="navbar-brand text-white brandmark" href="/">
+              <!-- simple record icon -->
+              <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <circle cx="12" cy="12" r="10" stroke="white" stroke-width="1.5"/>
+                <circle cx="12" cy="12" r="3" fill="white"/>
+              </svg>
+              <span>Cooking Vinyl Compilations</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#siteNav" aria-controls="siteNav" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
             </button>
-            <a class="navbar-brand" href="/">Cooking Vinyl Compilations</a>
-
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-              <ul class="nav navbar-nav">
+            <div class="collapse navbar-collapse" id="siteNav">
+              <ul class="navbar-nav ms-auto mb-2 mb-md-0">
                 <li class="nav-item"><a class="nav-link" href="/albums/">Albums</a></li>
                 <li class="nav-item"><a class="nav-link" href="/artists/">Artists</a></li>
                 <li class="nav-item"><a class="nav-link" href="/songs/">Songs</a></li>
-              </ul>
-              <ul class="nav navbar-nav ms-auto">
                 <li class="nav-item"><a class="nav-link" href="/about/">About</a></li>
               </ul>
-            </div><!-- /.navbar-collapse -->
-          </div><!-- /.container -->
+            </div>
+          </div>
         </nav>
+        <div class="container inner">
+          <div class="row align-items-end">
+            <div class="col-lg-10">
+              <h1>Cooking Vinyl Compilations</h1>
+              <p class="lead opacity-85">Browse every <strong>Cooking Vinyl</strong> compilation by album, artist, or track. A tiny slice of British indie history, neatly indexed.</p>
+            </div>
+          </div>
+        </div>
+        <div class="wave">
+          <svg preserveAspectRatio="none" viewBox="0 0 1200 40"><path d="M0,12 C150,40 350,0 600,20 C850,40 1050,10 1200,22 L1200,40 L0,40 Z" fill="#fff"/></svg>
+        </div>
+      </header>
+
+      <main class="pb-5">
+        <div class="container">
+
+  <h1>Artists</h1>
+  <p>A list of artists on compilations released by
+    <a href="http://www.cookingvinyl.com/">Cooking Vinyl</a> records.</p>
+
+  <div class="row g-4">
+    <div class="col-lg-9">
+      <div class="table-wrap feature-card p-0" style="--col1:100%;">
+        <div class="table-tools p-3 border-bottom">
+          <div class="d-flex flex-wrap align-items-center gap-2">
+            <label for="artistFilter" class="me-2 mb-0 small text-muted">Quick filter</label>
+            <input id="artistFilter" class="form-control form-control-sm w-auto" placeholder="Type to filter…">
+            <span class="ms-auto small text-muted" id="artistCount"></span>
+          </div>
+          <div class="mt-2 small">
+            <nav class="az d-flex flex-wrap">
+                            <a href="#" class="btn btn-light btn-sm js-az" data-letter="">All</a>
+                            <a href="#" class="btn btn-light btn-sm js-az" data-letter="A">A</a>
+                            <a href="#" class="btn btn-light btn-sm js-az" data-letter="B">B</a>
+                            <a href="#" class="btn btn-light btn-sm js-az" data-letter="C">C</a>
+                            <a href="#" class="btn btn-light btn-sm js-az" data-letter="D">D</a>
+                            <a href="#" class="btn btn-light btn-sm js-az" data-letter="E">E</a>
+                            <a href="#" class="btn btn-light btn-sm js-az" data-letter="F">F</a>
+                            <a href="#" class="btn btn-light btn-sm js-az" data-letter="G">G</a>
+                            <a href="#" class="btn btn-light btn-sm js-az" data-letter="H">H</a>
+                            <a href="#" class="btn btn-light btn-sm js-az" data-letter="I">I</a>
+                            <a href="#" class="btn btn-light btn-sm js-az" data-letter="J">J</a>
+                            <a href="#" class="btn btn-light btn-sm js-az" data-letter="K">K</a>
+                            <a href="#" class="btn btn-light btn-sm js-az" data-letter="L">L</a>
+                            <a href="#" class="btn btn-light btn-sm js-az" data-letter="M">M</a>
+                            <a href="#" class="btn btn-light btn-sm js-az" data-letter="N">N</a>
+                            <a href="#" class="btn btn-light btn-sm js-az" data-letter="O">O</a>
+                            <a href="#" class="btn btn-light btn-sm js-az" data-letter="P">P</a>
+                            <a href="#" class="btn btn-light btn-sm js-az" data-letter="Q">Q</a>
+                            <a href="#" class="btn btn-light btn-sm js-az" data-letter="R">R</a>
+                            <a href="#" class="btn btn-light btn-sm js-az" data-letter="S">S</a>
+                            <a href="#" class="btn btn-light btn-sm js-az" data-letter="T">T</a>
+                            <a href="#" class="btn btn-light btn-sm js-az" data-letter="U">U</a>
+                            <a href="#" class="btn btn-light btn-sm js-az" data-letter="V">V</a>
+                            <a href="#" class="btn btn-light btn-sm js-az" data-letter="W">W</a>
+                            <a href="#" class="btn btn-light btn-sm js-az" data-letter="X">X</a>
+                            <a href="#" class="btn btn-light btn-sm js-az" data-letter="Y">Y</a>
+                            <a href="#" class="btn btn-light btn-sm js-az" data-letter="Z">Z</a>
+                          </nav>
+          </div>
+          <div class="columns-bar mt-2" style="--col1:100%;"><div>Artist</div></div>
+        </div>
+        <div class="table-responsive">
+          <table id="datatable" class="table table-striped table-sm table-hover mb-0">
+            <colgroup><col></colgroup>
+            <thead><tr><th>Artist</th></tr></thead>
+            <tbody>
+              <tr><td><a href="/artists/ac_acoustics/">AC Acoustics</a></td></tr>
+              <tr><td><a href="/artists/am_fm/">AM/FM</a></td></tr>
+              <tr><td><a href="/artists/alex_chilton_medium_cool/">Alex Chilton & Medium Cool</a></td></tr>
+              <tr><td><a href="/artists/american_music_club/">American Music Club</a></td></tr>
+              <tr><td><a href="/artists/ancient_beatbox/">Ancient Beatbox</a></td></tr>
+              <tr><td><a href="/artists/andrew_cronshaw/">Andrew Cronshaw</a></td></tr>
+              <tr><td><a href="/artists/andy_white/">Andy White</a></td></tr>
+              <tr><td><a href="/artists/ani_difranco/">Ani DiFranco</a></td></tr>
+              <tr><td><a href="/artists/ani_difranco_utah_phillips/">Ani DiFranco & Utah Phillips</a></td></tr>
+              <tr><td><a href="/artists/anne_mccue/">Anne McCue</a></td></tr>
+              <tr><td><a href="/artists/apples_in_stereo/">Apples In Stereo</a></td></tr>
+              <tr><td><a href="/artists/awatinas/">Awatinas</a></td></tr>
+              <tr><td><a href="/artists/bj_cole/">BJ Cole</a></td></tr>
+              <tr><td><a href="/artists/barely_works/">Barely Works</a></td></tr>
+              <tr><td><a href="/artists/bauhaus/">Bauhaus</a></td></tr>
+              <tr><td><a href="/artists/ben_christophers/">Ben Christophers</a></td></tr>
+              <tr><td><a href="/artists/bert_jansch/">Bert Jansch</a></td></tr>
+              <tr><td><a href="/artists/bhundu_boys/">Bhundu Boys</a></td></tr>
+              <tr><td><a href="/artists/biggie_tembo/">Biggie Tembo</a></td></tr>
+              <tr><td><a href="/artists/billy_bragg/">Billy Bragg</a></td></tr>
+              <tr><td><a href="/artists/billy_bragg_the_blokes/">Billy Bragg & The Blokes</a></td></tr>
+              <tr><td><a href="/artists/black_francis/">Black Francis</a></td></tr>
+              <tr><td><a href="/artists/black_spot_champions/">Black Spot Champions</a></td></tr>
+              <tr><td><a href="/artists/blondie/">Blondie</a></td></tr>
+              <tr><td><a href="/artists/boiled_in_lead/">Boiled In Lead</a></td></tr>
+              <tr><td><a href="/artists/bruce_cockburn/">Bruce Cockburn</a></td></tr>
+              <tr><td><a href="/artists/buzzcocks/">Buzzcocks</a></td></tr>
+              <tr><td><a href="/artists/camper_van_beethoven/">Camper Van Beethoven</a></td></tr>
+              <tr><td><a href="/artists/carter/">Carter</a></td></tr>
+              <tr><td><a href="/artists/carter_the_unstoppable_sex_machine/">Carter the Unstoppable Sex Machine</a></td></tr>
+              <tr><td><a href="/artists/cathal_coughlan/">Cathal Coughlan</a></td></tr>
+              <tr><td><a href="/artists/centromatic/">Centromatic</a></td></tr>
+              <tr><td><a href="/artists/charles_mann/">Charles Mann</a></td></tr>
+              <tr><td><a href="/artists/cheb_mami/">Cheb Mami</a></td></tr>
+              <tr><td><a href="/artists/cheb_sahraoui/">Cheb Sahraoui</a></td></tr>
+              <tr><td><a href="/artists/chris_hillman/">Chris Hillman</a></td></tr>
+              <tr><td><a href="/artists/chuck_e_weiss/">Chuck E Weiss</a></td></tr>
+              <tr><td><a href="/artists/chuck_prophet/">Chuck Prophet</a></td></tr>
+              <tr><td><a href="/artists/cinerama/">Cinerama</a></td></tr>
+              <tr><td><a href="/artists/clem_snide/">Clem Snide</a></td></tr>
+              <tr><td><a href="/artists/clive_gregson_christine_collister/">Clive Gregson & Christine Collister</a></td></tr>
+              <tr><td><a href="/artists/colorblind_james_experience/">Colorblind James Experience</a></td></tr>
+              <tr><td><a href="/artists/cowboy_junkies/">Cowboy Junkies</a></td></tr>
+              <tr><td><a href="/artists/cracker/">Cracker</a></td></tr>
+              <tr><td><a href="/artists/dan_bern/">Dan Bern</a></td></tr>
+              <tr><td><a href="/artists/dave_graney_show/">Dave Graney Show</a></td></tr>
+              <tr><td><a href="/artists/david_thomas/">David Thomas</a></td></tr>
+              <tr><td><a href="/artists/david_thomas_two_pale_boys/">David Thomas & Two Pale Boys</a></td></tr>
+              <tr><td><a href="/artists/davy_spillane/">Davy Spillane</a></td></tr>
+              <tr><td><a href="/artists/deighton_family/">Deighton Family</a></td></tr>
+              <tr><td><a href="/artists/die_goldenen_zitronen/">Die Goldenen Zitronen</a></td></tr>
+              <tr><td><a href="/artists/dr_john/">Dr John</a></td></tr>
+              <tr><td><a href="/artists/duffy/">Duffy</a></td></tr>
+              <tr><td><a href="/artists/echo_and_the_bunnymen/">Echo and the Bunnymen</a></td></tr>
+              <tr><td><a href="/artists/eddi_reader/">Eddi Reader</a></td></tr>
+              <tr><td><a href="/artists/edward_ii_the_red_hot_polkas/">Edward II & the Red Hot Polkas</a></td></tr>
+              <tr><td><a href="/artists/ewan_maccoll/">Ewan MacColl</a></td></tr>
+              <tr><td><a href="/artists/ewan_maccoll_peggy_seeger/">Ewan MacColl & Peggy Seeger</a></td></tr>
+              <tr><td><a href="/artists/eyes_adrift/">Eyes Adrift</a></td></tr>
+              <tr><td><a href="/artists/flaco_jiminez/">Flaco Jiminez</a></td></tr>
+              <tr><td><a href="/artists/forward_russia/">Forward Russia</a></td></tr>
+              <tr><td><a href="/artists/four_brothers/">Four Brothers</a></td></tr>
+              <tr><td><a href="/artists/frank_black/">Frank Black</a></td></tr>
+              <tr><td><a href="/artists/frank_black_the_catholics/">Frank Black & the Catholics</a></td></tr>
+              <tr><td><a href="/artists/french_kicks/">French Kicks</a></td></tr>
+              <tr><td><a href="/artists/glide/">Glide</a></td></tr>
+              <tr><td><a href="/artists/goats_don_t_shave/">Goats Don't Shave</a></td></tr>
+              <tr><td><a href="/artists/gods_little_monkeys/">Gods Little Monkeys</a></td></tr>
+              <tr><td><a href="/artists/gone_to_earth/">Gone To Earth</a></td></tr>
+              <tr><td><a href="/artists/gordon_gano/">Gordon Gano</a></td></tr>
+              <tr><td><a href="/artists/grant_lee_phillips/">Grant-Lee Phillips</a></td></tr>
+              <tr><td><a href="/artists/great_big_sea/">Great Big Sea</a></td></tr>
+              <tr><td><a href="/artists/hanson/">Hanson</a></td></tr>
+              <tr><td><a href="/artists/hayseed_dixie/">Hayseed Dixie</a></td></tr>
+              <tr><td><a href="/artists/home/">Home</a></td></tr>
+              <tr><td><a href="/artists/honky_tonk_cowboys_rebecca_price/">Honky Tonk Cowboys & Rebecca Price</a></td></tr>
+              <tr><td><a href="/artists/horseflies/">Horseflies</a></td></tr>
+              <tr><td><a href="/artists/ian_mcculloch/">Ian McCulloch</a></td></tr>
+              <tr><td><a href="/artists/immaculate_fools/">Immaculate Fools</a></td></tr>
+              <tr><td><a href="/artists/incantation/">Incantation</a></td></tr>
+              <tr><td><a href="/artists/jackie_leven/">Jackie Leven</a></td></tr>
+              <tr><td><a href="/artists/janis_ian/">Janis Ian</a></td></tr>
+              <tr><td><a href="/artists/jolly_boys/">Jolly Boys</a></td></tr>
+              <tr><td><a href="/artists/june_tabor/">June Tabor</a></td></tr>
+              <tr><td><a href="/artists/june_tabor_oysterband/">June Tabor & Oysterband</a></td></tr>
+              <tr><td><a href="/artists/kaki_king/">Kaki King</a></td></tr>
+              <tr><td><a href="/artists/killing_joke/">Killing Joke</a></td></tr>
+              <tr><td><a href="/artists/king_cobb_steelie/">King Cobb Steelie</a></td></tr>
+              <tr><td><a href="/artists/kingsbury_manx/">Kingsbury Manx</a></td></tr>
+              <tr><td><a href="/artists/less_than_jake/">Less Than Jake</a></td></tr>
+              <tr><td><a href="/artists/levellers_mutineers/">Levellers Mutineers</a></td></tr>
+              <tr><td><a href="/artists/lou_rhodes/">Lou Rhodes</a></td></tr>
+              <tr><td><a href="/artists/luke_vibert_bj_cole/">Luke Vibert & BJ Cole</a></td></tr>
+              <tr><td><a href="/artists/machanic_manyeruke/">Machanic Manyeruke</a></td></tr>
+              <tr><td><a href="/artists/madder_rose/">Madder Rose</a></td></tr>
+              <tr><td><a href="/artists/maddy_prior/">Maddy Prior</a></td></tr>
+              <tr><td><a href="/artists/malcolms_interview/">Malcolms Interview</a></td></tr>
+              <tr><td><a href="/artists/maria_mckee/">Maria McKee</a></td></tr>
+              <tr><td><a href="/artists/mark_eitzel/">Mark Eitzel</a></td></tr>
+              <tr><td><a href="/artists/mark_t_the_brickbats/">Mark T. & The Brickbats</a></td></tr>
+              <tr><td><a href="/artists/mary_lorson_billy_cote/">Mary Lorson & Billy Cote</a></td></tr>
+              <tr><td><a href="/artists/mary_lorson_saint_low/">Mary Lorson & Saint Low</a></td></tr>
+              <tr><td><a href="/artists/mechanic_manureke/">Mechanic Manureke</a></td></tr>
+              <tr><td><a href="/artists/mendoza_line/">Mendoza Line</a></td></tr>
+              <tr><td><a href="/artists/mexican_institute_of_sound/">Mexican Institute Of Sound</a></td></tr>
+              <tr><td><a href="/artists/michael_messer/">Michael Messer</a></td></tr>
+              <tr><td><a href="/artists/michael_nesmith/">Michael Nesmith</a></td></tr>
+              <tr><td><a href="/artists/michelle_shocked/">Michelle Shocked</a></td></tr>
+              <tr><td><a href="/artists/minus_5/">Minus 5</a></td></tr>
+              <tr><td><a href="/artists/murder_by_death/">Murder By Death</a></td></tr>
+              <tr><td><a href="/artists/nitin_sawhiney/">Nitin Sawhiney</a></td></tr>
+              <tr><td><a href="/artists/north_mississippi_allstars/">North Mississippi Allstars</a></td></tr>
+              <tr><td><a href="/artists/number_one_cup/">Number One Cup</a></td></tr>
+              <tr><td><a href="/artists/obi/">Obi</a></td></tr>
+              <tr><td><a href="/artists/oysterband/">Oysterband</a></td></tr>
+              <tr><td><a href="/artists/pat_gallagher_goats_don_t_shave/">Pat Gallagher & Goats Don't Shave</a></td></tr>
+              <tr><td><a href="/artists/paul_kelly/">Paul Kelly</a></td></tr>
+              <tr><td><a href="/artists/pere_ubu/">Pere Ubu</a></td></tr>
+              <tr><td><a href="/artists/phil_roy/">Phil Roy</a></td></tr>
+              <tr><td><a href="/artists/poison_girls/">Poison Girls</a></td></tr>
+              <tr><td><a href="/artists/pressgang/">Pressgang</a></td></tr>
+              <tr><td><a href="/artists/prolapse/">Prolapse</a></td></tr>
+              <tr><td><a href="/artists/rev_hammer/">Rev Hammer</a></td></tr>
+              <tr><td><a href="/artists/rev_hammer_s_freeborn_john/">Rev Hammer's Freeborn John</a></td></tr>
+              <tr><td><a href="/artists/rey_de_copas/">Rey De Copas</a></td></tr>
+              <tr><td><a href="/artists/richard_thompson/">Richard Thompson</a></td></tr>
+              <tr><td><a href="/artists/rockingbirds/">Rockingbirds</a></td></tr>
+              <tr><td><a href="/artists/ron_sexsmith/">Ron Sexsmith</a></td></tr>
+              <tr><td><a href="/artists/rory_mcleod/">Rory McLeod</a></td></tr>
+              <tr><td><a href="/artists/roy_carriere/">Roy Carriere</a></td></tr>
+              <tr><td><a href="/artists/ryan_adams/">Ryan Adams</a></td></tr>
+              <tr><td><a href="/artists/s_e_rogie/">S.E. Rogie</a></td></tr>
+              <tr><td><a href="/artists/saint_low/">Saint Low</a></td></tr>
+              <tr><td><a href="/artists/savourna_stevenson/">Savourna Stevenson</a></td></tr>
+              <tr><td><a href="/artists/savourna_stevenson_danny_thompson/">Savourna Stevenson & Danny Thompson</a></td></tr>
+              <tr><td><a href="/artists/savourna_stevenson_davy_spillane/">Savourna Stevenson & Davy Spillane</a></td></tr>
+              <tr><td><a href="/artists/savourna_stevenson_june_tabor/">Savourna Stevenson & June Tabor</a></td></tr>
+              <tr><td><a href="/artists/savourna_stevenson_featuring_eddie_reader/">Savourna Stevenson featuring Eddie Reader</a></td></tr>
+              <tr><td><a href="/artists/screamin_jay_hawkins/">Screamin' Jay Hawkins</a></td></tr>
+              <tr><td><a href="/artists/seefood/">Seefood</a></td></tr>
+              <tr><td><a href="/artists/shelley_devoto/">Shelley Devoto</a></td></tr>
+              <tr><td><a href="/artists/soft_cell/">Soft Cell</a></td></tr>
+              <tr><td><a href="/artists/stephen_duffy/">Stephen Duffy</a></td></tr>
+              <tr><td><a href="/artists/suzzy_and_maggie_roche/">Suzzy And Maggie Roche</a></td></tr>
+              <tr><td><a href="/artists/sweet_honey_in_the_rock/">Sweet Honey in the Rock</a></td></tr>
+              <tr><td><a href="/artists/tv_smith/">TV Smith</a></td></tr>
+              <tr><td><a href="/artists/the_apples_in_stereo/">The Apples in Stereo</a></td></tr>
+              <tr><td><a href="/artists/the_barely_works/">The Barely Works</a></td></tr>
+              <tr><td><a href="/artists/the_bluetones/">The Bluetones</a></td></tr>
+              <tr><td><a href="/artists/the_charlatans/">The Charlatans</a></td></tr>
+              <tr><td><a href="/artists/the_church/">The Church</a></td></tr>
+              <tr><td><a href="/artists/the_cowboy_junkies/">The Cowboy Junkies</a></td></tr>
+              <tr><td><a href="/artists/the_datsuns/">The Datsuns</a></td></tr>
+              <tr><td><a href="/artists/the_four_brothers/">The Four Brothers</a></td></tr>
+              <tr><td><a href="/artists/the_happy_end/">The Happy End</a></td></tr>
+              <tr><td><a href="/artists/the_horseflies/">The Horseflies</a></td></tr>
+              <tr><td><a href="/artists/the_jolly_boys/">The Jolly Boys</a></td></tr>
+              <tr><td><a href="/artists/the_lilac_time/">The Lilac Time</a></td></tr>
+              <tr><td><a href="/artists/the_martinis/">The Martinis</a></td></tr>
+              <tr><td><a href="/artists/the_mekons/">The Mekons</a></td></tr>
+              <tr><td><a href="/artists/the_mekons_and_michelle_shocked/">The Mekons And Michelle Shocked</a></td></tr>
+              <tr><td><a href="/artists/the_mendoza_line/">The Mendoza Line</a></td></tr>
+              <tr><td><a href="/artists/the_minus_5/">The Minus 5</a></td></tr>
+              <tr><td><a href="/artists/the_orb/">The Orb</a></td></tr>
+              <tr><td><a href="/artists/the_oyster_band/">The Oyster Band</a></td></tr>
+              <tr><td><a href="/artists/the_pale_orchestra/">The Pale Orchestra</a></td></tr>
+              <tr><td><a href="/artists/the_presidents_of_the_united_states_of_america/">The Presidents of the United States Of America</a></td></tr>
+              <tr><td><a href="/artists/the_real_sounds/">The Real Sounds</a></td></tr>
+              <tr><td><a href="/artists/the_ukrainians/">The Ukrainians</a></td></tr>
+              <tr><td><a href="/artists/the_velvet_crush/">The Velvet Crush</a></td></tr>
+              <tr><td><a href="/artists/the_vines/">The Vines</a></td></tr>
+              <tr><td><a href="/artists/the_wannadies/">The Wannadies</a></td></tr>
+              <tr><td><a href="/artists/the_wedding_present/">The Wedding Present</a></td></tr>
+              <tr><td><a href="/artists/they_might_be_giants/">They Might Be Giants</a></td></tr>
+              <tr><td><a href="/artists/todd_rundgren/">Todd Rundgren</a></td></tr>
+              <tr><td><a href="/artists/tom_robinson/">Tom Robinson</a></td></tr>
+              <tr><td><a href="/artists/tom_robinson_band/">Tom Robinson Band</a></td></tr>
+              <tr><td><a href="/artists/utah_phillips_ani_difranco/">Utah Phillips & Ani DiFranco</a></td></tr>
+              <tr><td><a href="/artists/violent_femmes/">Violent Femmes</a></td></tr>
+              <tr><td><a href="/artists/waz/">WAZ</a></td></tr>
+              <tr><td><a href="/artists/we_free_kings/">We Free Kings</a></td></tr>
+              <tr><td><a href="/artists/weddings_parties_anithing/">Weddings Parties Anithing</a></td></tr>
+              <tr><td><a href="/artists/wende_zako/">Wende Zako</a></td></tr>
+              <tr><td><a href="/artists/wired_to_the_moon/">Wired to the Moon</a></td></tr>
+              <tr><td><a href="/artists/xtc/">XTC</a></td></tr>
+              <tr><td><a href="/artists/ziggy_marley/">Ziggy Marley</a></td></tr>
+
+            </tbody>
+          </table>
+        </div>
       </div>
-
-      <div class="jumbotron">
-
-    <h1>Artists</h1>
-    <p>A list of artists on compilations released by
-      <a href="http://www.cookingvinyl.com/">Cooking Vinyl</a> records.</p>
-    <table id="datatable" class="tablesorter table table-striped table-sm table-hover table-bordered">
-      <thead>
-        <tr>
-          <th>Artist</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td><a href="/artists/ac_acoustics/">AC Acoustics</a></td>
-        </tr>
-        <tr>
-          <td><a href="/artists/am_fm/">AM/FM</a></td>
-        </tr>
-        <tr>
-          <td><a href="/artists/alex_chilton_medium_cool/">Alex Chilton & Medium Cool</a></td>
-        </tr>
-        <tr>
-          <td><a href="/artists/american_music_club/">American Music Club</a></td>
-        </tr>
-        <tr>
-          <td><a href="/artists/ancient_beatbox/">Ancient Beatbox</a></td>
-        </tr>
-        <tr>
-          <td><a href="/artists/andrew_cronshaw/">Andrew Cronshaw</a></td>
-        </tr>
-        <tr>
-          <td><a href="/artists/andy_white/">Andy White</a></td>
-        </tr>
-        <tr>
-          <td><a href="/artists/ani_difranco/">Ani DiFranco</a></td>
-        </tr>
-        <tr>
-          <td><a href="/artists/anne_mccue/">Anne McCue</a></td>
-        </tr>
-        <tr>
-          <td><a href="/artists/any_difranco_utah_phillips/">Any DiFranco & Utah Phillips</a></td>
-        </tr>
-        <tr>
-          <td><a href="/artists/apples_in_stereo/">Apples In Stereo</a></td>
-        </tr>
-        <tr>
-          <td><a href="/artists/awatinas/">Awatinas</a></td>
-        </tr>
-        <tr>
-          <td><a href="/artists/bj_cole/">BJ Cole</a></td>
-        </tr>
-        <tr>
-          <td><a href="/artists/barely_works/">Barely Works</a></td>
-        </tr>
-        <tr>
-          <td><a href="/artists/bauhaus/">Bauhaus</a></td>
-        </tr>
-        <tr>
-          <td><a href="/artists/ben_christophers/">Ben Christophers</a></td>
-        </tr>
-        <tr>
-          <td><a href="/artists/bert_jansch/">Bert Jansch</a></td>
-        </tr>
-        <tr>
-          <td><a href="/artists/bhundu_boys/">Bhundu Boys</a></td>
-        </tr>
-        <tr>
-          <td><a href="/artists/biggie_tembo/">Biggie Tembo</a></td>
-        </tr>
-        <tr>
-          <td><a href="/artists/billy_bragg/">Billy Bragg</a></td>
-        </tr>
-        <tr>
-          <td><a href="/artists/billy_bragg_the_blokes/">Billy Bragg & The Blokes</a></td>
-        </tr>
-        <tr>
-          <td><a href="/artists/black_francis/">Black Francis</a></td>
-        </tr>
-        <tr>
-          <td><a href="/artists/black_spot_champions/">Black Spot Champions</a></td>
-        </tr>
-        <tr>
-          <td><a href="/artists/blondie/">Blondie</a></td>
-        </tr>
-        <tr>
-          <td><a href="/artists/boiled_in_lead/">Boiled In Lead</a></td>
-        </tr>
-        <tr>
-          <td><a href="/artists/bruce_cockburn/">Bruce Cockburn</a></td>
-        </tr>
-        <tr>
-          <td><a href="/artists/buzzcocks/">Buzzcocks</a></td>
-        </tr>
-        <tr>
-          <td><a href="/artists/camper_van_beethoven/">Camper Van Beethoven</a></td>
-        </tr>
-        <tr>
-          <td><a href="/artists/carter/">Carter</a></td>
-        </tr>
-        <tr>
-          <td><a href="/artists/carter_the_unstoppable_sex_machine/">Carter the Unstoppable Sex Machine</a></td>
-        </tr>
-        <tr>
-          <td><a href="/artists/cathal_coughlan/">Cathal Coughlan</a></td>
-        </tr>
-        <tr>
-          <td><a href="/artists/centromatic/">Centromatic</a></td>
-        </tr>
-        <tr>
-          <td><a href="/artists/charles_mann/">Charles Mann</a></td>
-        </tr>
-        <tr>
-          <td><a href="/artists/cheb_mami/">Cheb Mami</a></td>
-        </tr>
-        <tr>
-          <td><a href="/artists/cheb_sahraoui/">Cheb Sahraoui</a></td>
-        </tr>
-        <tr>
-          <td><a href="/artists/chris_hillman/">Chris Hillman</a></td>
-        </tr>
-        <tr>
-          <td><a href="/artists/chuck_e_weiss/">Chuck E Weiss</a></td>
-        </tr>
-        <tr>
-          <td><a href="/artists/chuck_prophet/">Chuck Prophet</a></td>
-        </tr>
-        <tr>
-          <td><a href="/artists/cinerama/">Cinerama</a></td>
-        </tr>
-        <tr>
-          <td><a href="/artists/clem_snide/">Clem Snide</a></td>
-        </tr>
-        <tr>
-          <td><a href="/artists/clive_gregson_christine_collister/">Clive Gregson & Christine Collister</a></td>
-        </tr>
-        <tr>
-          <td><a href="/artists/colorblind_james_experience/">Colorblind James Experience</a></td>
-        </tr>
-        <tr>
-          <td><a href="/artists/cowboy_junkies/">Cowboy Junkies</a></td>
-        </tr>
-        <tr>
-          <td><a href="/artists/cracker/">Cracker</a></td>
-        </tr>
-        <tr>
-          <td><a href="/artists/dan_bern/">Dan Bern</a></td>
-        </tr>
-        <tr>
-          <td><a href="/artists/dave_graney_show/">Dave Graney Show</a></td>
-        </tr>
-        <tr>
-          <td><a href="/artists/david_thomas/">David Thomas</a></td>
-        </tr>
-        <tr>
-          <td><a href="/artists/david_thomas_two_pale_boys/">David Thomas & Two Pale Boys</a></td>
-        </tr>
-        <tr>
-          <td><a href="/artists/davy_spillane/">Davy Spillane</a></td>
-        </tr>
-        <tr>
-          <td><a href="/artists/deighton_family/">Deighton Family</a></td>
-        </tr>
-        <tr>
-          <td><a href="/artists/die_goldenen_zitronen/">Die Goldenen Zitronen</a></td>
-        </tr>
-        <tr>
-          <td><a href="/artists/dr_john/">Dr John</a></td>
-        </tr>
-        <tr>
-          <td><a href="/artists/duffy/">Duffy</a></td>
-        </tr>
-        <tr>
-          <td><a href="/artists/echo_and_the_bunnymen/">Echo and the Bunnymen</a></td>
-        </tr>
-        <tr>
-          <td><a href="/artists/eddi_reader/">Eddi Reader</a></td>
-        </tr>
-        <tr>
-          <td><a href="/artists/edward_ii_the_red_hot_polkas/">Edward II & the Red Hot Polkas</a></td>
-        </tr>
-        <tr>
-          <td><a href="/artists/ewan_maccoll/">Ewan MacColl</a></td>
-        </tr>
-        <tr>
-          <td><a href="/artists/ewan_maccoll_peggy_seeger/">Ewan MacColl & Peggy Seeger</a></td>
-        </tr>
-        <tr>
-          <td><a href="/artists/eyes_adrift/">Eyes Adrift</a></td>
-        </tr>
-        <tr>
-          <td><a href="/artists/flaco_jiminez/">Flaco Jiminez</a></td>
-        </tr>
-        <tr>
-          <td><a href="/artists/forward_russia/">Forward Russia</a></td>
-        </tr>
-        <tr>
-          <td><a href="/artists/four_brothers/">Four Brothers</a></td>
-        </tr>
-        <tr>
-          <td><a href="/artists/frank_black/">Frank Black</a></td>
-        </tr>
-        <tr>
-          <td><a href="/artists/frank_black_the_catholics/">Frank Black & the Catholics</a></td>
-        </tr>
-        <tr>
-          <td><a href="/artists/french_kicks/">French Kicks</a></td>
-        </tr>
-        <tr>
-          <td><a href="/artists/glide/">Glide</a></td>
-        </tr>
-        <tr>
-          <td><a href="/artists/goats_don_t_shave/">Goats Don't Shave</a></td>
-        </tr>
-        <tr>
-          <td><a href="/artists/gods_little_monkeys/">Gods Little Monkeys</a></td>
-        </tr>
-        <tr>
-          <td><a href="/artists/gone_to_earth/">Gone To Earth</a></td>
-        </tr>
-        <tr>
-          <td><a href="/artists/gordon_gano/">Gordon Gano</a></td>
-        </tr>
-        <tr>
-          <td><a href="/artists/grant_lee_phillips/">Grant-Lee Phillips</a></td>
-        </tr>
-        <tr>
-          <td><a href="/artists/great_big_sea/">Great Big Sea</a></td>
-        </tr>
-        <tr>
-          <td><a href="/artists/hanson/">Hanson</a></td>
-        </tr>
-        <tr>
-          <td><a href="/artists/hayseed_dixie/">Hayseed Dixie</a></td>
-        </tr>
-        <tr>
-          <td><a href="/artists/home/">Home</a></td>
-        </tr>
-        <tr>
-          <td><a href="/artists/honky_tonk_cowboys_rebecca_price/">Honky Tonk Cowboys & Rebecca Price</a></td>
-        </tr>
-        <tr>
-          <td><a href="/artists/horseflies/">Horseflies</a></td>
-        </tr>
-        <tr>
-          <td><a href="/artists/ian_mcculloch/">Ian McCulloch</a></td>
-        </tr>
-        <tr>
-          <td><a href="/artists/immaculate_fools/">Immaculate Fools</a></td>
-        </tr>
-        <tr>
-          <td><a href="/artists/incantation/">Incantation</a></td>
-        </tr>
-        <tr>
-          <td><a href="/artists/jackie_leven/">Jackie Leven</a></td>
-        </tr>
-        <tr>
-          <td><a href="/artists/janis_ian/">Janis Ian</a></td>
-        </tr>
-        <tr>
-          <td><a href="/artists/jolly_boys/">Jolly Boys</a></td>
-        </tr>
-        <tr>
-          <td><a href="/artists/june_tabor/">June Tabor</a></td>
-        </tr>
-        <tr>
-          <td><a href="/artists/june_tabor_oysterband/">June Tabor & Oysterband</a></td>
-        </tr>
-        <tr>
-          <td><a href="/artists/kaki_king/">Kaki King</a></td>
-        </tr>
-        <tr>
-          <td><a href="/artists/killing_joke/">Killing Joke</a></td>
-        </tr>
-        <tr>
-          <td><a href="/artists/king_cobb_steelie/">King Cobb Steelie</a></td>
-        </tr>
-        <tr>
-          <td><a href="/artists/kingsbury_manx/">Kingsbury Manx</a></td>
-        </tr>
-        <tr>
-          <td><a href="/artists/less_than_jake/">Less Than Jake</a></td>
-        </tr>
-        <tr>
-          <td><a href="/artists/levellers_mutineers/">Levellers Mutineers</a></td>
-        </tr>
-        <tr>
-          <td><a href="/artists/lou_rhodes/">Lou Rhodes</a></td>
-        </tr>
-        <tr>
-          <td><a href="/artists/luke_vibert_bj_cole/">Luke Vibert & BJ Cole</a></td>
-        </tr>
-        <tr>
-          <td><a href="/artists/machanic_manyeruke/">Machanic Manyeruke</a></td>
-        </tr>
-        <tr>
-          <td><a href="/artists/madder_rose/">Madder Rose</a></td>
-        </tr>
-        <tr>
-          <td><a href="/artists/maddy_prior/">Maddy Prior</a></td>
-        </tr>
-        <tr>
-          <td><a href="/artists/malcolms_interview/">Malcolms Interview</a></td>
-        </tr>
-        <tr>
-          <td><a href="/artists/maria_mckee/">Maria McKee</a></td>
-        </tr>
-        <tr>
-          <td><a href="/artists/mark_eitzel/">Mark Eitzel</a></td>
-        </tr>
-        <tr>
-          <td><a href="/artists/mark_t_the_brickbats/">Mark T. & The Brickbats</a></td>
-        </tr>
-        <tr>
-          <td><a href="/artists/mary_lorson_billy_cote/">Mary Lorson & Billy Cote</a></td>
-        </tr>
-        <tr>
-          <td><a href="/artists/mary_lorson_saint_low/">Mary Lorson & Saint Low</a></td>
-        </tr>
-        <tr>
-          <td><a href="/artists/mechanic_manureke/">Mechanic Manureke</a></td>
-        </tr>
-        <tr>
-          <td><a href="/artists/mendoza_line/">Mendoza Line</a></td>
-        </tr>
-        <tr>
-          <td><a href="/artists/mexican_institute_of_sound/">Mexican Institute Of Sound</a></td>
-        </tr>
-        <tr>
-          <td><a href="/artists/michael_messer/">Michael Messer</a></td>
-        </tr>
-        <tr>
-          <td><a href="/artists/michael_nesmith/">Michael Nesmith</a></td>
-        </tr>
-        <tr>
-          <td><a href="/artists/michelle_shocked/">Michelle Shocked</a></td>
-        </tr>
-        <tr>
-          <td><a href="/artists/minus_5/">Minus 5</a></td>
-        </tr>
-        <tr>
-          <td><a href="/artists/murder_by_death/">Murder By Death</a></td>
-        </tr>
-        <tr>
-          <td><a href="/artists/nitin_sawhiney/">Nitin Sawhiney</a></td>
-        </tr>
-        <tr>
-          <td><a href="/artists/north_mississippi_allstars/">North Mississippi Allstars</a></td>
-        </tr>
-        <tr>
-          <td><a href="/artists/number_one_cup/">Number One Cup</a></td>
-        </tr>
-        <tr>
-          <td><a href="/artists/obi/">Obi</a></td>
-        </tr>
-        <tr>
-          <td><a href="/artists/oysterband/">Oysterband</a></td>
-        </tr>
-        <tr>
-          <td><a href="/artists/pat_gallagher_goats_don_t_shave/">Pat Gallagher & Goats Don't Shave</a></td>
-        </tr>
-        <tr>
-          <td><a href="/artists/paul_kelly/">Paul Kelly</a></td>
-        </tr>
-        <tr>
-          <td><a href="/artists/pere_ubu/">Pere Ubu</a></td>
-        </tr>
-        <tr>
-          <td><a href="/artists/phil_roy/">Phil Roy</a></td>
-        </tr>
-        <tr>
-          <td><a href="/artists/poison_girls/">Poison Girls</a></td>
-        </tr>
-        <tr>
-          <td><a href="/artists/pressgang/">Pressgang</a></td>
-        </tr>
-        <tr>
-          <td><a href="/artists/prolapse/">Prolapse</a></td>
-        </tr>
-        <tr>
-          <td><a href="/artists/rev_hammer/">Rev Hammer</a></td>
-        </tr>
-        <tr>
-          <td><a href="/artists/rev_hammer_s_freeborn_john/">Rev Hammer's Freeborn John</a></td>
-        </tr>
-        <tr>
-          <td><a href="/artists/rey_de_copas/">Rey De Copas</a></td>
-        </tr>
-        <tr>
-          <td><a href="/artists/richard_thompson/">Richard Thompson</a></td>
-        </tr>
-        <tr>
-          <td><a href="/artists/rockingbirds/">Rockingbirds</a></td>
-        </tr>
-        <tr>
-          <td><a href="/artists/ron_sexsmith/">Ron Sexsmith</a></td>
-        </tr>
-        <tr>
-          <td><a href="/artists/rory_mcleod/">Rory McLeod</a></td>
-        </tr>
-        <tr>
-          <td><a href="/artists/roy_carriere/">Roy Carriere</a></td>
-        </tr>
-        <tr>
-          <td><a href="/artists/ryan_adams/">Ryan Adams</a></td>
-        </tr>
-        <tr>
-          <td><a href="/artists/s_e_rogie/">S.E. Rogie</a></td>
-        </tr>
-        <tr>
-          <td><a href="/artists/saint_low/">Saint Low</a></td>
-        </tr>
-        <tr>
-          <td><a href="/artists/savourna_stevenson/">Savourna Stevenson</a></td>
-        </tr>
-        <tr>
-          <td><a href="/artists/savourna_stevenson_danny_thompson/">Savourna Stevenson & Danny Thompson</a></td>
-        </tr>
-        <tr>
-          <td><a href="/artists/savourna_stevenson_davy_spillane/">Savourna Stevenson & Davy Spillane</a></td>
-        </tr>
-        <tr>
-          <td><a href="/artists/savourna_stevenson_june_tabor/">Savourna Stevenson & June Tabor</a></td>
-        </tr>
-        <tr>
-          <td><a href="/artists/savourna_stevenson_featuring_eddie_reader/">Savourna Stevenson featuring Eddie Reader</a></td>
-        </tr>
-        <tr>
-          <td><a href="/artists/screamin_jay_hawkins/">Screamin' Jay Hawkins</a></td>
-        </tr>
-        <tr>
-          <td><a href="/artists/seefood/">Seefood</a></td>
-        </tr>
-        <tr>
-          <td><a href="/artists/shelley_devoto/">Shelley Devoto</a></td>
-        </tr>
-        <tr>
-          <td><a href="/artists/soft_cell/">Soft Cell</a></td>
-        </tr>
-        <tr>
-          <td><a href="/artists/stephen_duffy/">Stephen Duffy</a></td>
-        </tr>
-        <tr>
-          <td><a href="/artists/suzzy_and_maggie_roche/">Suzzy And Maggie Roche</a></td>
-        </tr>
-        <tr>
-          <td><a href="/artists/sweet_honey_in_the_rock/">Sweet Honey in the Rock</a></td>
-        </tr>
-        <tr>
-          <td><a href="/artists/tv_smith/">TV Smith</a></td>
-        </tr>
-        <tr>
-          <td><a href="/artists/the_apples_in_stereo/">The Apples in Stereo</a></td>
-        </tr>
-        <tr>
-          <td><a href="/artists/the_barely_works/">The Barely Works</a></td>
-        </tr>
-        <tr>
-          <td><a href="/artists/the_bluetones/">The Bluetones</a></td>
-        </tr>
-        <tr>
-          <td><a href="/artists/the_charlatans/">The Charlatans</a></td>
-        </tr>
-        <tr>
-          <td><a href="/artists/the_church/">The Church</a></td>
-        </tr>
-        <tr>
-          <td><a href="/artists/the_cowboy_junkies/">The Cowboy Junkies</a></td>
-        </tr>
-        <tr>
-          <td><a href="/artists/the_datsuns/">The Datsuns</a></td>
-        </tr>
-        <tr>
-          <td><a href="/artists/the_four_brothers/">The Four Brothers</a></td>
-        </tr>
-        <tr>
-          <td><a href="/artists/the_happy_end/">The Happy End</a></td>
-        </tr>
-        <tr>
-          <td><a href="/artists/the_horseflies/">The Horseflies</a></td>
-        </tr>
-        <tr>
-          <td><a href="/artists/the_jolly_boys/">The Jolly Boys</a></td>
-        </tr>
-        <tr>
-          <td><a href="/artists/the_lilac_time/">The Lilac Time</a></td>
-        </tr>
-        <tr>
-          <td><a href="/artists/the_martinis/">The Martinis</a></td>
-        </tr>
-        <tr>
-          <td><a href="/artists/the_mekons/">The Mekons</a></td>
-        </tr>
-        <tr>
-          <td><a href="/artists/the_mekons_and_michelle_shocked/">The Mekons And Michelle Shocked</a></td>
-        </tr>
-        <tr>
-          <td><a href="/artists/the_mendoza_line/">The Mendoza Line</a></td>
-        </tr>
-        <tr>
-          <td><a href="/artists/the_minus_5/">The Minus 5</a></td>
-        </tr>
-        <tr>
-          <td><a href="/artists/the_orb/">The Orb</a></td>
-        </tr>
-        <tr>
-          <td><a href="/artists/the_oyster_band/">The Oyster Band</a></td>
-        </tr>
-        <tr>
-          <td><a href="/artists/the_pale_orchestra/">The Pale Orchestra</a></td>
-        </tr>
-        <tr>
-          <td><a href="/artists/the_presidents_of_the_united_states_of_america/">The Presidents of the United States Of America</a></td>
-        </tr>
-        <tr>
-          <td><a href="/artists/the_real_sounds/">The Real Sounds</a></td>
-        </tr>
-        <tr>
-          <td><a href="/artists/the_ukrainians/">The Ukrainians</a></td>
-        </tr>
-        <tr>
-          <td><a href="/artists/the_velvet_crush/">The Velvet Crush</a></td>
-        </tr>
-        <tr>
-          <td><a href="/artists/the_vines/">The Vines</a></td>
-        </tr>
-        <tr>
-          <td><a href="/artists/the_wannadies/">The Wannadies</a></td>
-        </tr>
-        <tr>
-          <td><a href="/artists/the_wedding_present/">The Wedding Present</a></td>
-        </tr>
-        <tr>
-          <td><a href="/artists/they_might_be_giants/">They Might Be Giants</a></td>
-        </tr>
-        <tr>
-          <td><a href="/artists/todd_rundgren/">Todd Rundgren</a></td>
-        </tr>
-        <tr>
-          <td><a href="/artists/tom_robinson/">Tom Robinson</a></td>
-        </tr>
-        <tr>
-          <td><a href="/artists/tom_robinson_band/">Tom Robinson Band</a></td>
-        </tr>
-        <tr>
-          <td><a href="/artists/utah_phillips_ani_difranco/">Utah Phillips & Ani DiFranco</a></td>
-        </tr>
-        <tr>
-          <td><a href="/artists/violent_femmes/">Violent Femmes</a></td>
-        </tr>
-        <tr>
-          <td><a href="/artists/waz/">WAZ</a></td>
-        </tr>
-        <tr>
-          <td><a href="/artists/we_free_kings/">We Free Kings</a></td>
-        </tr>
-        <tr>
-          <td><a href="/artists/weddings_parties_anything/">Weddings Parties Anything</a></td>
-        </tr>
-        <tr>
-          <td><a href="/artists/wende_zako/">Wende Zako</a></td>
-        </tr>
-        <tr>
-          <td><a href="/artists/wired_to_the_moon/">Wired to the Moon</a></td>
-        </tr>
-        <tr>
-          <td><a href="/artists/xtc/">XTC</a></td>
-        </tr>
-        <tr>
-          <td><a href="/artists/ziggy_marley/">Ziggy Marley</a></td>
-        </tr>
-
-      </tbody>
-    </table>
-
+    </div>
+    <div class="col-lg-3">
+      <div class="card feature-card">
+        <div class="card-body">
+          <h5 class="card-title">Tips</h5>
+          <p class="small text-muted mb-2">Use A–Z to jump or start typing to filter.</p>
+          <p class="small text-muted mb-0">Click an artist to see which compilation(s) they appear on.</p>
+        </div>
       </div>
+    </div>
+  </div>
 
-    <footer class="footer">
-      <div class="addthis_native_toolbox"></div>
-      Site created by <a href="https://links.davecross.co.uk/">Dave Cross</a><br>
-      Code on <a href="https://github.com/davorg/cookingvinyl/">Github</a>
-    </footer>
-    <script type="text/javascript"
-        src="https://code.jquery.com/jquery-3.1.1.min.js"
-        integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" 
-        crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.31.3/js/jquery.tablesorter.min.js"
-            integrity="sha512-qzgd5cYSZcosqpzpn7zF2ZId8f/8CHmFKZ8j7mU4OUXTNRd5g+ZHBPsgKEwoqxCtdQvExE5LprwwPAgoicguNg=="
-            crossorigin="anonymous"
-            referrerpolicy="no-referrer"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
-            integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
-            crossorigin="anonymous"></script>
-    <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-56165a02d0fe210e" async="async"></script>
-    <script type="text/javascript">
-$(document).ready(function() {
-  $("#datatable").tablesorter();
-});
+
+
+        </div>
+      </main>
+
+      <footer class="footer mt-auto py-4">
+        <div class="container small text-center text-muted">
+          <div class="addthis_native_toolbox mb-2"></div>
+          Site created by <a href="https://links.davecross.co.uk/">Dave Cross</a> • Code on <a href="https://github.com/davorg/cookingvinyl/">GitHub</a>
+        </div>
+      </footer>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+    <!-- Minimal, dependency-free table utilities (sort + filter) -->
+    <script>
+    (()=>{
+      function getCellText(cell){ return (cell?.textContent || '').trim(); }
+      function detectType(val){ return /^-?\d+(?:[\.,]\d+)?$/.test(val.replace(/[,\s]/g,'')) ? 'number' : 'text'; }
+
+      function sortTable(table, colIndex, dir='asc'){
+        const tbody = table.tBodies[0];
+        const rows = Array.from(tbody.rows);
+        const sample = getCellText(rows[0]?.cells[colIndex] || {});
+        const type = table.querySelectorAll('th')[colIndex]?.dataset.sortType || detectType(sample);
+        rows.sort((a,b)=>{
+          let A = getCellText(a.cells[colIndex]);
+          let B = getCellText(b.cells[colIndex]);
+          if(type==='number'){ A=parseFloat(A.replace(/[,\s]/g,''))||0; B=parseFloat(B.replace(/[,\s]/g,''))||0; }
+          else { A=A.toLowerCase(); B=B.toLowerCase(); }
+          return (A<B ? -1 : A>B ? 1 : 0) * (dir==='asc'?1:-1);
+        });
+        rows.forEach(r=>tbody.appendChild(r));
+        // aria state
+        table.querySelectorAll('th').forEach(th=>th.removeAttribute('aria-sort'));
+        table.querySelectorAll('th')[colIndex].setAttribute('aria-sort', dir==='asc'?'ascending':'descending');
+      }
+
+      function makeSortable(table){
+        const headers = table.tHead?.rows[0]?.cells || [];
+        Array.from(headers).forEach((th, i)=>{
+          th.tabIndex = 0;
+          th.classList.add('sortable');
+          th.addEventListener('click', ()=>{
+            const dir = th.dataset.dir = (th.dataset.dir === 'asc' ? 'desc' : 'asc');
+            sortTable(table, i, dir);
+          });
+          th.addEventListener('keydown', (e)=>{
+            if(e.key==='Enter' || e.key===' ') { e.preventDefault(); th.click(); }
+          });
+        });
+      }
+
+      function attachFilter(table, input, counter){
+        if(!input) return;
+        const rows = table.tBodies[0].rows;
+        const update = ()=>{
+          const q = input.value.trim().toLowerCase();
+          let shown = 0;
+          for(const row of rows){
+            const txt = row.textContent.toLowerCase();
+            const vis = !q || txt.includes(q);
+            row.style.display = vis ? '' : 'none';
+            if(vis) shown++;
+          }
+          if(counter){
+            const total = rows.length;
+            counter.textContent = (shown===total) ? total + ' items' : shown + ' of ' + total + ' shown';
+          }
+        };
+        input.addEventListener('input', update);
+        update();
+      }
+
+      // expose helpers globally for page sections that need them
+      window.TableTools = { makeSortable, attachFilter, sortTable };
+    })();
     </script>
+
+    <!-- Page-specific vanilla JS, if supplied -->
+    
+    <script>
+    document.addEventListener('DOMContentLoaded', function(){
+
+  const table = document.getElementById('datatable');
+  TableTools.makeSortable(table);
+  TableTools.attachFilter(table, document.getElementById('artistFilter'), document.getElementById('artistCount'));
+  document.querySelectorAll('.js-az').forEach(a=>a.addEventListener('click', e=>{
+    e.preventDefault();
+    const letter = e.currentTarget.dataset.letter || '';
+    const input = document.getElementById('artistFilter');
+    if(letter) {
+      // starts-with filter
+      const rows = table.tBodies[0].rows;
+      let shown = 0;
+      for(const row of rows){
+        const txt = row.textContent.trim().toLowerCase();
+        const vis = txt.startsWith(letter.toLowerCase());
+        row.style.display = vis ? '' : 'none';
+        if(vis) shown++;
+      }
+      const total = table.tBodies[0].rows.length;
+      const counter = document.getElementById('artistCount');
+      if(counter) counter.textContent = (shown===total) ? total + ' artists' : shown + ' of ' + total + ' shown';
+    } else {
+      input.value = '';
+      input.dispatchEvent(new Event('input', {bubbles:true}));
+    }
+  }));
+
+    });
+    </script>
+    <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      document.querySelectorAll('.table-wrap').forEach(wrap => {
+        const tools = wrap.querySelector('.table-tools');
+        if (!tools) return;
+
+        const setOffset = () => {
+          wrap.style.setProperty('--tools-h', tools.offsetHeight + 'px');
+        };
+
+        setOffset();
+
+        // Handle resize & A–Z wrapping
+        new ResizeObserver(setOffset).observe(tools);
+        window.addEventListener('resize', setOffset, { passive: true });
+      });
+    });
+    </script>
+
+    
   </body>
 </html>
 

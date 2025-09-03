@@ -1,21 +1,64 @@
 [% WRAPPER page.tt %]
-    <h1>Cooking Vinyl Compilations</h1>
-    <p>A list of compilations released by
-      <a href="http://www.cookingvinyl.com/">Cooking Vinyl</a> records.</p>
-    <table id="datatable" class="tablesorter table table-striped table-sm table-hover table-bordered">
-      <thead>
-        <tr>
-          <th>Catalogue</th><th>Year</th><th>Title</th>
-        </tr>
-      </thead>
-      <tbody>
+  <h1>Cooking Vinyl Compilations</h1>
+  <p>A list of compilations released by
+    <a href="http://www.cookingvinyl.com/">Cooking Vinyl</a> records.</p>
+
+  <div class="row g-4">
+    <div class="col-lg-9">
+      <div class="table-wrap feature-card p-0" style="--col1:22%;--col2:10%;--col3:68%;">
+        <div class="table-tools p-3 border-bottom">
+          <div class="d-flex flex-wrap align-items-center gap-2">
+            <label for="albumFilter" class="me-2 mb-0 small text-muted">Quick filter</label>
+            <input id="albumFilter" class="form-control form-control-sm w-auto" placeholder="Type to filter…">
+            <span class="ms-auto small text-muted" id="albumCount"></span>
+          </div>
+          <div class="columns-bar mt-2">
+            <div>Catalogue</div><div>Year</div><div>Title</div>
+          </div>
+        </div>
+        <div class="table-responsive">
+          <table id="datatable" class="table table-striped table-sm table-hover mb-0">
+            <colgroup><col><col><col></colgroup>
+            <thead><tr><th>Catalogue</th><th>Year</th><th>Title</th></tr></thead>
+            <tbody>
 [% FOREACH album IN albums -%]
-        <tr>
-          <td>[% IF album.title %]<a href="/[% album.url_path %]">[% END %][% album.cat %][% IF album.title %]</a>[% END %]</td>
-          <td>[% album.year %]</td>
-          <td>[% album.title %]</td>
-        </tr>
+              <tr>
+                <td>[% IF album.title %]<a href="/[% album.url_path %]">[% END %][% album.cat %][% IF album.title %]</a>[% END %]</td>
+                <td>[% album.year %]</td>
+                <td>[% album.title %]</td>
+              </tr>
 [% END %]
-      </tbody>
-    </table>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-3">
+      <div class="card feature-card">
+        <div class="card-body">
+          <h5 class="card-title">Quick filters</h5>
+          <div class="d-grid gap-2">
+            <button class="btn btn-outline-secondary btn-sm js-year" data-year="1987">1987</button>
+            <button class="btn btn-outline-secondary btn-sm js-year" data-year="1993">1993</button>
+            <button class="btn btn-outline-secondary btn-sm js-year" data-year="1998">1998</button>
+            <button class="btn btn-outline-secondary btn-sm js-year" data-year="">All years</button>
+          </div>
+          <hr>
+          <p class="small text-muted mb-0">Tip: click a column header to sort. Press <kbd>Enter</kbd> on it to sort with the keyboard.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+[% page_js = BLOCK %]
+  const table = document.getElementById('datatable');
+  TableTools.makeSortable(table);
+  TableTools.attachFilter(table, document.getElementById('albumFilter'), document.getElementById('albumCount'));
+  document.querySelectorAll('.js-year').forEach(btn=>btn.addEventListener('click', e=>{
+    const y = e.currentTarget.dataset.year || '';
+    const input = document.getElementById('albumFilter');
+    input.value = y;
+    input.dispatchEvent(new Event('input', {bubbles:true}));
+  }));
+[% END %]
 [% END %]
