@@ -50,8 +50,9 @@ field @urls;
 method run {
   for (keys %page) {
     $tt->process("$_.tt", {
-      page => $page{$_},
-      domain => $uri,
+      page_type => 'page',
+      page      => $page{$_},
+      domain     => $uri,
     }, $page{$_}->{out})
       or die $tt->error;
 
@@ -59,6 +60,7 @@ method run {
   }
 
   $tt->process('albums.tt', {
+    page_type => 'list',
     albums    => \@albums,
     domain    => $uri,
     page      => {
@@ -73,6 +75,7 @@ method run {
   push @urls, "$uri/albums/";
 
   $tt->process('artists.tt', {
+    page_type => 'list',
     artists   => \@artists,
     domain    => $uri,
     page      => {
@@ -87,6 +90,7 @@ method run {
   push @urls, "$uri/artists/";
  
   $tt->process('songs.tt', {
+    page_type => 'list',
     songs     => \@songs,
     domain    => $uri,
     page      => {
@@ -103,6 +107,7 @@ method run {
   foreach (@albums) {
     next unless $_->title;
     $tt->process('album.tt', {
+      page_type => 'detail',
       album     => $_,
       domain    => $uri,
       tracks    => [ $_->tracks->by_title ],
@@ -116,6 +121,7 @@ method run {
 
   foreach (@artists) {
     $tt->process('artist.tt', {
+      page_type => 'detail',
       artist    => $_,
       domain    => $uri,
       tracks    => [ $_->tracks->by_title ],
@@ -129,6 +135,7 @@ method run {
 
   foreach (@songs) {
     $tt->process('song.tt', {
+      page_type => 'detail',
       song      => $_,
       domain    => $uri,
       tracks    => [ $_->tracks->by_title ],
