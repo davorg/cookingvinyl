@@ -211,3 +211,34 @@ body {
 .feature-icon.artists svg { --icon-color: #6a5acd; } /* purple */
 .feature-icon.songs   svg { --icon-color: #00a4ff; } /* electric blue */
 
+/* === Compact hero (detail pages) ===================================== */
+/* Shrink the vertical padding significantly */
+.hero.hero--compact .inner {
+  padding-top: 1.25rem;
+  padding-bottom: 0.75rem;
+}
+
+/* Scale the title down a notch */
+.hero.hero--compact h1 {
+  font-size: clamp(1.75rem, 3vw, 2.5rem);
+  margin-top: .15rem;
+}
+
+/* Tighten the lead spacing under the title, if present */
+.hero.hero--compact .lead {
+  margin-top: .25rem;
+}
+
+/* If your template renders the wave after the hero, hide it on compact pages */
+.hero.hero--compact + .wave {
+  display: none;
+}
+
+/* Optional: a touch more space on larger screens */
+@media (min-width: 992px) {
+  .hero.hero--compact .inner {
+    padding-top: 1.75rem;
+    padding-bottom: 1rem;
+  }
+}
+
