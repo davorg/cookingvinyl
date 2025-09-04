@@ -184,3 +184,30 @@ body {
 
 .table.detail-table td:nth-child(3),
 .table.detail-table th:nth-child(3) { width: 140px; white-space: nowrap; }
+
+/* === Feature card icons (hand-drawn) ================================ */
+.feature-card .card-body {
+  text-align: center;
+}
+
+.feature-icon svg {
+  width: 110px;
+  height: 110px;
+  color: var(--icon-color, #6a5acd); /* default tint */
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.handdrawn svg {
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.feature-card:hover .feature-icon svg {
+  transform: translateY(-2px) rotate(-1deg);
+}
+
+/* Per-card tints (use explicit classes set in index.tt) */
+.feature-icon.albums  svg { --icon-color: #ff7a18; } /* orange */
+.feature-icon.artists svg { --icon-color: #6a5acd; } /* purple */
+.feature-icon.songs   svg { --icon-color: #00a4ff; } /* electric blue */
+
