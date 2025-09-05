@@ -61,7 +61,7 @@ method run {
 
   $tt->process('albums.tt', {
     page_type => 'list',
-    albums    => \@albums,
+    albums    => $sch->resultset('Album'),
     domain    => $uri,
     page      => {
       page_title  => 'List of Albums',
@@ -76,7 +76,9 @@ method run {
 
   $tt->process('artists.tt', {
     page_type => 'list',
-    artists   => \@artists,
+    artists   => $sch->resultset('Artist')->search_rs(undef, {
+      order_by => 'name',
+    }),
     domain    => $uri,
     page      => {
       page_title  => 'List of Artists',

@@ -15,8 +15,22 @@ use warnings;
 
 use Moose;
 use MooseX::NonMoose;
-use MooseX::MarkAsMethods autoclean => 1;
+use namespace::autoclean;
 extends 'DBIx::Class::Core';
+
+=head1 COMPONENTS LOADED
+
+=over 4
+
+=item * L<DBIx::Class::InflateColumn::DateTime>
+
+=item * L<DBIx::Class::TimeStamp>
+
+=back
+
+=cut
+
+__PACKAGE__->load_components("InflateColumn::DateTime", "TimeStamp");
 
 =head1 TABLE: C<album>
 
@@ -49,6 +63,27 @@ __PACKAGE__->table("album");
   is_nullable: 1
   size: 100
 
+=head2 mb_rg_mbid
+
+  data_type: 'char'
+  is_nullable: 1
+  size: 36
+
+=head2 discogs_master_id
+
+  data_type: 'integer'
+  is_nullable: 1
+
+=head2 total_tracks
+
+  data_type: 'integer'
+  is_nullable: 1
+
+=head2 cover_url
+
+  data_type: 'text'
+  is_nullable: 1
+
 =cut
 
 __PACKAGE__->add_columns(
@@ -60,6 +95,14 @@ __PACKAGE__->add_columns(
   { data_type => "integer", is_nullable => 1 },
   "title",
   { data_type => "char", is_nullable => 1, size => 100 },
+  "mb_rg_mbid",
+  { data_type => "char", is_nullable => 1, size => 36 },
+  "discogs_master_id",
+  { data_type => "integer", is_nullable => 1 },
+  "total_tracks",
+  { data_type => "integer", is_nullable => 1 },
+  "cover_url",
+  { data_type => "text", is_nullable => 1 },
 );
 
 =head1 PRIMARY KEY
@@ -92,8 +135,8 @@ __PACKAGE__->has_many(
 );
 
 
-# Created by DBIx::Class::Schema::Loader v0.07046 @ 2017-01-14 11:01:12
-# DO NOT MODIFY THIS OR ANYTHING ABOVE! md5sum:cynVLrLpGNeyPUu1gPsDVQ
+# Created by DBIx::Class::Schema::Loader v0.07053 @ 2025-09-04 12:36:29
+# DO NOT MODIFY THIS OR ANYTHING ABOVE! md5sum:IiCrZ/JwdjphMxX87idOzQ
 
 
 # You can replace this text with custom code or comments, and it will be preserved on regeneration

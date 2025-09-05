@@ -22,7 +22,8 @@
           </div>
           <div class="mt-2 small">
             <nav class="az d-flex flex-wrap">
-              [% FOREACH l IN [ 'All','A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z' ] -%]
+              [% letters = [ 'All' ];
+                 FOREACH l IN letters.import(artists.letters.slice) -%]
               <a href="#" class="btn btn-light btn-sm js-az" data-letter="[% l == 'All' ? '' : l %]">[% l %]</a>
               [% END -%]
             </nav>
@@ -34,7 +35,7 @@
             <colgroup><col></colgroup>
             <thead><tr><th>Artist</th></tr></thead>
             <tbody>
-[% FOREACH artist IN artists -%]
+[% FOREACH artist IN artists.all -%]
               <tr><td><a href="/[% artist.url_path %]">[% artist.name %]</a></td></tr>
 [% END %]
             </tbody>

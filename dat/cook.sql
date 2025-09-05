@@ -1,4 +1,10 @@
-CREATE TABLE artist (id integer primary key autoincrement, name char(200));
-CREATE TABLE album (id integer primary key autoincrement, cat char(20), year integer, title char(100));
+CREATE TABLE sqlite_sequence(name,seq);
+CREATE TABLE artist (id integer primary key autoincrement, name char(200), mbid CHAR(36), discogs_id INTEGER);
+CREATE TABLE album (id integer primary key autoincrement, cat char(20), year integer, title char(100), mb_rg_mbid CHAR(36), discogs_master_id INTEGER, total_tracks INTEGER, cover_url TEXT);
 CREATE TABLE song (id integer primary key autoincrement, title char(200));
-CREATE TABLE track (id integer primary key autoincrement, number char(5), song integer, album integer, artist integer, foreign key(song) references song(id), foreign key(album) references album(id), foreign key (artist) references artist(id));
+CREATE TABLE track (id integer primary key autoincrement, number char(5), song integer, album integer, artist integer, duration_seconds INTEGER, mb_recording_mbid CHAR(36), foreign key(song) references song(id), foreign key(album) references album(id), foreign key (artist) references artist(id));
+CREATE INDEX idx_artist_mbid ON artist(mbid);
+CREATE INDEX idx_artist_discogs ON artist(discogs_id);
+CREATE INDEX idx_album_mb_rg ON album(mb_rg_mbid);
+CREATE INDEX idx_album_discogs_master ON album(discogs_master_id);
+CREATE INDEX idx_track_mbid ON track(mb_recording_mbid);

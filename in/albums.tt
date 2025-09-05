@@ -29,7 +29,7 @@
             <colgroup><col><col><col></colgroup>
             <thead><tr><th>Catalogue</th><th>Year</th><th>Title</th></tr></thead>
             <tbody>
-[% FOREACH album IN albums -%]
+[% FOREACH album IN albums.all -%]
               <tr>
                 <td>[% IF album.title %]<a href="/[% album.url_path %]">[% END %][% album.cat %][% IF album.title %]</a>[% END %]</td>
                 <td>[% album.year %]</td>
@@ -46,9 +46,9 @@
         <div class="card-body">
           <h5 class="card-title">Quick filters</h5>
           <div class="d-grid gap-2">
-            <button class="btn btn-outline-secondary btn-sm js-year" data-year="1987">1987</button>
-            <button class="btn btn-outline-secondary btn-sm js-year" data-year="1993">1993</button>
-            <button class="btn btn-outline-secondary btn-sm js-year" data-year="1998">1998</button>
+[% FOR year IN albums.years -%]
+            <button class="btn btn-outline-secondary btn-sm js-year" data-year="[% year %]">[% year %]</button>
+[% END -%]
             <button class="btn btn-outline-secondary btn-sm js-year" data-year="">All years</button>
           </div>
           <hr>

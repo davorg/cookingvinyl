@@ -15,8 +15,22 @@ use warnings;
 
 use Moose;
 use MooseX::NonMoose;
-use MooseX::MarkAsMethods autoclean => 1;
+use namespace::autoclean;
 extends 'DBIx::Class::Core';
+
+=head1 COMPONENTS LOADED
+
+=over 4
+
+=item * L<DBIx::Class::InflateColumn::DateTime>
+
+=item * L<DBIx::Class::TimeStamp>
+
+=back
+
+=cut
+
+__PACKAGE__->load_components("InflateColumn::DateTime", "TimeStamp");
 
 =head1 TABLE: C<artist>
 
@@ -38,6 +52,17 @@ __PACKAGE__->table("artist");
   is_nullable: 1
   size: 200
 
+=head2 mbid
+
+  data_type: 'char'
+  is_nullable: 1
+  size: 36
+
+=head2 discogs_id
+
+  data_type: 'integer'
+  is_nullable: 1
+
 =cut
 
 __PACKAGE__->add_columns(
@@ -45,6 +70,10 @@ __PACKAGE__->add_columns(
   { data_type => "integer", is_auto_increment => 1, is_nullable => 0 },
   "name",
   { data_type => "char", is_nullable => 1, size => 200 },
+  "mbid",
+  { data_type => "char", is_nullable => 1, size => 36 },
+  "discogs_id",
+  { data_type => "integer", is_nullable => 1 },
 );
 
 =head1 PRIMARY KEY
@@ -77,8 +106,8 @@ __PACKAGE__->has_many(
 );
 
 
-# Created by DBIx::Class::Schema::Loader v0.07046 @ 2017-01-14 11:01:12
-# DO NOT MODIFY THIS OR ANYTHING ABOVE! md5sum:uOe+a4PtaL3iKZAguzs9pg
+# Created by DBIx::Class::Schema::Loader v0.07053 @ 2025-09-04 12:36:29
+# DO NOT MODIFY THIS OR ANYTHING ABOVE! md5sum:uAARwvg6GZbZF1/lxLH4/g
 
 
 # You can replace this text with custom code or comments, and it will be preserved on regeneration
