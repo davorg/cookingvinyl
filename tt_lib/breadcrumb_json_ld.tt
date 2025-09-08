@@ -1,0 +1,16 @@
+[% MACRO breadcrumb_json(object) BLOCK;
+     IF page_type == 'list' OR page_type == 'detail' -%]
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home",   "item": "/" },
+    { "@type": "ListItem", "position": 2, "name": "[% object.breadcrumb_type %]", "item": "[% object.breadcrumb_path %]" }[%     IF page_type == 'detail' -%],
+    { "@type": "ListItem", "position": 3, "name": "[% object.name OR object.title %]" }
+[%     END -%]
+  ]
+}
+</script>
+[%   END;
+   END -%]

@@ -1,0 +1,82 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+# Paths for your project layout
+TT_GLOB='*.tt'
+CSS_FILE='css/style.css'
+
+fail=0
+
+echo "1) Check faux header present in list templates (columns-bar)…"
+miss=0
+for f in albums.tt artists.tt songs.tt; do
+  if [[ -f "$f" ]]; then
+    if ! grep -q 'class="columns-bar' "$f"; then
+      echo "  MISSING: columns-bar in $f"
+      miss=1
+    else
+      echo "  OK: $f has columns-bar"
+    fi
+  fi
+done
+(( miss )) && fail=1
+
+echo
+echo "2) Check that the real <thead> is NOT sticky anywhere…"
+if [[ -f "$CSS_FILE" ]]; then
+  if grep -nE 'thead[^{]*\{[^}]*position\s*:\s*sticky' "$CSS_FILE" >/dev/null; then
+    echo "  Found sticky thead rule in $CSS_FILE (should be removed for list pages)"
+    grep -nE 'thead[^{]*\{[^}]*position\s*:\s*sticky' "$CSS_FILE" | sed 's/^/  /'
+    fail=1
+  else
+    echo "  OK: no sticky thead rules found in $CSS_FILE"
+  fi
+else
+  echo "  NOTE: $CSS_FILE not found — skipping CSS checks."
+fi
+
+echo
+echo "3) Check overflow rules that can break sticky layout…"
+if [[ -f "$CSS_FILE" ]]; then
+  if ! grep -nE '\.table-wrap[^{]*\{[^}]*overflow\s*:\s*visible' "$CSS_FILE" >/dev/null; then
+    echo "  WARN: .table-wrap should set overflow: visible; (not found in $CSS_FILE)"
+  else
+    echo "  OK: .table-wrap sets overflow: visible;"
+  fi
+
+  if grep -nE '\.table-wrap[^{]*\{[^}]*overflow\s*:\s*hidden' "$CSS_FILE" >/dev/null; then
+    echo "  WARN: .table-wrap has overflow: hidden; — this can clip sticky elements."
+    grep -nE '\.table-wrap[^{]*\{[^}]*overflow\s*:\s*hidden' "$CSS_FILE" | sed 's/^/  /'
+  fi
+
+  if grep -nE '\.table-responsive[^{]*\{[^}]*overflow\s*:\s*hidden' "$CSS_FILE" >/dev/null; then
+    echo "  NOTE: .table-responsive has overflow: hidden; consider overflow: auto; instead."
+    grep -nE '\.table-responsive[^{]*\{[^}]*overflow\s*:\s*hidden' "$CSS_FILE" | sed 's/^/  /'
+  else
+    echo "  OK: .table-responsive not forcing overflow: hidden;"
+  fi
+fi
+
+echo
+echo "4) Quick presence checks for table-tools block…"
+miss_tools=0
+for f in albums.tt artists.tt songs.tt; do
+  if [[ -f "$f" ]]; then
+    if ! grep -q 'class="table-tools' "$f"; then
+      echo "  MISSING: table-tools in $f"
+      miss_tools=1
+    else
+      echo "  OK: $f has table-tools"
+    fi
+  fi
+done
+(( miss_tools )) && fail=1
+
+echo
+if (( fail )); then
+  echo "❌ Sanity checks found problems."
+  exit 1
+else
+  echo "✅ Sanity checks passed."
+fi
+
