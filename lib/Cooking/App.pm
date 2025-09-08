@@ -19,6 +19,9 @@ field $tt = Template->new({
   INCLUDE_PATH => [ qw(in tt_lib) ],
   OUTPUT_PATH  => 'docs',
   PRE_PROCESS  => [ 'breadcrumb_json_ld.tt' ],
+  VARIABLES    => {
+    uri => $uri,
+  },
 });
 
 field @albums  = $sch->resultset('Album')->all;
