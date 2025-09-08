@@ -27,6 +27,11 @@
 
     <!-- Tiny bit of custom flair -->
     <link rel="stylesheet" href="/css/style.css">
+
+[% breadcrumb_json(object) -%]
+[% IF page_type == 'detail' AND object.can('json_ld_wrapped');
+     object.json_ld_wrapped;
+   END -%]
   </head>
   <body>
     <div class="site-wrapper">

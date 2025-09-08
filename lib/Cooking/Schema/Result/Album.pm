@@ -141,6 +141,41 @@ __PACKAGE__->has_many(
 
 # You can replace this text with custom code or comments, and it will be preserved on regeneration
 
+with 'MooX::Role::JSON_LD';
+
+sub json_ld_type { 'MusicAlbum' }
+
+sub json_ld_fields { [
+  { name => 'title' },
+  { datePublished => 'year' },
+  { identifier => 'cat' },
+  { byArtist => sub { {
+      '@type' => 'MusicGroup',
+      'name' => 'Various Artists',
+    } }
+  },
+  { "track" => sub {
+      [ map { $_->json_ld_data } shift->tracks->all ],
+    }
+  },
+] }
+
+sub json_ld_short_data {
+  my $self = shift;
+
+  return {
+    '@type'  => $self->json_ld_type,
+    name     => $self->title,
+    byArtist => {
+      '@type' => 'MusicGroup',
+      'name' => 'Various Artists',
+    }
+  }
+}
+
+sub breadcrumb_type { 'Albums' }
+sub breadcrumb_path { '/albums/' }
+
 sub page_title {
   my $self = shift;
   my $title = $self->cat;

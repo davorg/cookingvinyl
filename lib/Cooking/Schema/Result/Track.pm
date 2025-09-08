@@ -178,6 +178,20 @@ __PACKAGE__->belongs_to(
 # Created by DBIx::Class::Schema::Loader v0.07053 @ 2025-09-04 12:36:29
 # DO NOT MODIFY THIS OR ANYTHING ABOVE! md5sum:LlYSHCSwz1w4sl8fI8ZI0A
 
+with 'MooX::Role::JSON_LD';
+
+sub json_ld_type { 'MusicRecording' }
+
+sub json_ld_fields { [
+  { name => sub { shift->song->title } },
+  { byArtist => sub {
+      {
+        '@type' => 'MusicGroup',
+        name    => shift->artist->name,
+      }
+    }
+  }
+] }
 
 # You can replace this text with custom code or comments, and it will be preserved on regeneration
 __PACKAGE__->meta->make_immutable;

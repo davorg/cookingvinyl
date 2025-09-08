@@ -18,6 +18,7 @@ field $sch = Cooking::Schema->get_schema;
 field $tt = Template->new({
   INCLUDE_PATH => [ qw(in tt_lib) ],
   OUTPUT_PATH  => 'docs',
+  PRE_PROCESS  => [ 'breadcrumb_json_ld.tt' ],
 });
 
 field @albums  = $sch->resultset('Album')->all;

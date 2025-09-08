@@ -97,6 +97,23 @@ __PACKAGE__->has_many(
 
 # You can replace this text with custom code or comments, and it will be preserved on regeneration
 
+with 'MooX::Role::JSON_LD';
+
+sub json_ld_type { 'MusicRecording' }
+
+sub json_ld_fields { [
+  { name => 'title' },
+  { inAlbum => sub {
+      [ map {
+          $_->album->json_ld_short_data,
+        } shift->tracks ]
+    }
+  }
+] }
+
+sub breadcrumb_type { 'Songs' }
+sub breadcrumb_path { '/songs/' }
+
 sub page_title {
   my $self = shift;
 
