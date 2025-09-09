@@ -22,7 +22,7 @@
          target="_blank" rel="noopener">On MusicBrainz</a>
 [%   END %]
 
-[%   url = PROCESS af_url type='amazon_artist' artist=artist.name %]
+[%   url = PROCESS af_url type='amazon_artist' query=artist.name %] 
 [%   PROCESS cta_btn url=url label='Shop on Amazon' %]
     </div>
 

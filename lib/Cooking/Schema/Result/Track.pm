@@ -180,18 +180,19 @@ __PACKAGE__->belongs_to(
 
 with 'MooX::Role::JSON_LD';
 
+sub json_ld_data { {
+  '@type' => $_[0]->json_ld_type,
+  byArtist => {
+    '@type' => 'MusicGroup',
+    name    => $_[0]->artist->name,
+  },
+  name => $_[0]->song->title,
+} }
+
 sub json_ld_type { 'MusicRecording' }
 
-sub json_ld_fields { [
-  { name => sub { shift->song->title } },
-  { byArtist => sub {
-      {
-        '@type' => 'MusicGroup',
-        name    => shift->artist->name,
-      }
-    }
-  }
-] }
+# Dummy to satisfy the role requirement
+sub json_ld_fields { }
 
 # You can replace this text with custom code or comments, and it will be preserved on regeneration
 __PACKAGE__->meta->make_immutable;

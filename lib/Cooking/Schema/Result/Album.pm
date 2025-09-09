@@ -147,17 +147,26 @@ sub json_ld_type { 'MusicAlbum' }
 
 sub json_ld_fields { [
   { name => 'title' },
-  { datePublished => 'year' },
+  { '@id' => sub { 'https://cookingvinyl.dave.org.uk/' . shift->url_path . '#album' } },
+  { url => sub { 'https://cookingvinyl.dave.org.uk/' . shift->url_path } },
+  { datePublished => sub { shift->year . '' } },
   { identifier => 'cat' },
   { byArtist => sub { {
       '@type' => 'MusicGroup',
       'name' => 'Various Artists',
     } }
   },
-  { "track" => sub {
+  { publisher => sub { {
+     '@type' => 'Organization',
+     name    => 'Cooking Vinyl'
+    } },
+  },
+  { numTracks => sub { shift->tracks->count } },
+  { track => sub {
       [ map { $_->json_ld_data } shift->tracks->all ],
     }
   },
+  { mainEntityOfPage => sub { 'https://cookingvinyl.dave.org.uk/' . shift->url_path } },
 ] }
 
 sub json_ld_short_data {
@@ -168,7 +177,8 @@ sub json_ld_short_data {
     name     => $self->title,
     byArtist => {
       '@type' => 'MusicGroup',
-      'name' => 'Various Artists',
+      name    => 'Various Artists',
+      url     => 'https://cookingvinyl.dave.org.uk/' . $self->url_path,
     }
   }
 }

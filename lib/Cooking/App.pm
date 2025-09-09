@@ -52,7 +52,10 @@ field %page = (
 field @urls;
 
 method run {
+  warn "Generating site...\n";
+  warn "\tPages\n";
   for (keys %page) {
+    warn "\t\t$_\n";
     $tt->process("$_.tt", {
       page_type => 'page',
       page      => $page{$_},
@@ -63,6 +66,7 @@ method run {
     push @urls, "$uri/$page{$_}->{url_path}";
   }
 
+  warn "\tAlbums list\n"; 
   $tt->process('albums.tt', {
     page_type => 'list',
     albums    => $sch->resultset('Album'),
@@ -78,6 +82,7 @@ method run {
 
   push @urls, "$uri/albums/";
 
+  warn "\tArtists list\n";
   $tt->process('artists.tt', {
     page_type => 'list',
     artists   => $sch->resultset('Artist')->search_rs(undef, {
@@ -95,6 +100,7 @@ method run {
 
   push @urls, "$uri/artists/";
  
+  warn "\tSongs list\n";
   $tt->process('songs.tt', {
     page_type => 'list',
     songs     => \@songs,
@@ -110,6 +116,7 @@ method run {
 
   push @urls, "$uri/songs/";
 
+  warn "\tAlbum detail pages\n";
   foreach (@albums) {
     next unless $_->title;
     $tt->process('album.tt', {
@@ -125,6 +132,7 @@ method run {
     $tt->process('redirect.tt', { target => '/' . $_->url_path }, $_->redirect_file);
   }
 
+  warn "\tArtist detail pages\n";
   foreach (@artists) {
     $tt->process('artist.tt', {
       page_type => 'detail',
@@ -139,6 +147,7 @@ method run {
     $tt->process('redirect.tt', { target => '/' . $_->url_path }, $_->redirect_file);
   }
 
+  warn "\tSong detail pages\n";
   foreach (@songs) {
     $tt->process('song.tt', {
       page_type => 'detail',
@@ -153,6 +162,7 @@ method run {
     $tt->process('redirect.tt', { target => '/' . $_->url_path }, $_->redirect_file);
   }
 
+  warn "\tSitemap\n";
   open my $sitemap, '>', 'docs/sitemap.xml'
     or die "Cannot open docs/sitemap.xml: $!\n";
 
@@ -172,4 +182,6 @@ EOSITEMAP
   }
 
   print $sitemap "</urlset>\n";
+
+  warn "Done\n";
 }

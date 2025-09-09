@@ -117,7 +117,12 @@ with 'MooX::Role::JSON_LD';
 sub json_ld_type { 'MusicGroup' }
 
 sub json_ld_fields {
-  [ 'name' ],
+  [
+    'name',
+    { '@id' => sub { 'https://cookingvinyl.dave.org.uk/' . shift->url_path . '#artist' } },
+    { url => sub { 'https://cookingvinyl.dave.org.uk/' . shift->url_path } },
+    { mainEntityOfPage => sub { 'https://cookingvinyl.dave.org.uk/' . shift->url_path } },
+  ],
 }
 
 sub breadcrumb_type { 'Artists' }
