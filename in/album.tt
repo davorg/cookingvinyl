@@ -1,4 +1,4 @@
-[% WRAPPER page.tt %]
+[% WRAPPER page.tt -%]
     <h1>[% album.title %]</h1>
 
     <nav aria-label="Breadcrumb" class="breadcrumb-nav mb-3">
@@ -8,6 +8,25 @@
         <li aria-current="page">[% album.title %]</li>
       </ol>
     </nav>
+
+    <div class="d-flex flex-wrap gap-2 mb-3">
+[%   IF album.discogs_master_id -%]
+      <a class="btn btn-sm btn-outline-secondary"
+         href="https://www.discogs.com/master/[% album.discogs_master_id %]"
+         target="_blank" rel="noopener">View on Discogs</a>
+[%   END -%]
+[%   IF album.mb_rg_mbid -%]
+      <a class="btn btn-sm btn-outline-secondary"
+         href="https://musicbrainz.org/release-group/[% album.mb_rg_mbid %]"
+         target="_blank" rel="noopener">On MusicBrainz</a>
+[%   END -%]
+[%   ebayq = "${album.title} ${album.cat} Cooking Vinyl" | trim;
+     url = PROCESS af_url type='ebay_search' query=ebayq;
+     PROCESS cta_btn url=url label='Search on eBay' -%]
+[%   q_album = album.title _ ' ' _ album.cat;
+     url = PROCESS af_url type='amazon_album' query=q_album;
+     PROCESS cta_btn url=url label='Search on Amazon' -%]
+</div>
 
     <table class="table table-striped table-sm table-hover table-bordered">
       <tr>
@@ -35,4 +54,4 @@
 [% END -%]
       </tbody>
     </table>
-[% END %]
+[% END -%]

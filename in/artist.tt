@@ -9,6 +9,23 @@
       </ol>
     </nav>
 
+    <div class="d-flex flex-wrap gap-2 mb-3">
+[%   IF artist.discogs_id %]
+      <a class="btn btn-sm btn-outline-secondary"
+         href="https://www.discogs.com/artist/[% artist.discogs_id %]"
+         target="_blank" rel="noopener">View on Discogs</a>
+[%   END %]
+
+[%   IF artist.mbid %]
+      <a class="btn btn-sm btn-outline-secondary"
+         href="https://musicbrainz.org/artist/[% artist.mbid %]"
+         target="_blank" rel="noopener">On MusicBrainz</a>
+[%   END %]
+
+[%   url = PROCESS af_url type='amazon_artist' artist=artist.name %]
+[%   PROCESS cta_btn url=url label='Shop on Amazon' %]
+    </div>
+
     <table id="datatable" class="tablesorter table table-striped table-sm table-hover table-bordered">
       <thead>
         <tr>
