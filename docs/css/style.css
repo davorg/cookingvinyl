@@ -51,6 +51,15 @@ footer { flex-shrink: 0; }
 .navbar-transparent .navbar-nav .nav-link { color: rgba(255,255,255,.92); }
 .navbar-transparent .navbar-nav .nav-link:hover { color: #fff; }
 
+.navbar-nav .nav-item:not(:last-child) {
+  margin-right: .75rem;
+}
+
+.navbar-nav .nav-item:nth-last-child(2) {
+  border-right: 1px solid rgba(255,255,255,0.5);
+  padding-right: .75rem;
+}
+
 /* Cards */
 .feature-card {
   border: 0;
