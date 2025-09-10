@@ -13,6 +13,7 @@ class Cooking::App;
 use lib 'lib';
 use Cooking::Schema;
 use Template;
+use Time::Piece;
 
 field $uri = 'https://cookingvinyl.dave.org.uk';
 field $sch = Cooking::Schema->get_schema;
@@ -184,10 +185,14 @@ method run {
   xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 EOSITEMAP
 
+  my $lastmod = localtime;
+  $lastmod = $lastmod->strftime('%Y-%m-%dT%H:%M:%S+00:00');
+
   for (@urls) {
     print $sitemap <<EOSITEMAP;
   <url>
     <loc>$_</loc>
+    <lastmod>$lastmod</lastmod>
   </url>
 EOSITEMAP
   }
