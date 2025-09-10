@@ -28,7 +28,9 @@
      PROCESS cta_btn url=url label='Search on Amazon' -%]
 </div>
 
-    <table class="table table-striped table-sm table-hover table-bordered">
+    <p class="intro">[% album.blurb %]</p>
+
+    <table class="table meta-table table-striped table-sm table-hover table-bordered">
       <tr>
         <th>Code</th>
         <td>[% album.cat %]</td>

@@ -26,6 +26,8 @@
 [%   PROCESS cta_btn url=url label='Shop on Amazon' %]
     </div>
 
+    <p class="intro">[% artist.blurb %]</p>
+
     <table id="datatable" class="tablesorter table table-striped table-sm table-hover table-bordered">
       <thead>
         <tr>

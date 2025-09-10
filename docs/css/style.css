@@ -185,6 +185,16 @@ body {
 .table.detail-table td:nth-child(3),
 .table.detail-table th:nth-child(3) { width: 140px; white-space: nowrap; }
 
+.meta-table {
+  max-width: 30rem;   /* about 480px */
+  margin: 1.5rem 0;
+  font-size: 0.95rem;
+}
+.meta-table th {
+  width: 8rem;        /* keep labels aligned */
+  white-space: nowrap;
+}
+
 /* === Feature card icons (hand-drawn) ================================ */
 .feature-card .card-body {
   text-align: center;
@@ -266,3 +276,10 @@ body {
   text-decoration: underline;
 }
 
+.intro {
+  font-size: 1.1rem;
+  line-height: 1.5;
+  margin-bottom: 1rem;
+  color: #444;
+  max-width: 50ch;
+}
