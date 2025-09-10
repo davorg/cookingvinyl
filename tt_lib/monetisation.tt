@@ -1,0 +1,22 @@
+[%# ---- Affiliate helpers ----------------------------------------------- %]
+[% BLOCK af_url;
+     q = query | uri;
+     SWITCH type;
+       CASE 'ebay_search';
+         "https://www.ebay.com/sch/i.html?_nkw=${q}&campid=5339122083";
+       CASE 'amazon_artist';
+         "https://www.amazon.co.uk/s?k=${q}&i=popular&tag=davblog-21";
+       CASE 'amazon_album';
+         "https://www.amazon.co.uk/s?k=${q}&i=popular&tag=davblog-21";
+       CASE 'apple_music_artist';
+         "https://music.apple.com/gb/search?term=${q}&at=YOUR_APPLE_AFFILIATE_ID";
+     END;
+   END -%]
+
+[% BLOCK cta_btn -%]
+  <a class="btn btn-sm btn-outline-secondary"
+     href="[% url | html %]" rel="noopener nofollow" target="_blank">
+[%   label %]
+  </a>
+[% END -%]
+

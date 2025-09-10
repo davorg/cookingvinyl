@@ -120,16 +120,17 @@ sub breadcrumb_path { '/songs/' }
 sub page_title {
   my $self = shift;
 
-  return $self->title;
+  return sprintf '%s · Cooking Vinyl Compilation Tracks', $self->title // 'Unknown Title';
 }
 
-sub type {
+sub og_type {
   return 'music.song';
 }
 
 sub description {
   my $self = shift;
-  return 'Song: ' . $self->title;
+  return sprintf '%s on Cooking Vinyl samplers/promos. See all album appearances.',
+    $self->title // 'Unknown Title';
 }
 
 sub url_path {

@@ -2,6 +2,7 @@
 
 use strict;
 use warnings;
+use utf8;
 use 5.040;
 
 use feature 'class';
@@ -16,9 +17,14 @@ use Template;
 field $uri = 'https://cookingvinyl.dave.org.uk';
 field $sch = Cooking::Schema->get_schema;
 field $tt = Template->new({
+  ENCODING     => 'utf8',
   INCLUDE_PATH => [ qw(in tt_lib) ],
   OUTPUT_PATH  => 'docs',
-  PRE_PROCESS  => [ 'breadcrumb_json_ld.tt', 'monetisation.tt' ],
+  PRE_PROCESS  => [
+    'breadcrumb_json_ld.tt',
+    'monetisation.tt',
+    'seo_header.tt',
+  ],
   VARIABLES    => {
     uri => $uri,
   },
@@ -37,14 +43,14 @@ field %page = (
     out         => 'index.html',
     page_title  => '',
     url_path    => '',
-    description => 'Information about the compilation albums released by Cooking Vinyl records.',
+    description => 'Exploring the compilation albums released by Cooking Vinyl — browse by albums, artists, and songs.',
     type        => 'website',
   },
   about => {
     out         => 'about/index.html',
-    page_title  => 'About',
+    page_title  => 'About the site · Cooking Vinyl Compilations',
     url_path    => 'about/',
-    description => 'About the site and why I built it.',
+    description => 'A little about the Cooking Vinyl Compilations site, its purpose, and the data it contains.',
     type        => 'website',
   },
 );
@@ -60,7 +66,7 @@ method run {
       page_type => 'page',
       page      => $page{$_},
       domain     => $uri,
-    }, $page{$_}->{out})
+    }, $page{$_}->{out}, { binmode => ':utf8' })
       or die $tt->error;
 
     push @urls, "$uri/$page{$_}->{url_path}";
@@ -72,12 +78,12 @@ method run {
     albums    => $sch->resultset('Album'),
     domain    => $uri,
     page      => {
-      page_title  => 'List of Albums',
+      page_title  => 'Albums · Cooking Vinyl Compilations',
       url_path    => 'albums/',
-      description => 'List of compilation albums released by Cooking Vinyl records.',
+      description => 'Browse the compilation albums released by Cooking Vinyl records.',
       type        => 'website',
     },
-  }, 'albums/index.html')
+  }, 'albums/index.html', { binmode => ':utf8' })
     or die $tt->error;
 
   push @urls, "$uri/albums/";
@@ -90,12 +96,12 @@ method run {
     }),
     domain    => $uri,
     page      => {
-      page_title  => 'List of Artists',
+      page_title  => 'Artists · Cooking Vinyl Compilation Appearances',
       url_path    => 'artists/',
-      description => 'List of artists appearing on compilations released by Cooking Vinyl records.',
+      description => 'Browse the artists appearing on compilations released by Cooking Vinyl records.',
       type      => 'website',
     },
-  }, 'artists/index.html')
+  }, 'artists/index.html', { binmode => ':utf8' })
     or die $tt->error;
 
   push @urls, "$uri/artists/";
@@ -106,12 +112,12 @@ method run {
     songs     => \@songs,
     domain    => $uri,
     page      => {
-      page_title  => 'List of Songs',
+      page_title  => 'Songs · Cooking Vinyl Compilation Tracks',
       url_path    => 'songs/',
-      description => 'List of songs appearing on compilations released by Cooking Vinyl records.',
+      description => 'Browse the songs appearing on compilations released by Cooking Vinyl records.',
       type        => 'website',
     },
-  }, 'songs/index.html')
+  }, 'songs/index.html', { binmode => ':utf8' })
     or die $tt->error;
 
   push @urls, "$uri/songs/";
@@ -124,7 +130,7 @@ method run {
       album     => $_,
       domain    => $uri,
       tracks    => [ $_->tracks->by_title ],
-    }, $_->out_file)
+    }, $_->out_file, { binmode => ':utf8' })
       or die $tt->error;
 
     push @urls, "$uri/" . $_->url_path;
@@ -139,7 +145,7 @@ method run {
       artist    => $_,
       domain    => $uri,
       tracks    => [ $_->tracks->by_title ],
-    }, $_->out_file)
+    }, $_->out_file, { binmode => ':utf8' })
       or die $tt->error;
 
     push @urls, "$uri/" . $_->url_path;
@@ -154,7 +160,7 @@ method run {
       song      => $_,
       domain    => $uri,
       tracks    => [ $_->tracks->by_title ],
-    }, $_->out_file)
+    }, $_->out_file, { binmode => ':utf8' })
       or die $tt->error;
 
     push @urls, "$uri/" . $_->url_path;

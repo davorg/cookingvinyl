@@ -188,19 +188,27 @@ sub breadcrumb_path { '/albums/' }
 
 sub page_title {
   my $self = shift;
-  my $title = $self->cat;
-  $title .= ': ' . $self->title if $self->title;
+  my $title = sprintf '%s (%s) · Cooking Vinyl · %s', 
+    $self->title // 'Unknown Title',
+    $self->year  // 'n.d.',
+    $self->cat   // 'No Cat#';
 
   return $title;
 }
 
-sub type {
+sub og_type {
   return 'music.album';
 }
 
 sub description {
   my $self = shift;
-  return 'Album: ' . $self->title;
+
+  my $description = sprintf q['%s' (%s, %s) Cooking Vinyl compilation. Full track list and details.],
+    $self->title // 'Unknown Title',
+    $self->year  // 'n.d.',
+    $self->cat   // 'No Cat#';
+
+  return $description;
 }
 
 sub url_path {

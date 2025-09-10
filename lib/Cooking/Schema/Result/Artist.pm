@@ -130,16 +130,17 @@ sub breadcrumb_path { '/artists/' }
 
 sub page_title {
   my $self = shift;
-  return $self->name;
+  return sprintf '%s · Cooking Vinyl Compilation Appearances', $self->name;
 }
 
-sub type {
+sub og_type {
   return 'music.musician';
 }
 
 sub description {
   my $self = shift;
-  return 'Artist: ' . $self->name;
+  return sprintf 'Compilation appearances by %s on Cooking Vinyl samplers and promos.',
+    $self->name // 'Unknown Artist';
 }
 
 sub url_path {
