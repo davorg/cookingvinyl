@@ -28,6 +28,15 @@ footer { flex-shrink: 0; }
 .hero .inner {
   padding: 5rem 0 3rem;
 }
+
+/* Reduce hero padding on small screens */
+@media (max-width: 576px) {
+  .hero .inner {
+    padding-top: 3.5rem;   /* was 5rem */
+    padding-bottom: 2rem;  /* was 3rem */
+  }
+}
+
 .brandmark {
   display: inline-flex;
   align-items: center;
