@@ -1,5 +1,5 @@
 [% WRAPPER page.tt -%]
-    <h1>[% album.title %]</h1>
+    <h1>[% album.title %] [[% album.cat %]]</h1>
 
     <nav aria-label="Breadcrumb" class="breadcrumb-nav mb-3">
       <ol class="breadcrumb">
