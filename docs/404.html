@@ -1,5 +1,7 @@
-<!-- Type: [% page_type %] / Template: [% template.name %] -->
-[% object = page OR album OR artist OR song -%]
+
+
+
+<!-- Type: page / Template: 404.tt -->
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -11,14 +13,28 @@
       gtag('js', new Date());
       gtag('config', 'G-XGZYTJZW70');
     </script>
-[% IF page.noindex -%]
     <meta name="robots" content="noindex, follow">
-[% END -%]
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-[% seo_header -%]
+    <title>404 Not Found · Cooking Vinyl Compilations</title>
+
+    <meta property="og:site_name" content="Cooking Vinyl Compilations">
+    <meta property="og:title" content="404 Not Found · Cooking Vinyl Compilations">
+    <meta property="og:description" content="The requested page could not be found.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://cookingvinyl.dave.org.uk/img/og-cooking-vinyl.png">
+    <meta property="og:url" content="https://cookingvinyl.dave.org.uk/">
+
+    <meta name="description" content="The requested page could not be found.">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="404 Not Found · Cooking Vinyl Compilations">
+    <meta name="twitter:description" content="The requested page could not be found.">
+    <meta name="twitter:image" content="https://cookingvinyl.dave.org.uk/img/og-cooking-vinyl.png">
+
+    <link rel="canonical" href="https://cookingvinyl.dave.org.uk/">
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600&family=Inter:wght@400;500&display=swap" rel="stylesheet">
@@ -26,14 +42,10 @@
     <!-- Tiny bit of custom flair -->
     <link rel="stylesheet" href="/css/style.css">
 
-[% breadcrumb_json(object) -%]
-[% IF page_type == 'detail' AND object.can('json_ld_wrapped');
-     object.json_ld_wrapped;
-   END -%]
   </head>
   <body>
     <div class="site-wrapper">
-      <header class="hero [% page_type == 'detail' ? 'hero--compact' : '' %]">
+      <header class="hero ">
         <nav class="navbar navbar-expand-md navbar-transparent">
           <div class="container">
             <a class="navbar-brand text-white brandmark" href="/">
@@ -60,7 +72,7 @@
         <div class="container inner">
           <div class="row align-items-end">
             <div class="col-lg-10">
-              <h1>[% page.title OR 'Cooking Vinyl Compilations' %]</h1>
+              <h1>Cooking Vinyl Compilations</h1>
               <p class="lead opacity-85">Browse every <strong>Cooking Vinyl</strong> compilation by album, artist, or track. A tiny slice of British indie history, neatly indexed.</p>
             </div>
           </div>
@@ -72,7 +84,19 @@
 
       <main class="pb-5">
         <div class="container">
-[% content %]
+  <div class="my-5">
+    <h1>Page not found (404)</h1>
+    <p class="lead">Sorry, we couldn’t find that page. It may have moved or never existed.</p>
+    <p>
+      You can try browsing the <a href="https://cookingvinyl.dave.org.uk/albums/">albums</a>,
+      <a href="https://cookingvinyl.dave.org.uk/artists/">artists</a>,
+      or <a href="https://cookingvinyl.dave.org.uk/songs/">songs</a> sections.
+    </p>
+    <p class="mt-4">
+      <a class="btn btn-dark" href="https://cookingvinyl.dave.org.uk/">Return to home</a>
+    </p>
+  </div>
+
         </div>
       </main>
 
@@ -154,31 +178,6 @@
     </script>
 
     <!-- Page-specific vanilla JS, if supplied -->
-    [% IF page_js %]
-    <script>
-    document.addEventListener('DOMContentLoaded', function(){
-[% page_js %]
-    });
-    </script>
-    <script>
-    document.addEventListener('DOMContentLoaded', () => {
-      document.querySelectorAll('.table-wrap').forEach(wrap => {
-        const tools = wrap.querySelector('.table-tools');
-        if (!tools) return;
-
-        const setOffset = () => {
-          wrap.style.setProperty('--tools-h', tools.offsetHeight + 'px');
-        };
-
-        setOffset();
-
-        // Handle resize & A–Z wrapping
-        new ResizeObserver(setOffset).observe(tools);
-        window.addEventListener('resize', setOffset, { passive: true });
-      });
-    });
-    </script>
-
-    [% END %]
+    
   </body>
 </html>

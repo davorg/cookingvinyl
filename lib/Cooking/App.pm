@@ -44,14 +44,19 @@ field %page = (
     page_title  => '',
     url_path    => '',
     description => 'Exploring the compilation albums released by Cooking Vinyl — browse by albums, artists, and songs.',
-    type        => 'website',
   },
   about => {
     out         => 'about/index.html',
     page_title  => 'About the site · Cooking Vinyl Compilations',
     url_path    => 'about/',
     description => 'A little about the Cooking Vinyl Compilations site, its purpose, and the data it contains.',
-    type        => 'website',
+  },
+  404 => {
+    out         => '404.html',
+    page_title  => '404 Not Found · Cooking Vinyl Compilations',
+    url_path    => '',
+    description => 'The requested page could not be found.',
+    noindex     => 1,
   },
 );
 
@@ -69,7 +74,7 @@ method run {
     }, $page{$_}->{out}, { binmode => ':utf8' })
       or die $tt->error;
 
-    push @urls, "$uri/$page{$_}->{url_path}";
+    push @urls, "$uri/$page{$_}->{url_path}" unless $page{$_}->{noindex};
   }
 
   warn "\tAlbums list\n"; 

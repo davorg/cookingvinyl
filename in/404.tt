@@ -1,0 +1,14 @@
+[% WRAPPER page.tt -%]
+  <div class="my-5">
+    <h1>Page not found (404)</h1>
+    <p class="lead">Sorry, we couldn’t find that page. It may have moved or never existed.</p>
+    <p>
+      You can try browsing the <a href="[% domain %]/albums/">albums</a>,
+      <a href="[% domain %]/artists/">artists</a>,
+      or <a href="[% domain %]/songs/">songs</a> sections.
+    </p>
+    <p class="mt-4">
+      <a class="btn btn-dark" href="[% domain %]/">Return to home</a>
+    </p>
+  </div>
+[% END -%]
