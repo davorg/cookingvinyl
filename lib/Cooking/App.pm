@@ -70,14 +70,15 @@ method run {
   warn "\tPages\n";
   for (keys %page) {
     warn "\t\t$_\n";
+    my $page = Cooking::Page->new($page{$_});
     $tt->process("$_.tt", {
       page_type => 'page',
-      page      => Cooking::Page->new($page{$_}),
+      page      => $page,
       domain     => $uri,
     }, $page{$_}->{out}, { binmode => ':utf8' })
       or die $tt->error;
 
-    push @urls, "$page{$_}->og_url" unless $page{$_}->{noindex};
+    push @urls, $page->og_url unless $page{$_}->{noindex};
   }
 
   warn "\tAlbums list\n"; 
