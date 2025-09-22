@@ -12,6 +12,8 @@ class Cooking::App;
 
 use lib 'lib';
 use Cooking::Schema;
+use Cooking::Page;
+
 use Template;
 use Time::Piece;
 
@@ -42,19 +44,19 @@ field @songs   = $sch->resultset('Song')->search(undef, {
 field %page = (
   index => {
     out         => 'index.html',
-    page_title  => '',
+    title       => '',
     url_path    => '',
     description => 'Exploring the compilation albums released by Cooking Vinyl — browse by albums, artists, and songs.',
   },
   about => {
     out         => 'about/index.html',
-    page_title  => 'About the site · Cooking Vinyl Compilations',
+    title       => 'About the site · Cooking Vinyl Compilations',
     url_path    => 'about/',
     description => 'A little about the Cooking Vinyl Compilations site, its purpose, and the data it contains.',
   },
   404 => {
     out         => '404.html',
-    page_title  => '404 Not Found · Cooking Vinyl Compilations',
+    title       => '404 Not Found · Cooking Vinyl Compilations',
     url_path    => '',
     description => 'The requested page could not be found.',
     noindex     => 1,
@@ -70,12 +72,12 @@ method run {
     warn "\t\t$_\n";
     $tt->process("$_.tt", {
       page_type => 'page',
-      page      => $page{$_},
+      page      => Cooking::Page->new($page{$_}),
       domain     => $uri,
     }, $page{$_}->{out}, { binmode => ':utf8' })
       or die $tt->error;
 
-    push @urls, "$uri/$page{$_}->{url_path}" unless $page{$_}->{noindex};
+    push @urls, "$page{$_}->og_url" unless $page{$_}->{noindex};
   }
 
   warn "\tAlbums list\n"; 
@@ -85,7 +87,7 @@ method run {
     domain    => $uri,
     page      => {
       page_title  => 'Albums · Cooking Vinyl Compilations',
-      url_path    => 'albums/',
+      og_url      => $uri . '/albums/',
       description => 'Browse the compilation albums released by Cooking Vinyl records.',
       type        => 'website',
     },
@@ -103,7 +105,7 @@ method run {
     domain    => $uri,
     page      => {
       page_title  => 'Artists · Cooking Vinyl Compilation Appearances',
-      url_path    => 'artists/',
+      og_url      => $uri . '/artists/',
       description => 'Browse the artists appearing on compilations released by Cooking Vinyl records.',
       type      => 'website',
     },
@@ -119,7 +121,7 @@ method run {
     domain    => $uri,
     page      => {
       page_title  => 'Songs · Cooking Vinyl Compilation Tracks',
-      url_path    => 'songs/',
+      og_url      => $uri . '/songs/',
       description => 'Browse the songs appearing on compilations released by Cooking Vinyl records.',
       type        => 'website',
     },
@@ -139,9 +141,9 @@ method run {
     }, $_->out_file, { binmode => ':utf8' })
       or die $tt->error;
 
-    push @urls, "$uri/" . $_->url_path;
+    push @urls, $_->og_url;
 
-    $tt->process('redirect.tt', { target => '/' . $_->url_path }, $_->redirect_file);
+    $tt->process('redirect.tt', { target => $_->og_url }, $_->redirect_file);
   }
 
   warn "\tArtist detail pages\n";
@@ -154,9 +156,9 @@ method run {
     }, $_->out_file, { binmode => ':utf8' })
       or die $tt->error;
 
-    push @urls, "$uri/" . $_->url_path;
+    push @urls, $_->og_url;
 
-    $tt->process('redirect.tt', { target => '/' . $_->url_path }, $_->redirect_file);
+    $tt->process('redirect.tt', { target => $_->og_url }, $_->redirect_file);
   }
 
   warn "\tSong detail pages\n";
@@ -169,9 +171,9 @@ method run {
     }, $_->out_file, { binmode => ':utf8' })
       or die $tt->error;
 
-    push @urls, "$uri/" . $_->url_path;
+    push @urls, $_->og_url;
 
-    $tt->process('redirect.tt', { target => '/' . $_->url_path }, $_->redirect_file);
+    $tt->process('redirect.tt', { target => $_->og_url }, $_->redirect_file);
   }
 
   warn "\tSitemap\n";

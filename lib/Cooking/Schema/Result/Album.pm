@@ -148,7 +148,7 @@ __PACKAGE__->has_many(
 
 # You can replace this text with custom code or comments, and it will be preserved on regeneration
 
-with 'MooX::Role::JSON_LD';
+with 'MooX::Role::JSON_LD', 'MooX::Role::OpenGraph', 'Cooking::Role::Default';
 
 sub json_ld_type { 'MusicAlbum' }
 
@@ -193,7 +193,7 @@ sub json_ld_short_data {
 sub breadcrumb_type { 'Albums' }
 sub breadcrumb_path { '/albums/' }
 
-sub page_title {
+sub og_title {
   my $self = shift;
   my $title = sprintf '%s (%s) · Cooking Vinyl · %s', 
     $self->title // 'Unknown Title',
@@ -207,7 +207,13 @@ sub og_type {
   return 'music.album';
 }
 
-sub description {
+sub og_url {
+  my $self = shift;
+
+  return 'https://cookingvinyl.dave.org.uk/' . $self->url_path;
+}
+
+sub og_description {
   my $self = shift;
 
   my $description = sprintf q['%s' (%s, %s) Cooking Vinyl compilation. Full track list and details.],

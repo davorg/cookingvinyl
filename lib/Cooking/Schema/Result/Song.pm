@@ -97,7 +97,7 @@ __PACKAGE__->has_many(
 
 # You can replace this text with custom code or comments, and it will be preserved on regeneration
 
-with 'MooX::Role::JSON_LD';
+with 'MooX::Role::JSON_LD', 'MooX::Role::OpenGraph', 'Cooking::Role::Default';
 
 sub json_ld_type { 'MusicRecording' }
 
@@ -117,7 +117,7 @@ sub json_ld_fields { [
 sub breadcrumb_type { 'Songs' }
 sub breadcrumb_path { '/songs/' }
 
-sub page_title {
+sub og_title {
   my $self = shift;
 
   return sprintf '%s · Cooking Vinyl Compilation Tracks', $self->title // 'Unknown Title';
@@ -127,7 +127,13 @@ sub og_type {
   return 'music.song';
 }
 
-sub description {
+sub og_url {
+  my $self = shift;
+
+  return 'https://cookingvinyl.dave.org.uk/' . $self->url_path;
+}
+
+sub og_description {
   my $self = shift;
   return sprintf '%s on Cooking Vinyl samplers/promos. See all album appearances.',
     $self->title // 'Unknown Title';
