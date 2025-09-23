@@ -101,18 +101,21 @@ with 'MooX::Role::JSON_LD', 'MooX::Role::SEOTags', 'Cooking::Role::Default';
 
 sub json_ld_type { 'MusicRecording' }
 
-sub json_ld_fields { [
-  { name => 'title' },
-  { '@id' => sub { 'https://cookingvinyl.dave.org.uk/' . shift->url_path . '#song' } },
-  { mainEntityOfPage => sub { 'https://cookingvinyl.dave.org.uk/' . shift->url_path } },
-  { url => sub { 'https://cookingvinyl.dave.org.uk/' . shift->url_path } },
-  { inAlbum => sub {
+sub json_ld_fields {
+  my $self = shift;
+  return [
+    { name => 'title' },
+    { '@id' => sub { $self->og_url . '#song' } },
+    { mainEntityOfPage => sub { $self->og_url } },
+    { url => sub { $self->og_url } },
+    { inAlbum => sub {
       [ map {
           $_->album->json_ld_short_data,
-        } shift->tracks ]
-    }
-  },
-] }
+        } $self->tracks ]
+      }
+    },
+  ]
+}
 
 sub breadcrumb_type { 'Songs' }
 sub breadcrumb_path { '/songs/' }
@@ -125,12 +128,6 @@ sub og_title {
 
 sub og_type {
   return 'music.song';
-}
-
-sub og_url {
-  my $self = shift;
-
-  return 'https://cookingvinyl.dave.org.uk/' . $self->url_path;
 }
 
 sub og_description {

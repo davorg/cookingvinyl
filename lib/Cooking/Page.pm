@@ -7,15 +7,16 @@ use feature 'signatures';
 
 use Moo;
 
-with 'MooX::Role::OpenGraph';
+with 'MooX::Role::OpenGraph',
+     'Cooking::Role::Default';
 
 has title => ( is => 'ro', required => 1 );
 has url_path => ( is => 'ro', required => 1 );
 has description => ( is => 'ro', required => 1 );
 has type => ( is => 'ro', default => sub { 'website' } );
 has image => ( is => 'ro', default => sub {
-  'https://cookingvinyl.dave.org.uk/img/og-cooking-vinyl.png' }
-);
+  shift->domain . '/img/og-cooking-vinyl.png'
+});
 has out => ( is => 'ro' );
 has noindex => ( is => 'ro', default => sub { 0 } );
 
@@ -36,7 +37,7 @@ sub og_image($self) {
 }
 
 sub og_url($self) {
-  return 'https://cookingvinyl.dave.org.uk/' . $self->url_path;
+  return $self->domain . '/' . $self->url_path;
 }
 
 __PACKAGE__->meta->make_immutable;

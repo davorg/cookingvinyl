@@ -152,28 +152,31 @@ with 'MooX::Role::JSON_LD', 'MooX::Role::SEOTags', 'Cooking::Role::Default';
 
 sub json_ld_type { 'MusicAlbum' }
 
-sub json_ld_fields { [
-  { name => 'title' },
-  { '@id' => sub { 'https://cookingvinyl.dave.org.uk/' . shift->url_path . '#album' } },
-  { url => sub { 'https://cookingvinyl.dave.org.uk/' . shift->url_path } },
-  { datePublished => sub { shift->year . '' } },
-  { identifier => 'cat' },
-  { byArtist => sub { {
-      '@type' => 'MusicGroup',
-      'name' => 'Various Artists',
-    } }
+sub json_ld_fields {
+  my $self = shift;
+  return [
+    { name => 'title' },
+    { '@id' => sub { $self->og_url . '#album' } },
+    { url => sub { $self->og_url } },
+    { datePublished => sub { $self->year . '' } },
+    { identifier => 'cat' },
+    { byArtist => sub { {
+        '@type' => 'MusicGroup',
+        'name' => 'Various Artists',
+      }
+    }
   },
   { publisher => sub { {
      '@type' => 'Organization',
      name    => 'Cooking Vinyl'
     } },
   },
-  { numTracks => sub { shift->tracks->count } },
+  { numTracks => sub { $self->tracks->count } },
   { track => sub {
-      [ map { $_->json_ld_data } shift->tracks->all ],
+      [ map { $_->json_ld_data } $self->tracks->all ],
     }
   },
-  { mainEntityOfPage => sub { 'https://cookingvinyl.dave.org.uk/' . shift->url_path } },
+  { mainEntityOfPage => sub { $self->og_url } },
 ] }
 
 sub json_ld_short_data {
@@ -185,7 +188,7 @@ sub json_ld_short_data {
     byArtist => {
       '@type' => 'MusicGroup',
       name    => 'Various Artists',
-      url     => 'https://cookingvinyl.dave.org.uk/' . $self->url_path,
+      url     => $self->og_url,
     }
   }
 }
@@ -205,12 +208,6 @@ sub og_title {
 
 sub og_type {
   return 'music.album';
-}
-
-sub og_url {
-  my $self = shift;
-
-  return 'https://cookingvinyl.dave.org.uk/' . $self->url_path;
 }
 
 sub og_description {
