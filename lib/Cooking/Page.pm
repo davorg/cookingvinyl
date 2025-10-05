@@ -7,7 +7,7 @@ use feature 'signatures';
 
 use Moo;
 
-with 'MooX::Role::OpenGraph',
+with 'MooX::Role::SEOTags',
      'Cooking::Role::Default';
 
 has title => ( is => 'ro', required => 1 );

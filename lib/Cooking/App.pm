@@ -44,7 +44,7 @@ field @songs   = $sch->resultset('Song')->search(undef, {
 field %page = (
   index => {
     out         => 'index.html',
-    title       => '',
+    title       => 'Cooking Vinyl Compilations',
     url_path    => '',
     description => 'Exploring the compilation albums released by Cooking Vinyl — browse by albums, artists, and songs.',
   },
@@ -86,12 +86,12 @@ method run {
     page_type => 'list',
     albums    => $sch->resultset('Album'),
     domain    => $uri,
-    page      => {
-      page_title  => 'Albums · Cooking Vinyl Compilations',
-      og_url      => $uri . '/albums/',
+    page      => Cooking::Page->new(
+      title       => 'Albums · Cooking Vinyl Compilations',
+      url_path    => '/albums/',
       description => 'Browse the compilation albums released by Cooking Vinyl records.',
       type        => 'website',
-    },
+    ),
   }, 'albums/index.html', { binmode => ':utf8' })
     or die $tt->error;
 
@@ -104,12 +104,12 @@ method run {
       order_by => 'name',
     }),
     domain    => $uri,
-    page      => {
-      page_title  => 'Artists · Cooking Vinyl Compilation Appearances',
-      og_url      => $uri . '/artists/',
+    page      => Cooking::Page->new(
+      title       => 'Artists · Cooking Vinyl Compilation Appearances',
+      url_path    => $uri . '/artists/',
       description => 'Browse the artists appearing on compilations released by Cooking Vinyl records.',
-      type      => 'website',
-    },
+      type        => 'website',
+    ),
   }, 'artists/index.html', { binmode => ':utf8' })
     or die $tt->error;
 
@@ -120,12 +120,12 @@ method run {
     page_type => 'list',
     songs     => \@songs,
     domain    => $uri,
-    page      => {
-      page_title  => 'Songs · Cooking Vinyl Compilation Tracks',
-      og_url      => $uri . '/songs/',
+    page      => Cooking::Page->new(
+      title       => 'Songs · Cooking Vinyl Compilation Tracks',
+      url_path    => $uri . '/songs/',
       description => 'Browse the songs appearing on compilations released by Cooking Vinyl records.',
       type        => 'website',
-    },
+    ),
   }, 'songs/index.html', { binmode => ':utf8' })
     or die $tt->error;
 
