@@ -5,6 +5,8 @@ use warnings;
 
 use feature 'signatures';
 
+use List::Util 'first';
+
 use Moo;
 
 with 'MooX::Role::SEOTags',
@@ -37,7 +39,17 @@ sub og_image($self) {
 }
 
 sub og_url($self) {
-  return $self->domain . '/' . $self->url_path;
+  return $self->domain . $self->url_path;
+}
+
+sub breadcrumb_type($self) {
+  my @bits = split m{/}, $self->url_path;
+
+  return ucfirst first { $_ } reverse @bits;
+}
+
+sub breadcrumb_path($self) {
+  return '/' . lc $self->breadcrumb_type . '/';
 }
 
 __PACKAGE__->meta->make_immutable;
