@@ -106,7 +106,7 @@ method run {
     domain    => $uri,
     page      => Cooking::Page->new(
       title       => 'Artists · Cooking Vinyl Compilation Appearances',
-      url_path    => $uri . '/artists/',
+      url_path    => '/artists/',
       description => 'Browse the artists appearing on compilations released by Cooking Vinyl records.',
       type        => 'website',
     ),
@@ -122,7 +122,7 @@ method run {
     domain    => $uri,
     page      => Cooking::Page->new(
       title       => 'Songs · Cooking Vinyl Compilation Tracks',
-      url_path    => $uri . '/songs/',
+      url_path    => '/songs/',
       description => 'Browse the songs appearing on compilations released by Cooking Vinyl records.',
       type        => 'website',
     ),
