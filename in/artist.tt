@@ -1,5 +1,5 @@
 [% WRAPPER page.tt %]
-    <h1>[% artist.name %]</h1>
+    <h2>[% artist.name %]</h2>
 
     <nav aria-label="Breadcrumb" class="breadcrumb-nav mb-3">
       <ol class="breadcrumb">

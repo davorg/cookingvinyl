@@ -1,5 +1,5 @@
 [% WRAPPER page.tt %]
-  <h1>Albums</h1>
+  <h2>Albums</h2>
 
   <nav aria-label="Breadcrumb" class="breadcrumb-nav mb-3">
     <ol class="breadcrumb">
