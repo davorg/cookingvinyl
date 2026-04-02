@@ -67,7 +67,7 @@
   <p class="text-muted small mb-0">
     This is a very niche project documenting a label I love.
     If you spot mistakes or have missing details/artwork,
-    <a href="https://github.com/davorg/cookingvinyl/issues">open an issue</a>.
+    <a href="/contact/">please contact us</a>.
   </p>
 </div>
 [% END -%]
