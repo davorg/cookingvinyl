@@ -1,0 +1,21 @@
+#!/usr/bin/perl
+
+use strict;
+use warnings;
+use feature 'say';
+
+use JSON;
+use Cooking::Schema;
+
+my $sch = Cooking::Schema->get_schema;
+
+my $albums;
+
+for ($sch->resultset('Album')->all) {
+  push @$albums, {
+    cat => $_->cat,
+    title => $_->title,
+  };
+}
+
+say JSON->new->pretty->encode($albums);

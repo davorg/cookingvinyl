@@ -1,0 +1,26 @@
+#!/usr/bin/env perl
+use strict; use warnings;
+use FindBin '$Bin'; use lib "$Bin/../lib";
+use Cooking::Schema;
+use Cooking::Harvest;
+
+my $db  = $ENV{DB_PATH} // 'dat/cook.db';
+my $id  = shift @ARGV;
+die "Usage: $0 <album_id|cat>\n" unless defined $id;
+
+my $schema = Cooking::Schema->get_schema;
+my $album  = $id =~ /^\d+$/ ? $schema->resultset('Album')->find($id)
+                            : $schema->resultset('Album')->find({ cat => $id });
+die "Album not found\n" unless $album;
+
+my $har = Cooking::Harvest->new(
+  schema => $schema,
+  mb_contact => $ENV{MUSICBRAINZ_CONTACT} // 'mailto:you@example.com',
+  discogs_token => $ENV{DISCOGS_TOKEN},    # recommended
+  ua_extra => 'CookingVinylSite/1.0',
+  dry_run => ($ENV{DRY_RUN}//0),
+);
+
+$har->harvest_album($album);
+print "Done: album $id\n";
+

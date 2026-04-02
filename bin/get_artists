@@ -1,0 +1,20 @@
+#!/usr/bin/perl
+
+use strict;
+use warnings;
+use feature 'say';
+
+use JSON;
+use Cooking::Schema;
+
+my $sch = Cooking::Schema->get_schema;
+
+my $artists;
+
+for ($sch->resultset('Artist')->all) {
+  push @$artists, {
+    name => $_->name,
+  };
+}
+
+say JSON->new->pretty->encode($artists);

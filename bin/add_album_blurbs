@@ -1,0 +1,29 @@
+#!/usr/bin/perl
+
+use strict;
+use warnings;
+use feature 'say';
+
+use JSON;
+use Cooking::Schema;
+
+@ARGV or die "Gimme a JSON file\n";
+
+my $sch = Cooking::Schema->get_schema;
+my $rs  = $sch->resultset('Album');
+
+my $json = do { local $/; <> };
+
+my $albums = JSON->new->decode($json);
+
+for (@$albums) {
+  next unless defined $_->{title};
+  my $album = $rs->find({ cat => $_->{cat} });
+
+  unless ($album) {
+    warn "Can't find $_->{cat}\n";
+    next;
+  }
+
+  $album->update({ blurb => $_->{blurb} });
+}
