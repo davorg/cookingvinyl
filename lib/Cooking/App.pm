@@ -54,6 +54,18 @@ field %page = (
     url_path    => 'about/',
     description => 'A little about the Cooking Vinyl Compilations site, its purpose, and the data it contains.',
   },
+  contact => {
+    out         => 'contact/index.html',
+    title       => 'Contact',
+    url_path    => 'contact/',
+    description => 'Contact us about the site',
+  },
+  privacy => {
+    out         => 'privacy/index.html',
+    title       => 'Privacy Policy',
+    url_path    => 'privacy/',
+    description => 'Privacy policy for the site',
+  },  
   404 => {
     out         => '404.html',
     title       => '404 Not Found · Cooking Vinyl Compilations',
